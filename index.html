@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AUREVIA — Luxury Travel Concierge</title>
+<meta name="description" content="AUREVIA diseña viajes de lujo a medida por Cusco, el Valle Sagrado y Machu Picchu, con atención de concierge de principio a fin.">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="logo">
+      <span class="logo-mark"></span>
+      <span class="logo-text">
+        <span class="logo-word">AUREVIA</span>
+        <span class="logo-tag">LUXURY TRAVEL CONCIERGE</span>
+      </span>
+    </a>
+
+    <nav class="main-nav">
+      <a href="index.html" aria-current="page" data-i18n="nav_inicio">Inicio</a>
+      <a href="destinos.html" data-i18n="nav_destinos">Destinos</a>
+      <a href="experiencias.html" data-i18n="nav_experiencias">Experiencias</a>
+      <a href="sobre-nosotros.html" data-i18n="nav_nosotros">Sobre Nosotros</a>
+      <a href="#contacto" data-i18n="nav_contacto">Contacto</a>
+    </nav>
+
+    <div class="header-actions">
+      <div class="lang-toggle">
+        <button type="button" data-lang="es">ES</button>
+        <button type="button" data-lang="en">EN</button>
+      </div>
+      <a href="#contacto" class="btn" data-i18n="cta_reservar">Reservar viaje</a>
+      <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false"></button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-media">
+      <img src="img/hero-portada-01.jpg" alt="Vista panorámica del Valle Sagrado al amanecer">
+    </div>
+    <div class="container hero-content">
+      <span class="hero-eyebrow">CUSCO · VALLE SAGRADO · MACHU PICCHU</span>
+      <h1>Viajes de autor por el corazón de los Andes</h1>
+      <p class="lede">AUREVIA diseña itinerarios privados, guías especializados y logística impecable para quienes viajan pocas veces al año, pero quieren que cada una sea inolvidable.</p>
+      <div class="hero-actions">
+        <a href="destinos.html" class="btn btn-light" data-i18n="hero_cta_1">Explorar destinos</a>
+        <a href="experiencias.html" class="btn btn-outline" style="border-color:#fff;color:#fff" data-i18n="hero_cta_2">Ver experiencias</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- DESTINOS DESTACADOS -->
+  <section id="destinos">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="section-kicker" data-i18n="nav_destinos">Destinos</span>
+          <h2>Lugares que definen un viaje por el Perú andino</h2>
+        </div>
+        <a href="destinos.html" class="section-link" data-i18n="ver_todos">Ver todos</a>
+      </div>
+      <div class="card-grid" id="home-destinos"></div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCIAS DESTACADAS -->
+  <section class="bg-ivory" id="experiencias">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="section-kicker" data-i18n="nav_experiencias">Experiencias</span>
+          <h2>Momentos diseñados, no solo visitados</h2>
+        </div>
+        <a href="experiencias.html" class="section-link" data-i18n="ver_todos">Ver todos</a>
+      </div>
+      <div class="card-grid" id="home-experiencias"></div>
+    </div>
+  </section>
+
+  <!-- ALIADOS ESTRATÉGICOS -->
+  <section>
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="section-kicker">Aliados estratégicos</span>
+          <h2>Hoteles y trenes seleccionados por su estándar de servicio</h2>
+        </div>
+        <div class="allies-controls">
+          <button id="allies-prev" aria-label="Anterior"></button>
+          <button id="allies-next" aria-label="Siguiente"></button>
+        </div>
+      </div>
+      <div class="allies-track" id="allies-track"></div>
+    </div>
+  </section>
+
+  <!-- ADELANTO SOBRE NOSOTROS -->
+  <section class="bg-black">
+    <div class="container split">
+      <div>
+        <span class="section-kicker" style="color:var(--c-olive)">Sobre AUREVIA</span>
+        <h2>Concierge de viaje, no una agencia más</h2>
+        <p style="color:rgba(255,255,255,.78);margin-top:1rem">Cada itinerario se construye desde cero junto al viajero: sin paquetes cerrados, con un solo punto de contacto del inicio al regreso.</p>
+        <a href="sobre-nosotros.html" class="btn btn-light" style="margin-top:1rem">Conocer AUREVIA</a>
+      </div>
+      <img src="img/nosotros-equipo-01.jpg" alt="Guía de AUREVIA junto a un viajero en el Valle Sagrado">
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto">
+    <div class="container contact-wrap">
+      <div class="contact-info">
+        <span class="section-kicker" data-i18n="nav_contacto">Contacto</span>
+        <h2 data-i18n="form_titulo">Empecemos a planear tu viaje</h2>
+        <p>Cuéntanos qué destino o experiencia te interesa y un especialista de AUREVIA te contactará con una propuesta a medida.</p>
+        <ul class="contact-list">
+          <li><span>reservas@aurevia-luxury.com</span></li>
+          <li><span>+51 984 000 000 (WhatsApp)</span></li>
+          <li><span>Cusco, Perú</span></li>
+        </ul>
+        <div class="social-row">
+          <a href="#" aria-label="Facebook" class="ic-facebook"></a>
+          <a href="#" aria-label="Instagram" class="ic-instagram"></a>
+          <a href="#" aria-label="TikTok" class="ic-tiktok"></a>
+          <a href="#" aria-label="Snapchat" class="ic-snapchat"></a>
+        </div>
+      </div>
+
+      <form id="contact-form" novalidate>
+        <div class="form-grid">
+          <div class="field">
+            <label for="nombre">Nombre</label>
+            <input id="nombre" name="nombre" type="text" required>
+          </div>
+          <div class="field">
+            <label for="apellido">Apellido</label>
+            <input id="apellido" name="apellido" type="text" required>
+          </div>
+          <div class="field">
+            <label for="pais">Nacionalidad</label>
+            <input id="pais" name="pais" type="text" required>
+          </div>
+          <div class="field">
+            <label for="pasaporte">N° de pasaporte (opcional)</label>
+            <input id="pasaporte" name="pasaporte" type="text">
+          </div>
+          <div class="field">
+            <label for="telefono">Teléfono / WhatsApp</label>
+            <input id="telefono" name="telefono" type="tel" required>
+          </div>
+          <div class="field">
+            <label for="correo">Correo electrónico</label>
+            <input id="correo" name="correo" type="email" required>
+          </div>
+          <div class="field">
+            <label for="tipo-viaje">Me interesa</label>
+            <select id="tipo-viaje" name="tipo-viaje">
+              <option value="destino">Un destino</option>
+              <option value="experiencia">Una experiencia</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="item-select">Selecciona</label>
+            <select id="item-select" name="item-select"></select>
+          </div>
+
+          <div class="field dynamic-field" data-dynamic="destino">
+            <label for="num-personas">Número de personas</label>
+            <input id="num-personas" name="num-personas" type="number" min="1" value="2">
+          </div>
+          <div class="field dynamic-field" data-dynamic="destino">
+            <label for="categoria-hotel">Categoría de hotel</label>
+            <select id="categoria-hotel" name="categoria-hotel">
+              <option>Boutique de lujo</option>
+              <option>5 estrellas</option>
+              <option>Premium con encanto</option>
+            </select>
+          </div>
+          <div class="field dynamic-field" data-dynamic="destino full">
+            <label for="guia">Idioma del guía</label>
+            <select id="guia" name="guia">
+              <option>Español</option>
+              <option>Inglés</option>
+              <option>Francés</option>
+              <option>Portugués</option>
+            </select>
+          </div>
+
+          <div class="field dynamic-field" data-dynamic="experiencia">
+            <label for="num-invitados">Número de invitados</label>
+            <input id="num-invitados" name="num-invitados" type="number" min="1" value="2">
+          </div>
+          <div class="field dynamic-field" data-dynamic="experiencia full">
+            <label for="fecha-tentativa">Fecha tentativa</label>
+            <input id="fecha-tentativa" name="fecha-tentativa" type="date">
+          </div>
+
+          <div class="field full">
+            <label for="mensaje">Cuéntanos algo más sobre tu viaje (opcional)</label>
+            <textarea id="mensaje" name="mensaje" rows="3"></textarea>
+          </div>
+        </div>
+
+        <button type="submit" class="btn mt-lg" data-i18n="form_enviar">Enviar solicitud</button>
+        <p class="form-note">Al enviar este formulario, tus datos se almacenan de forma segura para que un especialista de AUREVIA pueda contactarte.</p>
+        <p class="form-success" id="form-success" data-i18n="form_exito"></p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="logo-word" style="color:#fff">AUREVIA</span>
+        <p>Viajes de autor por Cusco, el Valle Sagrado y Machu Picchu, diseñados con estándar de concierge privado.</p>
+      </div>
+      <div>
+        <h4>Explorar</h4>
+        <ul>
+          <li><a href="destinos.html">Destinos</a></li>
+          <li><a href="experiencias.html">Experiencias</a></li>
+          <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Compañía</h4>
+        <ul>
+          <li><a href="sobre-nosotros.html">Nuestra historia</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Síguenos</h4>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">TikTok</a></li>
+          <li><a href="#">Snapchat</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-year></span> AUREVIA Luxury Travel Concierge</span>
+      <span>Cusco, Perú</span>
+    </div>
+  </div>
+</footer>
+
+<!-- MODAL DE DETALLE (destino / experiencia) -->
+<div class="modal-overlay" id="detail-modal">
+  <div class="modal">
+    <button class="modal-close" aria-label="Cerrar"></button>
+    <div class="modal-media"><img src="" alt=""></div>
+    <div class="modal-body">
+      <span class="card-tag">AUREVIA</span>
+      <h3></h3>
+      <p></p>
+      <ul class="modal-facts"></ul>
+      <a href="#" class="btn"></a>
+    </div>
+  </div>
+</div>
+
+<script src="js/icons.js"></script>
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+<script>
+  // Inserta los íconos de contacto/redes que no pueden ir directo en el HTML estático de arriba
+  document.querySelectorAll(".contact-list li").forEach((li, i) => {
+    const svg = [ICONS.mail, ICONS.phone, ICONS.pin][i];
+    li.insertAdjacentHTML("afterbegin", svg);
+  });
+  document.querySelector(".ic-facebook").innerHTML = ICONS.facebook;
+  document.querySelector(".ic-instagram").innerHTML = ICONS.instagram;
+  document.querySelector(".ic-tiktok").innerHTML = ICONS.tiktok;
+  document.querySelector(".ic-snapchat").innerHTML = ICONS.snapchat;
+</script>
+</body>
+</html>
