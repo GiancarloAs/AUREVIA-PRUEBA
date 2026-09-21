@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Destinos — AUREVIA Luxury Travel Concierge</title>
+<meta name="description" content="Cusco, el Valle Sagrado, Machu Picchu y otros destinos andinos diseñados por AUREVIA para viajes de autor.">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="logo">
+      <span class="logo-mark"></span>
+      <span class="logo-text">
+        <span class="logo-word">AUREVIA</span>
+        <span class="logo-tag">LUXURY TRAVEL CONCIERGE</span>
+      </span>
+    </a>
+    <nav class="main-nav">
+      <a href="index.html" data-i18n="nav_inicio">Inicio</a>
+      <a href="destinos.html" aria-current="page" data-i18n="nav_destinos">Destinos</a>
+      <a href="experiencias.html" data-i18n="nav_experiencias">Experiencias</a>
+      <a href="aliados.html" data-i18n="nav_aliados">Aliados</a>
+      <a href="sobre-nosotros.html" data-i18n="nav_nosotros">Sobre Nosotros</a>
+      <a href="index.html#contacto" data-i18n="nav_contacto">Contacto</a>
+    </nav>
+    <div class="header-actions">
+      <div class="lang-toggle">
+        <button type="button" data-lang="es">ES</button>
+        <button type="button" data-lang="en">EN</button>
+      </div>
+      <a href="index.html#contacto" class="btn" data-i18n="cta_reservar">Reservar viaje</a>
+      <button class="nav-toggle" data-i18n-aria="aria_abrir_menu" aria-label="Abrir menú" aria-expanded="false"></button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="brand-curve">
+      <svg viewBox="0 0 1200 500" preserveAspectRatio="none">
+        <path d="M-100 500 C 200 250, 500 550, 900 300 S 1300 200 1300 200 V500 Z" fill="#4C5A6F" opacity="0.35"/>
+      </svg>
+    </div>
+    <div class="container">
+      <span class="section-kicker" data-i18n="nav_destinos">Destinos</span>
+      <h1 data-i18n="destinos_hero_title">Siete lugares, un mismo estándar de servicio</h1>
+      <p class="lede" style="color:rgba(255,255,255,.78);max-width:56ch;margin-top:1rem" data-i18n="destinos_hero_lede">Desde Cusco Ciudad hasta el Camino Inka: cada destino se recorre con guía privado, transporte dedicado y tiempos pensados para viajar sin prisa.</p>
+      <div class="filter-row" data-filter-for="destinos-grid"></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="card-grid" id="destinos-grid"></div>
+    </div>
+  </section>
+
+  <section class="bg-ivory">
+    <div class="container center-head">
+      <span class="section-kicker" data-i18n="destinos_cta_kicker">¿No encuentras lo que buscas?</span>
+      <h2 data-i18n="destinos_cta_title">También diseñamos rutas a medida fuera de este listado</h2>
+      <p style="margin-inline:auto;margin-top:1rem" data-i18n="destinos_cta_text">Comparte tus fechas e intereses y armamos un itinerario exclusivo, incluso combinando varios destinos en un mismo viaje.</p>
+      <a href="index.html#contacto" class="btn mt-lg" data-i18n="cta_reservar">Reservar viaje</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="logo-word" style="color:#fff">AUREVIA</span>
+        <p data-i18n="footer_tagline">Viajes de autor por Cusco, el Valle Sagrado y Machu Picchu, diseñados con estándar de concierge privado.</p>
+      </div>
+      <div>
+        <h4 data-i18n="footer_explorar">Explorar</h4>
+        <ul>
+          <li><a href="destinos.html" data-i18n="nav_destinos">Destinos</a></li>
+          <li><a href="experiencias.html" data-i18n="nav_experiencias">Experiencias</a></li>
+          <li><a href="aliados.html" data-i18n="nav_aliados">Aliados</a></li>
+          <li><a href="sobre-nosotros.html" data-i18n="nav_nosotros">Sobre Nosotros</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-i18n="footer_compania">Compañía</h4>
+        <ul>
+          <li><a href="sobre-nosotros.html" data-i18n="footer_historia">Nuestra historia</a></li>
+          <li><a href="index.html#contacto" data-i18n="nav_contacto">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-i18n="footer_seguenos">Síguenos</h4>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">TikTok</a></li>
+          <li><a href="#">Snapchat</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-year></span> AUREVIA Luxury Travel Concierge</span>
+      <span data-i18n="footer_location">Cusco, Perú</span>
+    </div>
+  </div>
+</footer>
+
+<div class="modal-overlay" id="detail-modal">
+  <div class="modal">
+    <button class="modal-close" data-i18n-aria="aria_cerrar" aria-label="Cerrar"></button>
+    <div class="modal-media"><img src="" alt=""></div>
+    <div class="modal-body">
+      <span class="card-tag">AUREVIA</span>
+      <h3></h3>
+      <p></p>
+      <ul class="modal-facts"></ul>
+      <div class="modal-tips">
+        <h4></h4>
+        <ul></ul>
+      </div>
+      <a href="#" class="btn"></a>
+    </div>
+  </div>
+</div>
+
+<a href="https://wa.me/51984000000?text=Hola%20AUREVIA%2C%20quisiera%20más%20información%20sobre%20un%20viaje"
+   target="_blank" rel="noopener" class="whatsapp-float" aria-label="WhatsApp"></a>
+
+<script src="js/icons.js"></script>
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
