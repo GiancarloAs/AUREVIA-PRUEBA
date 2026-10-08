@@ -94,10 +94,16 @@ p{ margin:0 0 1rem; max-width:62ch; }
 /* ---------- Header ---------- */
 .site-header{
   position:sticky; top:0; z-index:40;
-  background:rgba(255,255,255,.97);
-  backdrop-filter:blur(8px);
   border-bottom:1px solid var(--c-line);
   transition:box-shadow .2s var(--ease);
+}
+/* Fondo + blur en un pseudo-elemento: si backdrop-filter va en el propio header,
+   éste pasa a ser el "containing block" de .main-nav (position:fixed) y el menú
+   móvil se queda sin altura/fondo (se ve transparente en Android). */
+.site-header::before{
+  content:""; position:absolute; inset:0; z-index:-1; pointer-events:none;
+  background:rgba(255,255,255,.97);
+  -webkit-backdrop-filter:blur(8px); backdrop-filter:blur(8px);
 }
 .site-header.is-scrolled{ box-shadow:0 6px 18px rgba(0,0,0,.08); }
 .site-header .container{
@@ -407,13 +413,14 @@ section{ padding-block:clamp(3.5rem, 7vw, 6.5rem); position:relative; }
 }
 @media (max-width: 720px){
   .main-nav{
-    position:fixed; inset:0 0 0 30%; top:64px; background:#FFFFFF; background-color:#FFFFFF;
+    position:fixed; top:64px; right:0; bottom:0; left:30%; z-index:50;
+    background:#fff; overflow-y:auto; -webkit-overflow-scrolling:touch;
+    visibility:hidden;
     flex-direction:column; align-items:flex-start; gap:0; padding:1.5rem var(--gutter);
-    transform:translateX(100%); transition:transform .3s var(--ease);
-    border-left:1px solid var(--c-line); will-change:transform;
-    -webkit-backdrop-filter:none; backdrop-filter:none;
+    transform:translateX(100%); transition:transform .3s var(--ease), visibility 0s linear .3s;
+    border-left:1px solid var(--c-line);
   }
-  .main-nav.is-open{ transform:translateX(0); }
+  .main-nav.is-open{ transform:translateX(0); visibility:visible; transition:transform .3s var(--ease), visibility 0s; }
   .main-nav a{ padding-block:.9rem; width:100%; border-bottom:1px solid var(--c-line); }
   .nav-toggle{ display:flex; }
   .header-actions .btn{ display:none; }
