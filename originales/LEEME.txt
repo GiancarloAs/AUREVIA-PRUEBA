@@ -1,0 +1,1 @@
+Coloca aquí las fotos originales (mismo nombre que en tools/imagenes-seo.json) y ejecuta python3 tools/procesar_imagenes.py
