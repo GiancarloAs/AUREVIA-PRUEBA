@@ -81,7 +81,7 @@ const UI_STRINGS = {
     closing_text: "Un especialista de AUREVIA te responderá en menos de 24 horas con una propuesta inicial.",
 
     modal_tips_heading: "Consejos para tu viaje",
-    modal_route_heading: "El recorrido", modal_includes_label: "Incluye", altitud_label: "Altitud",
+    modal_req_label: "Requisito", modal_route_heading: "El recorrido", modal_includes_label: "Incluye", altitud_label: "Altitud",
     modal_route_note: "Este recorrido es un punto de partida: fechas, ritmo y alojamientos se ajustan a cada viajero.",
     aria_foto_anterior: "Foto anterior", aria_foto_siguiente: "Foto siguiente",
     aria_abrir_menu: "Abrir menú", aria_cerrar_menu: "Cerrar menú", aria_cerrar: "Cerrar"
@@ -163,7 +163,7 @@ const UI_STRINGS = {
     closing_text: "An AUREVIA specialist will respond within 24 hours with an initial proposal.",
 
     modal_tips_heading: "Travel tips",
-    modal_route_heading: "The route", modal_includes_label: "Includes", altitud_label: "Altitude",
+    modal_req_label: "Requirement", modal_route_heading: "The route", modal_includes_label: "Includes", altitud_label: "Altitude",
     modal_route_note: "This route is a starting point: dates, pace and accommodation are adjusted to each traveler.",
     aria_foto_anterior: "Previous photo", aria_foto_siguiente: "Next photo",
     aria_abrir_menu: "Open menu", aria_cerrar_menu: "Close menu", aria_cerrar: "Close"
@@ -274,6 +274,7 @@ function cardTemplate(item, kind){
     <div class="card-media">
       <img src="img/${item.imagen}" alt="${imgAlt(item.imagen, pick(item.nombre))}" width="1000" height="1250" loading="lazy" decoding="async">
       <span class="card-tag">${categoryLabel(item.categoria)}</span>
+      ${item.requisito ? `<span class="card-req">${ICONS.bed}${pick(item.requisito.etiqueta)}</span>` : ""}
     </div>
     <div class="card-body">
       <h3>${pick(item.nombre)}</h3>
@@ -484,6 +485,13 @@ function fillModal(keepScroll){
 
   q(".modal-head .card-tag").textContent = categoryLabel(item.categoria);
   q(".modal-head h3").textContent = pick(item.nombre);
+  // Requisito para reservar (opcional): aviso destacado bajo el titular
+  const req = q(".modal-req");
+  req.hidden = !item.requisito;
+  if (item.requisito){
+    req.querySelector("strong").textContent = t("modal_req_label");
+    req.querySelector("p").textContent = pick(item.requisito.texto);
+  }
   q(".modal-desc").textContent = pick(item.descripcion);
   q(".modal-facts").innerHTML = facts + (item.ruta ? `<li>${ICONS.pin}${pick(item.ruta)}</li>` : "");
 
@@ -585,6 +593,7 @@ function initModal(){
     <header class="modal-head">
       <span class="card-tag"></span>
       <h3 id="detail-modal-title"></h3>
+      <div class="modal-req" role="note" hidden>${ICONS.bed}<div><strong></strong><p></p></div></div>
     </header>
     <div class="modal-gallery">
       <div class="mg-track" tabindex="0"></div>

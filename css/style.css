@@ -223,6 +223,15 @@ section{ padding-block:clamp(3.5rem, 7vw, 6.5rem); position:relative; }
 }
 .card-meta span{ display:flex; align-items:center; gap:.35rem; }
 .card-meta svg{ width:14px; height:14px; }
+/* Requisito para reservar (campo opcional "requisito"): franja sobre la foto */
+.card-req{
+  position:absolute; left:0; right:0; bottom:0; z-index:1;
+  display:flex; align-items:center; gap:.55rem; padding:.7rem .9rem;
+  background:var(--c-black); color:var(--c-white);
+  font-size:.68rem; font-weight:500; letter-spacing:.1em; text-transform:uppercase; line-height:1.3;
+  border-top:2px solid var(--c-olive);
+}
+.card-req svg{ width:16px; height:16px; flex:none; color:var(--c-olive); }
 /* Ruta de un viaje completo (campo opcional "ruta" en data.js) */
 .card-body p.card-route{ font-size:.76rem; letter-spacing:.02em; line-height:1.55; color:var(--c-blue); }
 /* Es un <button>: sin este reset se pinta con el borde y fondo gris del navegador */
@@ -357,6 +366,18 @@ section{ padding-block:clamp(3.5rem, 7vw, 6.5rem); position:relative; }
 .modal-overlay.is-open .modal{ transform:none; opacity:1; }
 [hidden]{ display:none !important; }
 
+/* Aviso de requisito bajo el titular de la ficha */
+.modal-req{
+  display:flex; gap:.9rem; align-items:flex-start; margin-top:1.2rem;
+  background:var(--c-black); color:var(--c-white); padding:1rem 1.2rem;
+  border-left:3px solid var(--c-olive);
+}
+.modal-req svg{ width:22px; height:22px; flex:none; color:var(--c-olive); margin-top:.1rem; }
+.modal-req strong{
+  display:block; font-size:.7rem; font-weight:500; letter-spacing:.14em; text-transform:uppercase;
+  color:var(--c-olive); margin-bottom:.25rem;
+}
+.modal-req p{ margin:0; max-width:none; font-size:.95rem; line-height:1.5; }
 .modal-top{ position:sticky; top:0; z-index:3; height:0; display:flex; justify-content:flex-end; }
 .modal-close{
   margin:.9rem .9rem 0 0; width:38px; height:38px; flex:none; background:var(--c-white);

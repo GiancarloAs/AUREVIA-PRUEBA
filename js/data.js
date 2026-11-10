@@ -13,6 +13,9 @@
      - galeria:    ["archivo-02.jpg", ...]  fotos adicionales del carrusel de la ficha.
                    El título y la descripción de cada foto salen de
                    tools/imagenes-seo.json (campos "title" y "caption")
+     - requisito:  { etiqueta:{es,en}, texto:{es,en} }  condición para reservar.
+                   La etiqueta sale como franja sobre la foto de la tarjeta y el
+                   texto como aviso destacado al inicio de la ficha
      - portadaProvisional: true  la imagen de la tarjeta es un placeholder:
                    el carrusel muestra solo las fotos de "galeria"
      - ruta:       { es, en }  lugares del recorrido (tarjeta y ficha)
@@ -292,10 +295,17 @@ const AUREVIA_DATA = {
       categoria: "icono",
       duracion: { es: "Medio día", en: "Half day" },
       grupo: { es: "2 – 6 personas", en: "2 – 6 people" },
+      requisito: {
+        etiqueta: { es: "Exclusivo huéspedes Sanctuary Lodge", en: "Sanctuary Lodge guests only" },
+        texto: {
+          es: "Esta experiencia es exclusiva para huéspedes del Sanctuary Lodge. Para reservarla es necesario estar alojado en el hotel.",
+          en: "This experience is exclusive to guests of Sanctuary Lodge. A stay at the hotel is required to book it."
+        }
+      },
       nombre: { es: "Desayuno con Vista al Huaynapicchu", en: "Breakfast with a View of Huaynapicchu" },
       resumen: {
-        es: "Un desayuno privado servido en un mirador exclusivo frente a Machu Picchu y el Huaynapicchu.",
-        en: "A private breakfast served at an exclusive viewpoint facing Machu Picchu and Huaynapicchu."
+        es: "Un desayuno privado frente a Machu Picchu y el Huaynapicchu, reservado para huéspedes del Sanctuary Lodge.",
+        en: "A private breakfast facing Machu Picchu and Huaynapicchu, reserved for guests of Sanctuary Lodge."
       },
       descripcion: {
         es: "Acceso anticipado antes de la apertura general, mesa dispuesta en mirador reservado y menú de desayuno gourmet con productos peruanos.",
@@ -303,12 +313,12 @@ const AUREVIA_DATA = {
       },
       consejos: {
         es: [
-          "Salida muy temprano desde Aguas Calientes: descansa bien la noche previa.",
+          "Reserva tu estadía en el Sanctuary Lodge con anticipación: es el único hotel junto al ingreso a Machu Picchu y tiene pocas habitaciones.",
           "Las mañanas pueden ser neblinosas y frías — lleva una chaqueta abrigadora.",
           "Cámara con batería cargada: la luz de la mañana sobre la ciudadela es el momento estrella."
         ],
         en: [
-          "Very early departure from Aguas Calientes: get a good night's rest beforehand.",
+          "Book your stay at Sanctuary Lodge well ahead: it is the only hotel beside the entrance to Machu Picchu and has few rooms.",
           "Mornings can be foggy and cold — bring a warm jacket.",
           "Bring a charged camera: morning light over the citadel is the highlight moment."
         ]
