@@ -65,12 +65,12 @@
     "w": 1000,
     "h": 1250,
     "title": {
-      "es": "Valle Sagrado de los Incas (Moray)",
-      "en": "Sacred Valley of the Incas (Moray)"
+      "es": "Moray, Valle Sagrado de los Incas",
+      "en": "Moray, Sacred Valley of the Incas"
     },
     "alt": {
-      "es": "Terrazas circulares incas de Moray vistas desde lo alto, en el Valle Sagrado de Cusco",
-      "en": "Circular Inca terraces of Moray seen from above, in the Sacred Valley of Cusco"
+      "es": "Terrazas circulares incas de Moray cubiertas de pasto verde, vistas desde lo alto en el Valle Sagrado de Cusco",
+      "en": "Circular Inca terraces of Moray covered in green grass, seen from above in the Sacred Valley of Cusco"
     },
     "description": "Terrazas incas de Moray en el Valle Sagrado, Cusco, Perú.",
     "keywords": [
@@ -84,10 +84,99 @@
     "brief": "Vertical: terrazas de Pisac, Moray o Ollantaytambo con buena luz.",
     "avoid": "Fotos con mochilas/turistas dominando el encuadre.",
     "source_hint": "Unsplash / Pexels / Wikimedia Commons (licencia libre)",
-    "credit": "Felipe Mendoza / Unsplash (Licencia Unsplash)",
+    "credit": "Viajes con Astro Cartografía / Unsplash (Licencia Unsplash)",
+    "focus": [
+      0.43,
+      0.6
+    ]
+  },
+  {
+    "file": "destino-valle-sagrado-02.jpg",
+    "w": 1000,
+    "h": 1250,
+    "title": {
+      "es": "Ollantaytambo, Valle Sagrado",
+      "en": "Ollantaytambo, Sacred Valley"
+    },
+    "alt": {
+      "es": "Sitio arqueológico de Ollantaytambo con el pueblo y el cerro Pinkuylluna al fondo, en un día soleado",
+      "en": "Ollantaytambo archaeological site with the town and Pinkuylluna hill behind, on a sunny day"
+    },
+    "description": "Sitio arqueológico y pueblo de Ollantaytambo, Valle Sagrado, Cusco, Perú.",
+    "keywords": [
+      "Ollantaytambo",
+      "Valle Sagrado",
+      "Pinkuylluna",
+      "Cusco",
+      "Sacred Valley",
+      "Inca site"
+    ],
+    "brief": "Vertical: Ollantaytambo con luz de día y poca gente.",
+    "avoid": "Turistas dominando el encuadre.",
+    "source_hint": "Unsplash / Pexels / Wikimedia Commons (licencia libre)",
+    "credit": "joejett / Pixabay (Licencia de contenido de Pixabay)",
     "focus": [
       0.5,
-      0.5
+      0.45
+    ]
+  },
+  {
+    "file": "destino-valle-sagrado-03.jpg",
+    "w": 1000,
+    "h": 1250,
+    "title": {
+      "es": "Salineras de Maras, Valle Sagrado",
+      "en": "Maras salt pans, Sacred Valley"
+    },
+    "alt": {
+      "es": "Pozas de sal de las Salineras de Maras escalonadas en la ladera, con visitantes recorriendo los bordes",
+      "en": "Terraced salt pans of the Salineras de Maras on the hillside, with visitors walking along the edges"
+    },
+    "description": "Salineras de Maras, Valle Sagrado, Cusco, Perú.",
+    "keywords": [
+      "Salineras de Maras",
+      "Maras",
+      "Valle Sagrado",
+      "Cusco",
+      "salt pans",
+      "Sacred Valley"
+    ],
+    "brief": "Vertical: pozas de sal con buena luz, idealmente sin grupos de turistas.",
+    "avoid": "Grupos numerosos en primer plano.",
+    "source_hint": "Unsplash / Pexels / Wikimedia Commons (licencia libre)",
+    "credit": "jdbenthien / Pixabay (Licencia de contenido de Pixabay)",
+    "focus": [
+      0.42,
+      0.4
+    ]
+  },
+  {
+    "file": "destino-valle-sagrado-04.jpg",
+    "w": 1000,
+    "h": 1250,
+    "title": {
+      "es": "Andenes de Ollantaytambo",
+      "en": "Ollantaytambo terraces"
+    },
+    "alt": {
+      "es": "Andenes y muros incas de Ollantaytambo al pie de un cerro rocoso, bajo un cielo nublado",
+      "en": "Inca terraces and walls of Ollantaytambo at the foot of a rocky hill, under an overcast sky"
+    },
+    "description": "Andenes incas de Ollantaytambo, Valle Sagrado, Cusco, Perú.",
+    "keywords": [
+      "Ollantaytambo",
+      "andenes incas",
+      "Valle Sagrado",
+      "Cusco",
+      "Inca terraces"
+    ],
+    "brief": "Vertical: andenes y muros de Ollantaytambo.",
+    "avoid": "Cielos grises si hay una alternativa con mejor luz.",
+    "source_hint": "Unsplash / Pexels / Wikimedia Commons (licencia libre)",
+    "credit": "Mauro Lima / Unsplash (Licencia Unsplash)",
+    "focus": [
+      0.5,
+      0.75
     ]
   },
   {
@@ -316,6 +405,82 @@
     ],
     "brief": "Vertical: mesa de desayuno en terraza de hotel con vista a la montaña.",
     "avoid": "Tomas de interior sin vista a la montaña.",
+    "source_hint": "Unsplash / Pexels / Wikimedia Commons (licencia libre)",
+    "credit": ""
+  },
+  {
+    "file": "experiencia-luna-de-miel-01.jpg",
+    "w": 1000,
+    "h": 1250,
+    "title": {
+      "es": "Luna de miel en los Andes",
+      "en": "Honeymoon in the Andes"
+    },
+    "alt": {
+      "es": "Pareja contemplando el Valle Sagrado al amanecer",
+      "en": "Couple looking out over the Sacred Valley at sunrise"
+    },
+    "description": "Viaje de luna de miel por el Valle Sagrado y Machu Picchu, Perú.",
+    "keywords": [
+      "luna de miel Perú",
+      "honeymoon Peru",
+      "Valle Sagrado",
+      "Machu Picchu",
+      "viaje en pareja"
+    ],
+    "brief": "Vertical: pareja de espaldas o de perfil frente al Valle Sagrado, luz cálida de amanecer. Sujeto al centro; el tercio superior e inferior quedan libres.",
+    "avoid": "Rostros reconocibles sin autorización de modelo; poses de catálogo; fotos de hoteles concretos que no sean aliados.",
+    "source_hint": "Unsplash / Pexels / Wikimedia Commons (licencia libre)",
+    "credit": ""
+  },
+  {
+    "file": "experiencia-peru-a-la-mesa-01.jpg",
+    "w": 1000,
+    "h": 1250,
+    "title": {
+      "es": "Perú a la mesa",
+      "en": "Peru at the Table"
+    },
+    "alt": {
+      "es": "Platos de cocina peruana contemporánea con ingredientes andinos",
+      "en": "Contemporary Peruvian dishes made with Andean ingredients"
+    },
+    "description": "Ruta gastronómica por Lima, Cusco y el Valle Sagrado, Perú.",
+    "keywords": [
+      "gastronomía peruana",
+      "ruta gastronómica Perú",
+      "Peruvian cuisine",
+      "Lima",
+      "Cusco",
+      "food tour Peru"
+    ],
+    "brief": "Vertical cenital: platos de cocina peruana contemporánea sobre cerámica artesanal, luz natural, paleta terrosa.",
+    "avoid": "Platos de restaurantes reconocibles sin permiso; ceviche genérico de banco de imágenes.",
+    "source_hint": "Unsplash / Pexels / Wikimedia Commons (licencia libre)",
+    "credit": ""
+  },
+  {
+    "file": "experiencia-peru-en-familia-01.jpg",
+    "w": 1000,
+    "h": 1250,
+    "title": {
+      "es": "Perú en familia",
+      "en": "Peru with the Family"
+    },
+    "alt": {
+      "es": "Familia de picnic junto a una laguna andina en Cusco",
+      "en": "Family having a picnic beside an Andean lake in Cusco"
+    },
+    "description": "Viaje familiar por Lima, Cusco y Machu Picchu, Perú.",
+    "keywords": [
+      "viaje familiar Perú",
+      "family trip Peru",
+      "Cusco con niños",
+      "laguna Piuray",
+      "Machu Picchu"
+    ],
+    "brief": "Vertical: familia con niños en una actividad al aire libre (picnic, kayak, caminata suave) con montañas de fondo.",
+    "avoid": "Menores reconocibles sin autorización; fotos posadas de estudio.",
     "source_hint": "Unsplash / Pexels / Wikimedia Commons (licencia libre)",
     "credit": ""
   },

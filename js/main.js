@@ -81,7 +81,10 @@ const UI_STRINGS = {
     closing_text: "Un especialista de AUREVIA te responderá en menos de 24 horas con una propuesta inicial.",
 
     modal_tips_heading: "Consejos para tu viaje",
-    aria_abrir_menu: "Abrir menú", aria_cerrar: "Cerrar", aria_anterior: "Anterior", aria_siguiente: "Siguiente"
+    modal_route_heading: "El recorrido", modal_includes_label: "Incluye", altitud_label: "Altitud",
+    modal_route_note: "Este recorrido es un punto de partida: fechas, ritmo y alojamientos se ajustan a cada viajero.",
+    aria_foto_anterior: "Foto anterior", aria_foto_siguiente: "Foto siguiente",
+    aria_abrir_menu: "Abrir menú", aria_cerrar_menu: "Cerrar menú", aria_cerrar: "Cerrar"
   },
   en: {
     nav_inicio: "Home", nav_destinos: "Destinations", nav_experiencias: "Experiences",
@@ -160,7 +163,10 @@ const UI_STRINGS = {
     closing_text: "An AUREVIA specialist will respond within 24 hours with an initial proposal.",
 
     modal_tips_heading: "Travel tips",
-    aria_abrir_menu: "Open menu", aria_cerrar: "Close", aria_anterior: "Previous", aria_siguiente: "Next"
+    modal_route_heading: "The route", modal_includes_label: "Includes", altitud_label: "Altitude",
+    modal_route_note: "This route is a starting point: dates, pace and accommodation are adjusted to each traveler.",
+    aria_foto_anterior: "Previous photo", aria_foto_siguiente: "Next photo",
+    aria_abrir_menu: "Open menu", aria_cerrar_menu: "Close menu", aria_cerrar: "Close"
   }
 };
 
@@ -171,6 +177,7 @@ const CATEGORY_LABELS = {
   trekking: { es: "Trekking", en: "Trekking" },
   celebracion: { es: "Celebración", en: "Celebration" },
   gastronomia: { es: "Gastronomía", en: "Gastronomy" },
+  viaje: { es: "Viaje completo", en: "Full journey" },
   hotel: { es: "Hotel", en: "Hotel" },
   tren: { es: "Tren", en: "Train" }
 };
@@ -225,11 +232,20 @@ function initHeader(){
       const open = nav.classList.toggle("is-open");
       toggle.innerHTML = open ? ICONS.close : ICONS.menu;
       toggle.setAttribute("aria-expanded", open);
+      toggle.dataset.i18nAria = open ? "aria_cerrar_menu" : "aria_abrir_menu";
+      toggle.setAttribute("aria-label", t(toggle.dataset.i18nAria));
     });
-    nav.querySelectorAll("a").forEach(a => a.addEventListener("click", () => {
+    const closeNav = () => {
       nav.classList.remove("is-open");
       toggle.innerHTML = ICONS.menu;
-    }));
+      toggle.setAttribute("aria-expanded", "false");
+      toggle.dataset.i18nAria = "aria_abrir_menu";
+      toggle.setAttribute("aria-label", t("aria_abrir_menu"));
+    };
+    nav.querySelectorAll("a").forEach(a => a.addEventListener("click", closeNav));
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && nav.classList.contains("is-open")){ closeNav(); toggle.focus(); }
+    });
   }
   document.querySelectorAll("img[data-seo-alt]").forEach(el => {
     const f = (el.getAttribute("src") || "").split("/").pop();
@@ -262,8 +278,9 @@ function cardTemplate(item, kind){
     <div class="card-body">
       <h3>${pick(item.nombre)}</h3>
       <p>${pick(item.resumen)}</p>
+      ${item.ruta ? `<p class="card-route">${pick(item.ruta)}</p>` : ""}
       <div class="card-meta">${facts}</div>
-      <button class="card-open" data-open-modal="${item.id}" data-kind="${kind}">
+      <button type="button" class="card-open" data-open-modal="${item.id}" data-kind="${kind}">
         ${t("ver_detalle")} ${ICONS.arrowRight}
       </button>
     </div>
@@ -282,7 +299,7 @@ function renderAllGrids(){
     renderGrid("home-destinos", "destino", AUREVIA_DATA.destinos, 6);
   }
   if (document.getElementById("home-experiencias")){
-    renderGrid("home-experiencias", "experiencia", AUREVIA_DATA.experiencias, 3);
+    renderGrid("home-experiencias", "experiencia", AUREVIA_DATA.experiencias, 6);
   }
   if (document.getElementById("destinos-grid")){
     renderFilteredGrid("destinos-grid", "destino", AUREVIA_DATA.destinos);
@@ -346,6 +363,9 @@ function renderAllies(){
   const next = document.getElementById("allies-next");
   if (prev) prev.innerHTML = ICONS.chevronLeft;
   if (next) next.innerHTML = ICONS.chevronRight;
+  // renderAllies() se vuelve a ejecutar en cada cambio de idioma: los listeners se enlazan una sola vez
+  if (track.dataset.bound) return;
+  track.dataset.bound = "true";
   prev?.addEventListener("click", () => track.scrollBy({ left: -220, behavior: "smooth" }));
   next?.addEventListener("click", () => track.scrollBy({ left: 220, behavior: "smooth" }));
 }
@@ -404,19 +424,60 @@ function findItem(kind, id){
   return list.find(i => i.id === id);
 }
 
-function openModal(kind, id){
-  const item = findItem(kind, id);
-  if (!item) return;
+/* Fotos de la ficha: la principal + las de "galeria" (opcional en data.js) */
+const MODAL_STATE = { kind: null, id: null, fotos: [], idx: 0, opener: null };
+
+function showModalPhoto(i){
   const overlay = document.getElementById("detail-modal");
+  const item = findItem(MODAL_STATE.kind, MODAL_STATE.id);
+  const n = MODAL_STATE.fotos.length;
+  if (!overlay || !item || !n) return;
+  MODAL_STATE.idx = (i + n) % n;
+  const file = MODAL_STATE.fotos[MODAL_STATE.idx];
+  const img = overlay.querySelector(".modal-media img");
+  img.src = `img/${file}`;
+  img.alt = imgAlt(file, pick(item.nombre));
+  const count = overlay.querySelector(".modal-count");
+  if (count) count.textContent = `${MODAL_STATE.idx + 1} / ${n}`;
+}
+
+function fillModal(){
+  const { kind, id } = MODAL_STATE;
+  const item = findItem(kind, id);
+  const overlay = document.getElementById("detail-modal");
+  if (!item || !overlay) return;
   const facts = kind === "destino"
-    ? `<li>${ICONS.clock}${pick(item.duracion)}</li><li>${ICONS.mountain}Altitud: ${item.altitud}</li>`
+    ? `<li>${ICONS.clock}${pick(item.duracion)}</li><li>${ICONS.mountain}${t("altitud_label")}: ${item.altitud}</li>`
     : `<li>${ICONS.clock}${pick(item.duracion)}</li><li>${ICONS.users}${pick(item.grupo)}</li>`;
 
-  overlay.querySelector(".modal-media img").src = `img/${item.imagen}`;
-  overlay.querySelector(".modal-media img").alt = imgAlt(item.imagen, pick(item.nombre));
+  overlay.querySelector(".modal-body .card-tag").textContent = categoryLabel(item.categoria);
   overlay.querySelector(".modal-body h3").textContent = pick(item.nombre);
   overlay.querySelector(".modal-body > p").textContent = pick(item.descripcion);
-  overlay.querySelector(".modal-facts").innerHTML = facts;
+  overlay.querySelector(".modal-facts").innerHTML = facts
+    + (item.ruta ? `<li>${ICONS.pin}${pick(item.ruta)}</li>` : "");
+
+  // Servicios incluidos (opcional)
+  const incWrap = overlay.querySelector(".modal-includes");
+  const inc = pick(item.incluye);
+  if (Array.isArray(inc) && inc.length){
+    incWrap.hidden = false;
+    incWrap.setAttribute("aria-label", t("modal_includes_label"));
+    incWrap.innerHTML = inc.map(x => `<li>${ICONS.check}<span>${x}</span></li>`).join("");
+  } else {
+    incWrap.hidden = true;
+  }
+
+  // Recorrido por etapas (opcional)
+  const routeWrap = overlay.querySelector(".modal-route");
+  const steps = pick(item.itinerario);
+  if (Array.isArray(steps) && steps.length){
+    routeWrap.hidden = false;
+    routeWrap.querySelector("h4").textContent = t("modal_route_heading");
+    routeWrap.querySelector("ol").innerHTML = steps.map(([etapa, texto]) => `<li><strong>${etapa}</strong><span>${texto}</span></li>`).join("");
+    routeWrap.querySelector("p").textContent = t("modal_route_note");
+  } else {
+    routeWrap.hidden = true;
+  }
 
   const tipsWrap = overlay.querySelector(".modal-tips");
   const tips = pick(item.consejos);
@@ -431,13 +492,38 @@ function openModal(kind, id){
   const cta = overlay.querySelector(".modal-body .btn");
   cta.href = `index.html?tipo=${kind}&item=${item.id}#contacto`;
   cta.textContent = t("reservar_esto");
+
+  overlay.querySelector(".modal-prev").setAttribute("aria-label", t("aria_foto_anterior"));
+  overlay.querySelector(".modal-next").setAttribute("aria-label", t("aria_foto_siguiente"));
+  overlay.querySelector(".modal-media").classList.toggle("has-gallery", MODAL_STATE.fotos.length > 1);
+  showModalPhoto(MODAL_STATE.idx);
+}
+
+function openModal(kind, id){
+  const item = findItem(kind, id);
+  const overlay = document.getElementById("detail-modal");
+  if (!item || !overlay) return;
+  MODAL_STATE.kind = kind;
+  MODAL_STATE.id = id;
+  MODAL_STATE.fotos = [item.imagen, ...(item.galeria || [])];
+  MODAL_STATE.idx = 0;
+  MODAL_STATE.opener = document.activeElement;
+  fillModal();
   overlay.classList.add("is-open");
+  overlay.querySelector(".modal").scrollTop = 0;
   document.body.style.overflow = "hidden";
+  overlay.querySelector(".modal-close").focus();
 }
 
 function closeModal(){
-  document.getElementById("detail-modal")?.classList.remove("is-open");
+  const overlay = document.getElementById("detail-modal");
+  if (!overlay || !overlay.classList.contains("is-open")) return;
+  overlay.classList.remove("is-open");
   document.body.style.overflow = "";
+  // devuelve el foco a la tarjeta desde la que se abrió (se vuelve a buscar por si se repintó)
+  const back = document.querySelector(`[data-open-modal="${MODAL_STATE.id}"][data-kind="${MODAL_STATE.kind}"]`) || MODAL_STATE.opener;
+  MODAL_STATE.id = null;
+  back?.focus?.();
 }
 
 function bindModalTriggers(){
@@ -451,10 +537,57 @@ function bindModalTriggers(){
 function initModal(){
   const overlay = document.getElementById("detail-modal");
   if (!overlay) return;
+  const modal = overlay.querySelector(".modal");
+  const media = overlay.querySelector(".modal-media");
+  const tips = overlay.querySelector(".modal-tips");
+
+  // Accesibilidad: se anuncia como diálogo y el título de la ficha le da nombre
+  modal.setAttribute("role", "dialog");
+  modal.setAttribute("aria-modal", "true");
+  overlay.querySelector(".modal-body h3").id = "detail-modal-title";
+  modal.setAttribute("aria-labelledby", "detail-modal-title");
+
+  // Bloques opcionales (galería, incluye, recorrido): se crean aquí para no repetir
+  // el marcado en cada .html que contiene la ficha
+  media.insertAdjacentHTML("beforeend", `
+    <button type="button" class="modal-nav modal-prev">${ICONS.chevronLeft}</button>
+    <button type="button" class="modal-nav modal-next">${ICONS.chevronRight}</button>
+    <span class="modal-count" aria-hidden="true"></span>`);
+  tips.insertAdjacentHTML("beforebegin", `
+    <ul class="modal-includes" hidden></ul>
+    <div class="modal-route" hidden><h4></h4><ol></ol><p></p></div>`);
+  media.querySelector(".modal-prev").addEventListener("click", () => showModalPhoto(MODAL_STATE.idx - 1));
+  media.querySelector(".modal-next").addEventListener("click", () => showModalPhoto(MODAL_STATE.idx + 1));
+
   overlay.querySelector(".modal-close").innerHTML = ICONS.close;
   overlay.addEventListener("click", (e) => { if (e.target === overlay) closeModal(); });
   overlay.querySelector(".modal-close").addEventListener("click", closeModal);
-  document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeModal(); });
+  overlay.querySelector(".modal-body .btn").addEventListener("click", closeModal);
+  document.addEventListener("keydown", (e) => {
+    if (!overlay.classList.contains("is-open")) return;
+    if (e.key === "Escape") closeModal();
+    if (MODAL_STATE.fotos.length > 1 && e.key === "ArrowLeft") showModalPhoto(MODAL_STATE.idx - 1);
+    if (MODAL_STATE.fotos.length > 1 && e.key === "ArrowRight") showModalPhoto(MODAL_STATE.idx + 1);
+    // el foco no sale de la ficha mientras está abierta
+    if (e.key === "Tab"){
+      const f = [...modal.querySelectorAll("button, a[href]")].filter(el => el.offsetParent !== null);
+      const first = f[0], last = f[f.length - 1];
+      if (e.shiftKey && document.activeElement === first){ e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && document.activeElement === last){ e.preventDefault(); first.focus(); }
+    }
+  });
+  // si se cambia de idioma con la ficha abierta, se repinta en el nuevo idioma
+  document.addEventListener("aurevia:lang-changed", () => {
+    if (overlay.classList.contains("is-open")) fillModal();
+  });
+}
+
+/* ---------- 5b. Cifras de "Sobre nosotros" calculadas desde data.js ---------- */
+function initCounts(){
+  document.querySelectorAll("[data-count]").forEach(el => {
+    const list = AUREVIA_DATA[el.dataset.count];
+    if (Array.isArray(list)) el.textContent = list.length;
+  });
 }
 
 /* ---------- 6. Formulario de contacto dinámico (con obligatoriedad real) ---------- */
@@ -628,6 +761,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initLogoMarks();
   renderAllGrids();
   initModal();
+  initCounts();
   initContactForm();
   initFooterYear();
   initWhatsappFloat();
