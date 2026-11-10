@@ -10,8 +10,9 @@ Uso:
   3. Ejecuta:  pip install pillow  &&  python3 tools/procesar_imagenes.py
 
 Resultado: img/<nombre>.jpg con el recorte y tamaño exactos que usa la web,
-metadatos SEO incrustados (título, descripción, palabras clave, copyright)
-y el archivo CREDITOS.md con el origen de cada foto.
+metadatos SEO incrustados (título, descripción, palabras clave, copyright),
+el archivo CREDITOS.md con el origen de cada foto y js/img-seo.js regenerado
+(textos alt y títulos ES/EN que usa la web), para que nunca queden desfasados.
 """
 import json, sys
 from pathlib import Path
@@ -60,6 +61,11 @@ def main():
             hechas += 1
         creditos.append(f"| {it['file']} | {it.get('credit') or 'PENDIENTE'} |")
     (ROOT / "CREDITOS.md").write_text("\n".join(creditos) + "\n", encoding="utf-8")
+    seo = {it["file"]: {"alt": it["alt"], "title": it["title"]} for it in DATA}
+    (ROOT / "js" / "img-seo.js").write_text(
+        "/* Generado desde tools/imagenes-seo.json — alt y títulos por imagen (ES/EN) */\n"
+        "const AUREVIA_IMG_SEO = " + json.dumps(seo, ensure_ascii=False, indent=2) + ";\n",
+        encoding="utf-8")
     print(f"\n{hechas}/{len(DATA)} imágenes procesadas. Las que faltan conservan su placeholder.")
 
 if __name__ == "__main__":

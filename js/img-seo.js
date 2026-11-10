@@ -22,12 +22,42 @@ const AUREVIA_IMG_SEO = {
   },
   "destino-valle-sagrado-01.jpg": {
     "alt": {
-      "es": "Terrazas circulares incas de Moray vistas desde lo alto, en el Valle Sagrado de Cusco",
-      "en": "Circular Inca terraces of Moray seen from above, in the Sacred Valley of Cusco"
+      "es": "Terrazas circulares incas de Moray cubiertas de pasto verde, vistas desde lo alto en el Valle Sagrado de Cusco",
+      "en": "Circular Inca terraces of Moray covered in green grass, seen from above in the Sacred Valley of Cusco"
     },
     "title": {
-      "es": "Valle Sagrado de los Incas (Moray)",
-      "en": "Sacred Valley of the Incas (Moray)"
+      "es": "Moray, Valle Sagrado de los Incas",
+      "en": "Moray, Sacred Valley of the Incas"
+    }
+  },
+  "destino-valle-sagrado-02.jpg": {
+    "alt": {
+      "es": "Sitio arqueológico de Ollantaytambo con el pueblo y el cerro Pinkuylluna al fondo, en un día soleado",
+      "en": "Ollantaytambo archaeological site with the town and Pinkuylluna hill behind, on a sunny day"
+    },
+    "title": {
+      "es": "Ollantaytambo, Valle Sagrado",
+      "en": "Ollantaytambo, Sacred Valley"
+    }
+  },
+  "destino-valle-sagrado-03.jpg": {
+    "alt": {
+      "es": "Pozas de sal de las Salineras de Maras escalonadas en la ladera, con visitantes recorriendo los bordes",
+      "en": "Terraced salt pans of the Salineras de Maras on the hillside, with visitors walking along the edges"
+    },
+    "title": {
+      "es": "Salineras de Maras, Valle Sagrado",
+      "en": "Maras salt pans, Sacred Valley"
+    }
+  },
+  "destino-valle-sagrado-04.jpg": {
+    "alt": {
+      "es": "Andenes y muros incas de Ollantaytambo al pie de un cerro rocoso, bajo un cielo nublado",
+      "en": "Inca terraces and walls of Ollantaytambo at the foot of a rocky hill, under an overcast sky"
+    },
+    "title": {
+      "es": "Andenes de Ollantaytambo",
+      "en": "Ollantaytambo terraces"
     }
   },
   "destino-machu-picchu-01.jpg": {
@@ -108,6 +138,36 @@ const AUREVIA_IMG_SEO = {
     "title": {
       "es": "Desayuno con vista al Huaynapicchu",
       "en": "Breakfast with a view of Huayna Picchu"
+    }
+  },
+  "experiencia-luna-de-miel-01.jpg": {
+    "alt": {
+      "es": "Pareja contemplando el Valle Sagrado al amanecer",
+      "en": "Couple looking out over the Sacred Valley at sunrise"
+    },
+    "title": {
+      "es": "Luna de miel en los Andes",
+      "en": "Honeymoon in the Andes"
+    }
+  },
+  "experiencia-peru-a-la-mesa-01.jpg": {
+    "alt": {
+      "es": "Platos de cocina peruana contemporánea con ingredientes andinos",
+      "en": "Contemporary Peruvian dishes made with Andean ingredients"
+    },
+    "title": {
+      "es": "Perú a la mesa",
+      "en": "Peru at the Table"
+    }
+  },
+  "experiencia-peru-en-familia-01.jpg": {
+    "alt": {
+      "es": "Familia de picnic junto a una laguna andina en Cusco",
+      "en": "Family having a picnic beside an Andean lake in Cusco"
+    },
+    "title": {
+      "es": "Perú en familia",
+      "en": "Peru with the Family"
     }
   },
   "aliado-hotel-01.jpg": {

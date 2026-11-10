@@ -222,10 +222,18 @@ section{ padding-block:clamp(3.5rem, 7vw, 6.5rem); position:relative; }
 }
 .card-meta span{ display:flex; align-items:center; gap:.35rem; }
 .card-meta svg{ width:14px; height:14px; }
+/* Ruta de un viaje completo (campo opcional "ruta" en data.js) */
+.card-body p.card-route{ font-size:.76rem; letter-spacing:.02em; line-height:1.55; color:var(--c-blue); }
+/* Es un <button>: sin este reset se pinta con el borde y fondo gris del navegador */
 .card-open{
   margin-top:.4rem; font-size:.8rem; letter-spacing:.05em;
   display:inline-flex; align-items:center; gap:.4rem; align-self:flex-start;
+  background:none; border:0; padding:.35rem 0; color:var(--c-black);
+  border-bottom:1px solid transparent; transition:border-color .2s var(--ease), color .2s var(--ease);
 }
+.card-open:hover{ color:var(--c-blue); border-bottom-color:var(--c-blue); }
+/* Toda la tarjeta abre la ficha, no solo el texto "Ver detalle" */
+.card-open::after{ content:""; position:absolute; inset:0; }
 .card-open svg{ width:14px; height:14px; transition:transform .2s var(--ease); }
 .card:hover .card-open svg{ transform:translateX(3px); }
 
@@ -353,6 +361,34 @@ section{ padding-block:clamp(3.5rem, 7vw, 6.5rem); position:relative; }
 .modal-facts li{ display:flex; gap:.6rem; align-items:flex-start; }
 .modal-facts svg{ width:16px; height:16px; color:var(--c-blue); margin-top:.1rem; flex:none; }
 .modal-body .btn{ align-self:flex-start; margin-top:1rem; }
+[hidden]{ display:none !important; }
+/* Galería de la ficha (campo opcional "galeria" en data.js) */
+.modal-nav, .modal-count{ display:none; }
+.modal-media.has-gallery .modal-nav{
+  display:flex; align-items:center; justify-content:center; position:absolute; z-index:1;
+  top:50%; transform:translateY(-50%); width:40px; height:40px;
+  background:rgba(255,255,255,.92); border:1px solid var(--c-line); color:var(--c-black);
+}
+.modal-nav svg{ width:18px; height:18px; }
+.modal-nav:hover{ background:var(--c-black); border-color:var(--c-black); color:var(--c-white); }
+.modal-prev{ left:.75rem; } .modal-next{ right:.75rem; }
+.modal-media.has-gallery .modal-count{
+  display:block; position:absolute; z-index:1; left:.75rem; bottom:.75rem;
+  background:var(--c-white); padding:.25rem .55rem; font-size:.7rem; letter-spacing:.08em;
+}
+/* Servicios incluidos y recorrido por etapas (viajes completos) */
+.modal-includes{ display:flex; flex-wrap:wrap; gap:.5rem 1.1rem; margin-bottom:.4rem; font-size:.84rem; }
+.modal-includes li{ display:flex; align-items:center; gap:.4rem; }
+.modal-includes svg{ width:14px; height:14px; color:var(--c-olive); flex:none; }
+.modal-route{ margin-top:1.2rem; }
+.modal-route h4{
+  font-family:var(--f-body); font-size:.78rem; letter-spacing:.06em; text-transform:uppercase;
+  color:var(--c-blue); margin:0 0 .3rem;
+}
+.modal-route ol{ list-style:none; margin:0; padding:0; }
+.modal-route li{ padding:.8rem 0; border-bottom:1px solid var(--c-line); font-size:.86rem; color:#333; }
+.modal-route li strong{ display:block; font-weight:600; color:var(--c-black); margin-bottom:.15rem; }
+.modal-route p{ font-size:.78rem; color:#666; margin:.8rem 0 0; }
 .modal-tips{
   background:var(--c-ivory); border-left:2px solid var(--c-olive);
   padding:1rem 1.1rem; margin-top:1.4rem;
@@ -409,7 +445,7 @@ section{ padding-block:clamp(3.5rem, 7vw, 6.5rem); position:relative; }
   .contact-wrap{ grid-template-columns:1fr; }
   .footer-grid{ grid-template-columns:1fr 1fr; }
   .modal{ grid-template-columns:1fr; }
-  .modal-media{ min-height:220px; }
+  .modal-media{ min-height:clamp(220px, 62vw, 420px); }
 }
 @media (max-width: 720px){
   .main-nav{

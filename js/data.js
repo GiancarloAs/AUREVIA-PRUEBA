@@ -8,6 +8,13 @@
      - el listado completo de destinos.html / experiencias.html / aliados.html
      - la ventana modal de detalle (con sus consejos de viaje)
      - el selector del formulario de contacto
+
+   Campos opcionales (si no se ponen, simplemente no se muestran):
+     - galeria:    ["archivo-02.jpg", ...]  fotos adicionales; en la ficha
+                   aparecen flechas para pasar de una a otra
+     - ruta:       { es, en }  lugares del recorrido (tarjeta y ficha)
+     - incluye:    { es:[...], en:[...] }  servicios incluidos (ficha)
+     - itinerario: { es:[[etapa, texto], ...], en:[...] }  recorrido por etapas (ficha)
    ========================================================= */
 
 const AUREVIA_DATA = {
@@ -44,6 +51,7 @@ const AUREVIA_DATA = {
     {
       id: "valle-sagrado",
       imagen: "destino-valle-sagrado-01.jpg",
+      galeria: ["destino-valle-sagrado-02.jpg", "destino-valle-sagrado-03.jpg", "destino-valle-sagrado-04.jpg"],
       categoria: "naturaleza",
       duracion: { es: "1 día", en: "1 day" },
       altitud: "2,800 m s.n.m.",
@@ -299,6 +307,163 @@ const AUREVIA_DATA = {
           "Very early departure from Aguas Calientes: get a good night's rest beforehand.",
           "Mornings can be foggy and cold — bring a warm jacket.",
           "Bring a charged camera: morning light over the citadel is the highlight moment."
+        ]
+      }
+    },
+
+    /* ---- Viajes completos (itinerarios de varios días) ----
+       BORRADOR: rutas, días y servicios deben validarse con operaciones antes de publicar. */
+    {
+      id: "luna-de-miel-andes",
+      imagen: "experiencia-luna-de-miel-01.jpg",
+      categoria: "viaje",
+      duracion: { es: "10 días / 9 noches", en: "10 days / 9 nights" },
+      grupo: { es: "Viaje privado", en: "Private journey" },
+      nombre: { es: "Luna de Miel en los Andes", en: "Honeymoon in the Andes" },
+      ruta: {
+        es: "Valle Sagrado · Chinchero · Maras y Moray · Camino Inka · Machu Picchu · Cusco · Palcoyo",
+        en: "Sacred Valley · Chinchero · Maras & Moray · Inca Trail · Machu Picchu · Cusco · Palcoyo"
+      },
+      resumen: {
+        es: "Diez días para empezar la vida juntos sin prisa: amaneceres sobre el Valle Sagrado, la llegada a Machu Picchu a pie y cenas privadas que no olvidarán.",
+        en: "Ten unhurried days to begin life together: sunrises over the Sacred Valley, arriving at Machu Picchu on foot, and private dinners you won't forget."
+      },
+      descripcion: {
+        es: "Un viaje para dos que avanza sin prisa, del silencio del Valle Sagrado a la llegada a pie a Machu Picchu, con tiempo de sobra para simplemente estar juntos.",
+        en: "A journey for two that moves at an easy pace, from the quiet of the Sacred Valley to arriving at Machu Picchu on foot, with plenty of time to simply be together."
+      },
+      incluye: {
+        es: ["Guía privado", "Traslados", "Alojamiento", "Entradas"],
+        en: ["Private guide", "Transfers", "Accommodation", "Entrance tickets"]
+      },
+      itinerario: {
+        es: [
+          ["Días 1 a 3 · Valle Sagrado", "Llegada y aclimatación suave. Las tejedoras de Chinchero, las salineras de Maras y las terrazas circulares de Moray."],
+          ["Días 4 y 5 · Camino Inka y Machu Picchu", "Caminata por el tramo corto del Camino Inka hasta la Puerta del Sol y visita guiada a la ciudadela al día siguiente."],
+          ["Días 6 a 8 · Cusco", "El centro histórico y el barrio de San Blas a su ritmo, con una cena privada para celebrar."],
+          ["Día 9 · Palcoyo", "La montaña de colores por su ruta más tranquila, lejos de las multitudes."],
+          ["Día 10 · Regreso", "Traslado al aeropuerto y vuelo de retorno."]
+        ],
+        en: [
+          ["Days 1–3 · Sacred Valley", "Arrival and gentle acclimatization. The weavers of Chinchero, the Maras salt pans and the circular terraces of Moray."],
+          ["Days 4–5 · Inca Trail & Machu Picchu", "A hike along the short Inca Trail to the Sun Gate, with a guided visit to the citadel the following day."],
+          ["Days 6–8 · Cusco", "The historic center and the San Blas quarter at your own pace, with a private dinner to celebrate."],
+          ["Day 9 · Palcoyo", "The rainbow mountain by its quieter route, away from the crowds."],
+          ["Day 10 · Departure", "Airport transfer and return flight."]
+        ]
+      },
+      consejos: {
+        es: [
+          "El tramo corto del Camino Inka requiere permiso y los cupos son limitados: conviene reservar con meses de anticipación.",
+          "El viaje empieza en el Valle Sagrado, a menor altitud que Cusco, para aclimatarse de forma gradual.",
+          "Palcoyo está cerca de los 4,900 m: por eso se visita al final, ya aclimatados."
+        ],
+        en: [
+          "The short Inca Trail requires a permit and spaces are limited: book months in advance.",
+          "The trip starts in the Sacred Valley, lower than Cusco, so you acclimatize gradually.",
+          "Palcoyo sits at nearly 4,900 m, which is why it comes at the end, once you're acclimatized."
+        ]
+      }
+    },
+    {
+      id: "peru-a-la-mesa",
+      imagen: "experiencia-peru-a-la-mesa-01.jpg",
+      categoria: "viaje",
+      duracion: { es: "11 días / 10 noches", en: "11 days / 10 nights" },
+      grupo: { es: "Viaje privado", en: "Private journey" },
+      nombre: { es: "Perú a la Mesa", en: "Peru at the Table" },
+      ruta: {
+        es: "Lima · Cusco · San Blas · Moray · Valle Sagrado",
+        en: "Lima · Cusco · San Blas · Moray · Sacred Valley"
+      },
+      resumen: {
+        es: "Un recorrido por la cocina que puso al Perú en el mapa: de las mesas más buscadas de Lima a los cultivos de altura del Valle Sagrado.",
+        en: "A journey through the cuisine that put Peru on the map: from Lima's most sought-after tables to the high-altitude crops of the Sacred Valley."
+      },
+      descripcion: {
+        es: "La cocina peruana contada desde su origen: los mercados y las grandes mesas de Lima, las picanterías de Cusco y los cultivos de altura que lo sostienen todo.",
+        en: "Peruvian cuisine told from its source: the markets and great tables of Lima, the picanterías of Cusco and the high-altitude crops behind it all."
+      },
+      incluye: {
+        es: ["Guía privado", "Traslados", "Alojamiento", "Reservas en restaurantes"],
+        en: ["Private guide", "Transfers", "Accommodation", "Restaurant reservations"]
+      },
+      itinerario: {
+        es: [
+          ["Días 1 a 4 · Lima", "Mercados al amanecer, cebicherías de barrio, alta cocina y una tarde por Barranco."],
+          ["Días 5 a 7 · Cusco y San Blas", "Cocina cusqueña tradicional, picanterías y un taller con cocineros locales."],
+          ["Días 8 a 10 · Valle Sagrado y Moray", "Visita a productores, cultivos de papas y maíces nativos, y una pachamanca preparada en tierra."],
+          ["Día 11 · Regreso", "Traslado al aeropuerto y vuelo de retorno."]
+        ],
+        en: [
+          ["Days 1–4 · Lima", "Markets at dawn, neighborhood cebicherías, fine dining and an afternoon in Barranco."],
+          ["Days 5–7 · Cusco & San Blas", "Traditional Cusco cooking, picanterías and a workshop with local cooks."],
+          ["Days 8–10 · Sacred Valley & Moray", "Visits to producers, native potato and corn fields, and a pachamanca cooked in the earth."],
+          ["Day 11 · Departure", "Airport transfer and return flight."]
+        ]
+      },
+      consejos: {
+        es: [
+          "Los restaurantes más solicitados se reservan con semanas o meses de anticipación: cuanto antes confirmes fechas, mejor.",
+          "Avísanos con anticipación sobre alergias o restricciones alimentarias del grupo.",
+          "El viaje empieza en Lima, a nivel del mar, y sube a Cusco a mitad de camino: el primer día allí es de ritmo suave."
+        ],
+        en: [
+          "The most sought-after restaurants book up weeks or months ahead: the sooner you confirm dates, the better.",
+          "Let us know in advance about any allergies or dietary restrictions in the group.",
+          "The trip starts in Lima, at sea level, and climbs to Cusco midway: the first day there is kept light."
+        ]
+      }
+    },
+    {
+      id: "peru-en-familia",
+      imagen: "experiencia-peru-en-familia-01.jpg",
+      categoria: "viaje",
+      duracion: { es: "8 días / 7 noches", en: "8 days / 7 nights" },
+      grupo: { es: "Viaje privado", en: "Private journey" },
+      nombre: { es: "Perú en Familia", en: "Peru with the Family" },
+      ruta: {
+        es: "Lima · Cusco · Laguna Piuray · Machu Picchu · Huaynapicchu · Circuito Mágico del Agua",
+        en: "Lima · Cusco · Piuray Lake · Machu Picchu · Huaynapicchu · Magic Water Circuit"
+      },
+      resumen: {
+        es: "Un viaje pensado para que grandes y chicos lo disfruten por igual: kayak en la laguna Piuray, picnic entre montañas y Machu Picchu a un ritmo cómodo.",
+        en: "A trip designed for grown-ups and kids alike: kayaking on Piuray Lake, a picnic among the mountains and Machu Picchu at a comfortable pace."
+      },
+      descripcion: {
+        es: "Un itinerario con el ritmo de una familia: actividades al aire libre, trayectos cortos y tiempo para descansar, sin dejar fuera lo esencial del Perú.",
+        en: "An itinerary at a family's pace: outdoor activities, short transfers and time to rest, without leaving out the essentials of Peru."
+      },
+      incluye: {
+        es: ["Guía privado", "Traslados", "Alojamiento", "Entradas"],
+        en: ["Private guide", "Transfers", "Accommodation", "Entrance tickets"]
+      },
+      itinerario: {
+        es: [
+          ["Día 1 · Lima", "Llegada, traslado y primera tarde tranquila en la ciudad."],
+          ["Días 2 a 4 · Cusco y laguna Piuray", "Recorrido por Cusco pensado para niños, kayak en la laguna Piuray y picnic entre montañas."],
+          ["Días 5 y 6 · Machu Picchu", "Viaje en tren y visita guiada a la ciudadela. Subida al Huaynapicchu opcional, según la edad de los viajeros."],
+          ["Día 7 · Lima", "Regreso a Lima y noche en el Circuito Mágico del Agua."],
+          ["Día 8 · Regreso", "Traslado al aeropuerto y vuelo de retorno."]
+        ],
+        en: [
+          ["Day 1 · Lima", "Arrival, transfer and a relaxed first afternoon in the city."],
+          ["Days 2–4 · Cusco & Piuray Lake", "A kid-friendly tour of Cusco, kayaking on Piuray Lake and a picnic among the mountains."],
+          ["Days 5–6 · Machu Picchu", "Train journey and guided visit to the citadel. Optional Huaynapicchu climb, depending on the travelers' ages."],
+          ["Day 7 · Lima", "Return to Lima and an evening at the Magic Water Circuit."],
+          ["Day 8 · Departure", "Airport transfer and return flight."]
+        ]
+      },
+      consejos: {
+        es: [
+          "Lleva el pasaporte físico de cada viajero, incluidos los niños: es obligatorio para ingresar a Machu Picchu.",
+          "La subida al Huaynapicchu tiene restricción de edad y cupos limitados; la confirmamos según las edades del grupo.",
+          "El primer día en Cusco se deja libre de actividades exigentes para que todos se aclimaten."
+        ],
+        en: [
+          "Bring every traveler's physical passport, children included: it's required to enter Machu Picchu.",
+          "The Huaynapicchu climb has an age restriction and limited spaces; we confirm it based on the group's ages.",
+          "The first day in Cusco is kept free of demanding activities so everyone can acclimatize."
         ]
       }
     }
