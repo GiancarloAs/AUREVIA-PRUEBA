@@ -8,7 +8,9 @@ const AUREVIA_IMG_SEO = {
     "title": {
       "es": "Valle Sagrado de los Incas",
       "en": "Sacred Valley of the Incas"
-    }
+    },
+    "w": 1920,
+    "h": 1080
   },
   "destino-cusco-ciudad-01.jpg": {
     "alt": {
@@ -18,6 +20,28 @@ const AUREVIA_IMG_SEO = {
     "title": {
       "es": "Cusco Ciudad, Perú",
       "en": "Cusco City, Peru"
+    },
+    "w": 1000,
+    "h": 1250,
+    "caption": {
+      "es": "La Compañía de Jesús y los portales de la Plaza de Armas, con la luz dorada de la tarde.",
+      "en": "The Compañía de Jesús and the arcades of the Plaza de Armas in golden afternoon light."
+    }
+  },
+  "destino-cusco-ciudad-02.jpg": {
+    "alt": {
+      "es": "Iglesia de la Compañía de Jesús vista desde la Plaza de Armas de Cusco, bajo un cielo azul con nubes",
+      "en": "Church of the Compañía de Jesús seen from Cusco's Plaza de Armas, under a blue sky with clouds"
+    },
+    "title": {
+      "es": "Plaza de Armas de Cusco",
+      "en": "Cusco's Plaza de Armas"
+    },
+    "w": 1200,
+    "h": 800,
+    "caption": {
+      "es": "El corazón de la ciudad: la Compañía de Jesús vista desde la plaza, a plena luz del día.",
+      "en": "The heart of the city: the Compañía de Jesús seen from the square in full daylight."
     }
   },
   "destino-valle-sagrado-01.jpg": {
@@ -28,6 +52,12 @@ const AUREVIA_IMG_SEO = {
     "title": {
       "es": "Moray, Valle Sagrado de los Incas",
       "en": "Moray, Sacred Valley of the Incas"
+    },
+    "w": 1000,
+    "h": 1250,
+    "caption": {
+      "es": "Terrazas circulares que, se cree, sirvieron a los incas para ensayar cultivos a distintas alturas.",
+      "en": "Circular terraces believed to have let the Incas trial crops at different altitudes."
     }
   },
   "destino-valle-sagrado-02.jpg": {
@@ -38,6 +68,12 @@ const AUREVIA_IMG_SEO = {
     "title": {
       "es": "Ollantaytambo, Valle Sagrado",
       "en": "Ollantaytambo, Sacred Valley"
+    },
+    "w": 1000,
+    "h": 1250,
+    "caption": {
+      "es": "Uno de los pocos pueblos incas que sigue habitado, al pie del cerro Pinkuylluna.",
+      "en": "One of the few Inca towns still lived in, at the foot of Pinkuylluna hill."
     }
   },
   "destino-valle-sagrado-03.jpg": {
@@ -48,6 +84,12 @@ const AUREVIA_IMG_SEO = {
     "title": {
       "es": "Salineras de Maras, Valle Sagrado",
       "en": "Maras salt pans, Sacred Valley"
+    },
+    "w": 1000,
+    "h": 1250,
+    "caption": {
+      "es": "Miles de pozas de sal que las familias de Maras siguen trabajando a mano.",
+      "en": "Thousands of salt pans still worked by hand by the families of Maras."
     }
   },
   "destino-valle-sagrado-04.jpg": {
@@ -58,6 +100,12 @@ const AUREVIA_IMG_SEO = {
     "title": {
       "es": "Andenes de Ollantaytambo",
       "en": "Ollantaytambo terraces"
+    },
+    "w": 1000,
+    "h": 1250,
+    "caption": {
+      "es": "Andenes y muros de piedra que suben por la ladera de la fortaleza.",
+      "en": "Terraces and stone walls climbing the hillside of the fortress."
     }
   },
   "destino-machu-picchu-01.jpg": {
@@ -68,6 +116,12 @@ const AUREVIA_IMG_SEO = {
     "title": {
       "es": "Machu Picchu",
       "en": "Machu Picchu"
+    },
+    "w": 1000,
+    "h": 1250,
+    "caption": {
+      "es": "La ciudadela con la primera luz de la mañana y el Huayna Picchu al fondo.",
+      "en": "The citadel in the first morning light, with Huayna Picchu behind."
     }
   },
   "destino-montana-7-colores-01.jpg": {
@@ -78,6 +132,12 @@ const AUREVIA_IMG_SEO = {
     "title": {
       "es": "Montaña de 7 Colores (Vinicunca)",
       "en": "Rainbow Mountain (Vinicunca)"
+    },
+    "w": 1000,
+    "h": 1250,
+    "caption": {
+      "es": "Las franjas minerales de Vinicunca, a más de 5,000 metros de altura.",
+      "en": "The mineral stripes of Vinicunca, more than 5,000 meters above sea level."
     }
   },
   "destino-laguna-humantay-01.jpg": {
@@ -88,6 +148,12 @@ const AUREVIA_IMG_SEO = {
     "title": {
       "es": "Laguna Humantay",
       "en": "Humantay Lake"
+    },
+    "w": 1000,
+    "h": 1250,
+    "caption": {
+      "es": "Aguas turquesa al pie del glaciar, tras una caminata corta y empinada.",
+      "en": "Turquoise water at the foot of the glacier, after a short, steep hike."
     }
   },
   "destino-siete-lagunas-01.jpg": {
@@ -98,6 +164,12 @@ const AUREVIA_IMG_SEO = {
     "title": {
       "es": "Siete Lagunas (Ausangate)",
       "en": "Seven Lakes (Ausangate)"
+    },
+    "w": 1000,
+    "h": 1250,
+    "caption": {
+      "es": "Lagunas glaciares en una ruta remota, a la sombra del Ausangate.",
+      "en": "Glacial lakes on a remote route in the shadow of Ausangate."
     }
   },
   "destino-camino-inka-01.jpg": {
@@ -108,6 +180,12 @@ const AUREVIA_IMG_SEO = {
     "title": {
       "es": "Camino Inka a Machu Picchu",
       "en": "Inca Trail to Machu Picchu"
+    },
+    "w": 1000,
+    "h": 1250,
+    "caption": {
+      "es": "Un alto en el camino frente a los nevados, antes de seguir hacia Machu Picchu.",
+      "en": "A pause on the trail facing the snow peaks, before pressing on to Machu Picchu."
     }
   },
   "experiencia-boda-andina-01.jpg": {
@@ -118,7 +196,9 @@ const AUREVIA_IMG_SEO = {
     "title": {
       "es": "Boda Andina",
       "en": "Andean Wedding"
-    }
+    },
+    "w": 1000,
+    "h": 1250
   },
   "experiencia-huerto-mesa-01.jpg": {
     "alt": {
@@ -128,6 +208,12 @@ const AUREVIA_IMG_SEO = {
     "title": {
       "es": "Del Huerto a tu Mesa",
       "en": "From Garden to Table"
+    },
+    "w": 1000,
+    "h": 1250,
+    "caption": {
+      "es": "Papas nativas, maíces y ajíes recién cosechados, listos para la cocina.",
+      "en": "Freshly harvested native potatoes, corn and chilies, ready for the kitchen."
     }
   },
   "experiencia-desayuno-huaynapicchu-01.jpg": {
@@ -138,7 +224,9 @@ const AUREVIA_IMG_SEO = {
     "title": {
       "es": "Desayuno con vista al Huaynapicchu",
       "en": "Breakfast with a view of Huayna Picchu"
-    }
+    },
+    "w": 1000,
+    "h": 1250
   },
   "experiencia-luna-de-miel-01.jpg": {
     "alt": {
@@ -148,7 +236,9 @@ const AUREVIA_IMG_SEO = {
     "title": {
       "es": "Luna de miel en los Andes",
       "en": "Honeymoon in the Andes"
-    }
+    },
+    "w": 1000,
+    "h": 1250
   },
   "experiencia-peru-a-la-mesa-01.jpg": {
     "alt": {
@@ -158,7 +248,9 @@ const AUREVIA_IMG_SEO = {
     "title": {
       "es": "Perú a la mesa",
       "en": "Peru at the Table"
-    }
+    },
+    "w": 1000,
+    "h": 1250
   },
   "experiencia-peru-en-familia-01.jpg": {
     "alt": {
@@ -168,7 +260,9 @@ const AUREVIA_IMG_SEO = {
     "title": {
       "es": "Perú en familia",
       "en": "Peru with the Family"
-    }
+    },
+    "w": 1000,
+    "h": 1250
   },
   "aliado-hotel-01.jpg": {
     "alt": {
@@ -178,7 +272,9 @@ const AUREVIA_IMG_SEO = {
     "title": {
       "es": "Palacio Nazarenas, Cusco",
       "en": "Palacio Nazarenas, Cusco"
-    }
+    },
+    "w": 600,
+    "h": 600
   },
   "aliado-hotel-02.jpg": {
     "alt": {
@@ -188,7 +284,9 @@ const AUREVIA_IMG_SEO = {
     "title": {
       "es": "Inkaterra La Casona, Cusco",
       "en": "Inkaterra La Casona, Cusco"
-    }
+    },
+    "w": 600,
+    "h": 600
   },
   "aliado-hotel-03.jpg": {
     "alt": {
@@ -198,7 +296,9 @@ const AUREVIA_IMG_SEO = {
     "title": {
       "es": "Sumaq Machu Picchu Hotel",
       "en": "Sumaq Machu Picchu Hotel"
-    }
+    },
+    "w": 600,
+    "h": 600
   },
   "aliado-tren-01.jpg": {
     "alt": {
@@ -208,7 +308,9 @@ const AUREVIA_IMG_SEO = {
     "title": {
       "es": "Belmond Hiram Bingham",
       "en": "Belmond Hiram Bingham"
-    }
+    },
+    "w": 600,
+    "h": 600
   },
   "aliado-tren-02.jpg": {
     "alt": {
@@ -218,7 +320,9 @@ const AUREVIA_IMG_SEO = {
     "title": {
       "es": "PeruRail Vistadome",
       "en": "PeruRail Vistadome"
-    }
+    },
+    "w": 600,
+    "h": 600
   },
   "aliado-tren-03.jpg": {
     "alt": {
@@ -228,7 +332,9 @@ const AUREVIA_IMG_SEO = {
     "title": {
       "es": "Inca Rail Private",
       "en": "Inca Rail Private"
-    }
+    },
+    "w": 600,
+    "h": 600
   },
   "celebracion-aniversarios-01.jpg": {
     "alt": {
@@ -238,7 +344,9 @@ const AUREVIA_IMG_SEO = {
     "title": {
       "es": "Aniversarios",
       "en": "Anniversaries"
-    }
+    },
+    "w": 1600,
+    "h": 900
   },
   "celebracion-retiros-empresa-01.jpg": {
     "alt": {
@@ -248,7 +356,9 @@ const AUREVIA_IMG_SEO = {
     "title": {
       "es": "Retiros de empresa",
       "en": "Company retreats"
-    }
+    },
+    "w": 1600,
+    "h": 900
   },
   "celebracion-familiares-01.jpg": {
     "alt": {
@@ -258,7 +368,9 @@ const AUREVIA_IMG_SEO = {
     "title": {
       "es": "Celebraciones familiares",
       "en": "Family celebrations"
-    }
+    },
+    "w": 1600,
+    "h": 900
   },
   "nosotros-equipo-01.jpg": {
     "alt": {
@@ -268,7 +380,9 @@ const AUREVIA_IMG_SEO = {
     "title": {
       "es": "Guía de AUREVIA con viajero",
       "en": "AUREVIA guide with a traveler"
-    }
+    },
+    "w": 1000,
+    "h": 1250
   },
   "nosotros-fundadores-01.jpg": {
     "alt": {
@@ -278,6 +392,8 @@ const AUREVIA_IMG_SEO = {
     "title": {
       "es": "Equipo AUREVIA planificando un itinerario",
       "en": "AUREVIA team planning an itinerary"
-    }
+    },
+    "w": 1000,
+    "h": 1250
   }
 };

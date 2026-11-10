@@ -329,6 +329,7 @@ function renderFilteredGrid(containerId, kind, list){
     const filtered = cat === "all" ? list : list.filter(i => i.categoria === cat);
     el.innerHTML = filtered.map(item => cardTemplate(item, kind)).join("");
     bindModalTriggers();
+    markReveal();
   };
 
   if (filterRow){
@@ -397,6 +398,7 @@ function renderAliadosGrid(){
     const cat = ACTIVE_FILTERS["aliados-grid"];
     const filtered = cat === "all" ? list : list.filter(i => i.categoria === cat);
     el.innerHTML = filtered.map(allyCardTemplate).join("");
+    markReveal();
   };
 
   if (filterRow){
@@ -424,40 +426,80 @@ function findItem(kind, id){
   return list.find(i => i.id === id);
 }
 
-/* Fotos de la ficha: la principal + las de "galeria" (opcional en data.js) */
-const MODAL_STATE = { kind: null, id: null, fotos: [], idx: 0, opener: null };
+/* La ficha: titular arriba, carrusel de fotos (cada una con su descripción) y el texto debajo */
+const MODAL_STATE = { kind: null, id: null, opener: null };
+const REDUCE_MOTION = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-function showModalPhoto(i){
-  const overlay = document.getElementById("detail-modal");
-  const item = findItem(MODAL_STATE.kind, MODAL_STATE.id);
-  const n = MODAL_STATE.fotos.length;
-  if (!overlay || !item || !n) return;
-  MODAL_STATE.idx = (i + n) % n;
-  const file = MODAL_STATE.fotos[MODAL_STATE.idx];
-  const img = overlay.querySelector(".modal-media img");
-  img.src = `img/${file}`;
-  img.alt = imgAlt(file, pick(item.nombre));
-  const count = overlay.querySelector(".modal-count");
-  if (count) count.textContent = `${MODAL_STATE.idx + 1} / ${n}`;
+function imgMeta(file){
+  return (typeof AUREVIA_IMG_SEO !== "undefined" && AUREVIA_IMG_SEO[file]) || null;
+}
+/* Fotos del carrusel: la de la tarjeta + las de "galeria". Si la de la tarjeta es un
+   placeholder (portadaProvisional), se muestran solo las de la galería. */
+function modalPhotos(item){
+  const extra = item.galeria || [];
+  return (item.portadaProvisional && extra.length) ? extra : [item.imagen, ...extra];
+}
+function galleryTemplate(item){
+  return modalPhotos(item).map((file, i) => {
+    const m = imgMeta(file);
+    const w = (m && m.w) || 1000, h = (m && m.h) || 1250;
+    const titulo = m ? pick(m.title) : pick(item.nombre);
+    const pie = m && m.caption ? pick(m.caption) : "";
+    return `
+    <figure class="mg-slide" style="--ar:${(w / h).toFixed(4)};--i:${i}">
+      <img src="img/${file}" alt="${imgAlt(file, pick(item.nombre))}" width="${w}" height="${h}" decoding="async">
+      <figcaption><strong>${titulo}</strong>${pie ? `<span>${pie}</span>` : ""}</figcaption>
+    </figure>`;
+  }).join("");
+}
+function galleryGo(dir){
+  const track = document.querySelector("#detail-modal .mg-track");
+  const slides = track ? [...track.children] : [];
+  if (!slides.length) return;
+  const pad = parseFloat(getComputedStyle(track).paddingLeft) || 0;
+  let i = slides.findIndex(s => s.offsetLeft - pad >= track.scrollLeft - 2);
+  if (i < 0) i = slides.length - 1;
+  const target = slides[Math.max(0, Math.min(slides.length - 1, i + dir))];
+  track.scrollTo({ left: target.offsetLeft - pad, behavior: REDUCE_MOTION ? "auto" : "smooth" });
+}
+function updateGalleryNav(){
+  const box = document.querySelector("#detail-modal .modal-gallery");
+  if (!box) return;
+  const track = box.querySelector(".mg-track");
+  const max = track.scrollWidth - track.clientWidth;
+  box.classList.toggle("is-scrollable", max > 4);
+  box.querySelector(".mg-prev").disabled = track.scrollLeft <= 2;
+  box.querySelector(".mg-next").disabled = track.scrollLeft >= max - 2;
 }
 
-function fillModal(){
+function fillModal(keepScroll){
   const { kind, id } = MODAL_STATE;
   const item = findItem(kind, id);
   const overlay = document.getElementById("detail-modal");
   if (!item || !overlay) return;
+  const q = sel => overlay.querySelector(sel);
   const facts = kind === "destino"
     ? `<li>${ICONS.clock}${pick(item.duracion)}</li><li>${ICONS.mountain}${t("altitud_label")}: ${item.altitud}</li>`
     : `<li>${ICONS.clock}${pick(item.duracion)}</li><li>${ICONS.users}${pick(item.grupo)}</li>`;
 
-  overlay.querySelector(".modal-body .card-tag").textContent = categoryLabel(item.categoria);
-  overlay.querySelector(".modal-body h3").textContent = pick(item.nombre);
-  overlay.querySelector(".modal-body > p").textContent = pick(item.descripcion);
-  overlay.querySelector(".modal-facts").innerHTML = facts
-    + (item.ruta ? `<li>${ICONS.pin}${pick(item.ruta)}</li>` : "");
+  q(".modal-head .card-tag").textContent = categoryLabel(item.categoria);
+  q(".modal-head h3").textContent = pick(item.nombre);
+  q(".modal-desc").textContent = pick(item.descripcion);
+  q(".modal-facts").innerHTML = facts + (item.ruta ? `<li>${ICONS.pin}${pick(item.ruta)}</li>` : "");
+
+  // Carrusel de fotos
+  const track = q(".mg-track");
+  const x = keepScroll ? track.scrollLeft : 0;
+  track.innerHTML = galleryTemplate(item);
+  track.classList.toggle("is-single", track.children.length === 1);
+  track.scrollLeft = x;
+  track.querySelectorAll("img").forEach(img => img.addEventListener("load", updateGalleryNav, { once: true }));
+  q(".mg-prev").setAttribute("aria-label", t("aria_foto_anterior"));
+  q(".mg-next").setAttribute("aria-label", t("aria_foto_siguiente"));
+  q(".modal-close").setAttribute("aria-label", t("aria_cerrar"));
 
   // Servicios incluidos (opcional)
-  const incWrap = overlay.querySelector(".modal-includes");
+  const incWrap = q(".modal-includes");
   const inc = pick(item.incluye);
   if (Array.isArray(inc) && inc.length){
     incWrap.hidden = false;
@@ -468,7 +510,7 @@ function fillModal(){
   }
 
   // Recorrido por etapas (opcional)
-  const routeWrap = overlay.querySelector(".modal-route");
+  const routeWrap = q(".modal-route");
   const steps = pick(item.itinerario);
   if (Array.isArray(steps) && steps.length){
     routeWrap.hidden = false;
@@ -479,24 +521,20 @@ function fillModal(){
     routeWrap.hidden = true;
   }
 
-  const tipsWrap = overlay.querySelector(".modal-tips");
+  const tipsWrap = q(".modal-tips");
   const tips = pick(item.consejos);
   if (Array.isArray(tips) && tips.length){
-    tipsWrap.style.display = "";
+    tipsWrap.hidden = false;
     tipsWrap.querySelector("h4").textContent = t("modal_tips_heading");
     tipsWrap.querySelector("ul").innerHTML = tips.map(tip => `<li>${ICONS.tip}<span>${tip}</span></li>`).join("");
   } else {
-    tipsWrap.style.display = "none";
+    tipsWrap.hidden = true;
   }
 
-  const cta = overlay.querySelector(".modal-body .btn");
+  const cta = q(".modal-side .btn");
   cta.href = `index.html?tipo=${kind}&item=${item.id}#contacto`;
   cta.textContent = t("reservar_esto");
-
-  overlay.querySelector(".modal-prev").setAttribute("aria-label", t("aria_foto_anterior"));
-  overlay.querySelector(".modal-next").setAttribute("aria-label", t("aria_foto_siguiente"));
-  overlay.querySelector(".modal-media").classList.toggle("has-gallery", MODAL_STATE.fotos.length > 1);
-  showModalPhoto(MODAL_STATE.idx);
+  updateGalleryNav();
 }
 
 function openModal(kind, id){
@@ -505,14 +543,13 @@ function openModal(kind, id){
   if (!item || !overlay) return;
   MODAL_STATE.kind = kind;
   MODAL_STATE.id = id;
-  MODAL_STATE.fotos = [item.imagen, ...(item.galeria || [])];
-  MODAL_STATE.idx = 0;
   MODAL_STATE.opener = document.activeElement;
-  fillModal();
+  fillModal(false);
   overlay.classList.add("is-open");
   overlay.querySelector(".modal").scrollTop = 0;
   document.body.style.overflow = "hidden";
   overlay.querySelector(".modal-close").focus();
+  updateGalleryNav();
 }
 
 function closeModal(){
@@ -538,39 +575,52 @@ function initModal(){
   const overlay = document.getElementById("detail-modal");
   if (!overlay) return;
   const modal = overlay.querySelector(".modal");
-  const media = overlay.querySelector(".modal-media");
-  const tips = overlay.querySelector(".modal-tips");
 
-  // Accesibilidad: se anuncia como diálogo y el título de la ficha le da nombre
+  // El marcado de la ficha vive aquí, en un solo lugar, y no repetido en cada .html
   modal.setAttribute("role", "dialog");
   modal.setAttribute("aria-modal", "true");
-  overlay.querySelector(".modal-body h3").id = "detail-modal-title";
   modal.setAttribute("aria-labelledby", "detail-modal-title");
+  modal.innerHTML = `
+    <div class="modal-top"><button type="button" class="modal-close">${ICONS.close}</button></div>
+    <header class="modal-head">
+      <span class="card-tag"></span>
+      <h3 id="detail-modal-title"></h3>
+    </header>
+    <div class="modal-gallery">
+      <div class="mg-track" tabindex="0"></div>
+      <button type="button" class="mg-btn mg-prev">${ICONS.chevronLeft}</button>
+      <button type="button" class="mg-btn mg-next">${ICONS.chevronRight}</button>
+    </div>
+    <div class="modal-body">
+      <div class="modal-main">
+        <p class="modal-desc"></p>
+        <div class="modal-route" hidden><h4></h4><ol></ol><p></p></div>
+        <div class="modal-tips"><h4></h4><ul></ul></div>
+      </div>
+      <aside class="modal-side">
+        <ul class="modal-facts"></ul>
+        <ul class="modal-includes" hidden></ul>
+        <a href="#" class="btn"></a>
+      </aside>
+    </div>`;
 
-  // Bloques opcionales (galería, incluye, recorrido): se crean aquí para no repetir
-  // el marcado en cada .html que contiene la ficha
-  media.insertAdjacentHTML("beforeend", `
-    <button type="button" class="modal-nav modal-prev">${ICONS.chevronLeft}</button>
-    <button type="button" class="modal-nav modal-next">${ICONS.chevronRight}</button>
-    <span class="modal-count" aria-hidden="true"></span>`);
-  tips.insertAdjacentHTML("beforebegin", `
-    <ul class="modal-includes" hidden></ul>
-    <div class="modal-route" hidden><h4></h4><ol></ol><p></p></div>`);
-  media.querySelector(".modal-prev").addEventListener("click", () => showModalPhoto(MODAL_STATE.idx - 1));
-  media.querySelector(".modal-next").addEventListener("click", () => showModalPhoto(MODAL_STATE.idx + 1));
+  const track = modal.querySelector(".mg-track");
+  modal.querySelector(".mg-prev").addEventListener("click", () => galleryGo(-1));
+  modal.querySelector(".mg-next").addEventListener("click", () => galleryGo(1));
+  track.addEventListener("scroll", () => { clearTimeout(track._t); track._t = setTimeout(updateGalleryNav, 80); }, { passive: true });
+  window.addEventListener("resize", updateGalleryNav);
 
-  overlay.querySelector(".modal-close").innerHTML = ICONS.close;
   overlay.addEventListener("click", (e) => { if (e.target === overlay) closeModal(); });
-  overlay.querySelector(".modal-close").addEventListener("click", closeModal);
-  overlay.querySelector(".modal-body .btn").addEventListener("click", closeModal);
+  modal.querySelector(".modal-close").addEventListener("click", closeModal);
+  modal.querySelector(".modal-side .btn").addEventListener("click", closeModal);
   document.addEventListener("keydown", (e) => {
     if (!overlay.classList.contains("is-open")) return;
     if (e.key === "Escape") closeModal();
-    if (MODAL_STATE.fotos.length > 1 && e.key === "ArrowLeft") showModalPhoto(MODAL_STATE.idx - 1);
-    if (MODAL_STATE.fotos.length > 1 && e.key === "ArrowRight") showModalPhoto(MODAL_STATE.idx + 1);
+    if (e.key === "ArrowLeft") galleryGo(-1);
+    if (e.key === "ArrowRight") galleryGo(1);
     // el foco no sale de la ficha mientras está abierta
     if (e.key === "Tab"){
-      const f = [...modal.querySelectorAll("button, a[href]")].filter(el => el.offsetParent !== null);
+      const f = [...modal.querySelectorAll("button:not(:disabled), a[href], [tabindex='0']")].filter(el => el.offsetParent !== null);
       const first = f[0], last = f[f.length - 1];
       if (e.shiftKey && document.activeElement === first){ e.preventDefault(); last.focus(); }
       else if (!e.shiftKey && document.activeElement === last){ e.preventDefault(); first.focus(); }
@@ -578,8 +628,41 @@ function initModal(){
   });
   // si se cambia de idioma con la ficha abierta, se repinta en el nuevo idioma
   document.addEventListener("aurevia:lang-changed", () => {
-    if (overlay.classList.contains("is-open")) fillModal();
+    if (overlay.classList.contains("is-open")) fillModal(true);
   });
+}
+
+/* ---------- 5a. Animaciones de entrada al hacer scroll ----------
+   Los elementos aparecen con un desplazamiento suave la primera vez que entran en pantalla.
+   Sin JavaScript o con "reducir movimiento" activado, todo se ve normal desde el inicio. */
+const REVEAL_SEL = ".hero-content > *, .page-hero .container > *, .section-head, .center-head, .card, .ally-card, .ally, .split > *, .value-item, .contact-info, #contact-form, .celebration-carousel, .footer-grid > *";
+let REVEAL_IO = null;
+let REVEAL_INSTANT = false;
+
+function markReveal(){
+  if (!REVEAL_IO) return;
+  document.querySelectorAll(REVEAL_SEL).forEach(el => {
+    if (el.classList.contains("reveal")) return;
+    el.classList.add("reveal");
+    // contenido repintado (p. ej. al cambiar de idioma): aparece sin volver a animarse
+    if (REVEAL_INSTANT){ el.classList.add("is-in", "no-anim"); return; }
+    const sibs = [...el.parentElement.children].filter(c => c.matches(REVEAL_SEL));
+    const n = sibs.indexOf(el);
+    const paso = el.matches(".card, .ally-card") ? n % 3 : Math.min(n, 5);
+    el.style.setProperty("--d", (paso * 90) + "ms");
+    REVEAL_IO.observe(el);
+  });
+}
+function initReveal(){
+  if (REDUCE_MOTION || !("IntersectionObserver" in window)) return;
+  REVEAL_IO = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      e.target.classList.add("is-in");
+      REVEAL_IO.unobserve(e.target);
+    });
+  }, { rootMargin: "0px 0px -6% 0px", threshold: 0.06 });
+  markReveal();
 }
 
 /* ---------- 5b. Cifras de "Sobre nosotros" calculadas desde data.js ---------- */
@@ -766,7 +849,11 @@ document.addEventListener("DOMContentLoaded", () => {
   initFooterYear();
   initWhatsappFloat();
   initCelebrationCarousel();
+  initReveal();
 });
 document.addEventListener("aurevia:lang-changed", () => {
+  REVEAL_INSTANT = true;
   renderAllGrids();
+  markReveal();
+  REVEAL_INSTANT = false;
 });

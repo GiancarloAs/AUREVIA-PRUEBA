@@ -10,8 +10,11 @@
      - el selector del formulario de contacto
 
    Campos opcionales (si no se ponen, simplemente no se muestran):
-     - galeria:    ["archivo-02.jpg", ...]  fotos adicionales; en la ficha
-                   aparecen flechas para pasar de una a otra
+     - galeria:    ["archivo-02.jpg", ...]  fotos adicionales del carrusel de la ficha.
+                   El título y la descripción de cada foto salen de
+                   tools/imagenes-seo.json (campos "title" y "caption")
+     - portadaProvisional: true  la imagen de la tarjeta es un placeholder:
+                   el carrusel muestra solo las fotos de "galeria"
      - ruta:       { es, en }  lugares del recorrido (tarjeta y ficha)
      - incluye:    { es:[...], en:[...] }  servicios incluidos (ficha)
      - itinerario: { es:[[etapa, texto], ...], en:[...] }  recorrido por etapas (ficha)
@@ -23,6 +26,7 @@ const AUREVIA_DATA = {
     {
       id: "cusco-ciudad",
       imagen: "destino-cusco-ciudad-01.jpg",
+      galeria: ["destino-cusco-ciudad-02.jpg"],
       categoria: "ciudad",
       duracion: { es: "1–2 días", en: "1–2 days" },
       altitud: "3,399 m s.n.m.",
@@ -316,6 +320,8 @@ const AUREVIA_DATA = {
     {
       id: "luna-de-miel-andes",
       imagen: "experiencia-luna-de-miel-01.jpg",
+      portadaProvisional: true,
+      galeria: ["destino-valle-sagrado-01.jpg", "destino-valle-sagrado-03.jpg", "destino-machu-picchu-01.jpg", "destino-cusco-ciudad-01.jpg"],
       categoria: "viaje",
       duracion: { es: "10 días / 9 noches", en: "10 days / 9 nights" },
       grupo: { es: "Viaje privado", en: "Private journey" },
@@ -368,6 +374,8 @@ const AUREVIA_DATA = {
     {
       id: "peru-a-la-mesa",
       imagen: "experiencia-peru-a-la-mesa-01.jpg",
+      portadaProvisional: true,
+      galeria: ["experiencia-huerto-mesa-01.jpg", "destino-valle-sagrado-01.jpg", "destino-cusco-ciudad-02.jpg"],
       categoria: "viaje",
       duracion: { es: "11 días / 10 noches", en: "11 days / 10 nights" },
       grupo: { es: "Viaje privado", en: "Private journey" },
@@ -418,6 +426,8 @@ const AUREVIA_DATA = {
     {
       id: "peru-en-familia",
       imagen: "experiencia-peru-en-familia-01.jpg",
+      portadaProvisional: true,
+      galeria: ["destino-cusco-ciudad-02.jpg", "destino-machu-picchu-01.jpg", "destino-valle-sagrado-02.jpg"],
       categoria: "viaje",
       duracion: { es: "8 días / 7 noches", en: "8 days / 7 nights" },
       grupo: { es: "Viaje privado", en: "Private journey" },

@@ -37,6 +37,7 @@
   --radius: 2px; /* la marca es angular — sin esquinas redondeadas */
 
   --ease: cubic-bezier(.4,0,.2,1);
+  --ease-out: cubic-bezier(.16,.8,.24,1); /* entradas: arranca rápido y frena suave */
 }
 
 *,*::before,*::after{ box-sizing:border-box; }
@@ -337,69 +338,132 @@ section{ padding-block:clamp(3.5rem, 7vw, 6.5rem); position:relative; }
   color:rgba(255,255,255,.5); flex-wrap:wrap; gap:.6rem;
 }
 
-/* ---------- Modal (ficha de destino / experiencia) ---------- */
+/* ---------- Ficha de destino / experiencia ----------
+   Titular arriba, carrusel de fotos con su descripción y el texto debajo. */
 .modal-overlay{
   position:fixed; inset:0; background:rgba(0,0,0,.72); z-index:100;
-  display:none; align-items:center; justify-content:center; padding:1.5rem;
+  display:flex; align-items:center; justify-content:center; padding:1.5rem;
+  visibility:hidden; opacity:0;
+  transition:opacity .35s var(--ease), visibility 0s linear .35s;
 }
-.modal-overlay.is-open{ display:flex; }
+.modal-overlay.is-open{ visibility:visible; opacity:1; transition:opacity .35s var(--ease), visibility 0s; }
 .modal{
-  background:var(--c-white); width:min(920px, 100%); max-height:88vh; overflow-y:auto;
-  display:grid; grid-template-columns:1fr 1fr; position:relative;
+  --mp:2.4rem; /* margen interior de la ficha */
+  background:var(--c-white); width:min(1000px, 100%); max-height:90vh; overflow-y:auto;
+  position:relative; overscroll-behavior:contain;
+  transform:translateY(28px); opacity:0;
+  transition:transform .6s var(--ease-out), opacity .4s var(--ease);
 }
+.modal-overlay.is-open .modal{ transform:none; opacity:1; }
+[hidden]{ display:none !important; }
+
+.modal-top{ position:sticky; top:0; z-index:3; height:0; display:flex; justify-content:flex-end; }
 .modal-close{
-  position:absolute; top:.9rem; right:.9rem; width:36px; height:36px; background:var(--c-white);
-  border:1px solid var(--c-line); display:flex; align-items:center; justify-content:center; z-index:2;
+  margin:.9rem .9rem 0 0; width:38px; height:38px; flex:none; background:var(--c-white);
+  border:1px solid var(--c-line); display:flex; align-items:center; justify-content:center;
+  transition:background .2s var(--ease), color .2s var(--ease), border-color .2s var(--ease);
 }
 .modal-close svg{ width:16px; height:16px; }
-.modal-media{ position:relative; min-height:260px; background:var(--c-ivory-2); }
-.modal-media img{ width:100%; height:100%; object-fit:cover; position:absolute; inset:0; }
-.modal-body{ padding:2.2rem; display:flex; flex-direction:column; }
-.modal-body .card-tag{ position:static; align-self:flex-start; background:var(--c-ivory); margin-bottom:1rem; }
-.modal-body h3{ font-size:1.6rem; margin-bottom:.8rem; }
-.modal-facts{ display:grid; gap:.6rem; margin:1.2rem 0; font-size:.86rem; }
+.modal-close:hover{ background:var(--c-black); border-color:var(--c-black); color:var(--c-white); }
+
+.modal-head{ padding:var(--mp) calc(var(--mp) + 3rem) 1.5rem var(--mp); }
+.modal-head .card-tag{ position:static; display:inline-block; background:var(--c-ivory); margin-bottom:.9rem; }
+.modal-head h3{ font-size:clamp(1.7rem, 1.2rem + 1.8vw, 2.5rem); font-weight:300; }
+
+/* Carrusel: cada foto conserva su proporción (--ar) a una altura común (--gh) */
+.modal-gallery{ position:relative; --gh:clamp(230px, 44vh, 430px); }
+.mg-track{
+  position:relative; display:flex; gap:.9rem; overflow-x:auto;
+  padding-inline:var(--mp); scroll-padding-inline:var(--mp);
+  scroll-snap-type:x proximity; overscroll-behavior-x:contain;
+  -webkit-overflow-scrolling:touch; scrollbar-width:none;
+}
+.mg-track::-webkit-scrollbar{ display:none; }
+.mg-track::after{ content:""; flex:none; width:calc(var(--mp) - .9rem); }
+.mg-slide{
+  flex:none; margin:0; scroll-snap-align:start;
+  width:min(calc(var(--gh) * var(--ar)), 80vw);
+}
+.mg-slide img{ width:100%; height:var(--gh); object-fit:cover; background:var(--c-ivory-2); }
+.mg-slide figcaption{ padding-top:.75rem; font-size:.8rem; line-height:1.5; color:#555; }
+.mg-slide figcaption strong{
+  display:block; font-family:var(--f-heading); font-weight:400; font-size:1rem;
+  letter-spacing:.01em; color:var(--c-black); margin-bottom:.1rem;
+}
+.mg-track.is-single .mg-slide{ flex:1; width:auto; }
+.mg-track.is-single::after{ display:none; }
+.modal-overlay.is-open .mg-slide{
+  animation:reveal-up .8s var(--ease-out) backwards; animation-delay:calc(var(--i) * 90ms + 180ms);
+}
+.mg-btn{
+  display:none; position:absolute; z-index:1; top:calc(var(--gh) / 2); transform:translateY(-50%);
+  width:42px; height:42px; align-items:center; justify-content:center;
+  background:rgba(255,255,255,.94); border:1px solid var(--c-line); color:var(--c-black);
+  transition:background .2s var(--ease), color .2s var(--ease), opacity .25s var(--ease);
+}
+.modal-gallery.is-scrollable .mg-btn{ display:flex; }
+.mg-btn svg{ width:18px; height:18px; }
+.mg-btn:hover{ background:var(--c-black); border-color:var(--c-black); color:var(--c-white); }
+.mg-btn:disabled{ opacity:0; pointer-events:none; }
+.mg-prev{ left:.9rem; } .mg-next{ right:.9rem; }
+
+.modal-body{
+  display:grid; grid-template-columns:1.55fr 1fr; gap:2.2rem 3rem; align-items:start;
+  padding:2rem var(--mp) var(--mp);
+}
+.modal-desc{ font-size:1.08rem; line-height:1.65; max-width:none; margin:0; }
+.modal-side{ border-top:1px solid var(--c-black); padding-top:1.2rem; }
+.modal-facts{ display:grid; gap:.7rem; font-size:.86rem; }
 .modal-facts li{ display:flex; gap:.6rem; align-items:flex-start; }
-.modal-facts svg{ width:16px; height:16px; color:var(--c-blue); margin-top:.1rem; flex:none; }
-.modal-body .btn{ align-self:flex-start; margin-top:1rem; }
-[hidden]{ display:none !important; }
-/* Galería de la ficha (campo opcional "galeria" en data.js) */
-.modal-nav, .modal-count{ display:none; }
-.modal-media.has-gallery .modal-nav{
-  display:flex; align-items:center; justify-content:center; position:absolute; z-index:1;
-  top:50%; transform:translateY(-50%); width:40px; height:40px;
-  background:rgba(255,255,255,.92); border:1px solid var(--c-line); color:var(--c-black);
+.modal-facts svg{ width:16px; height:16px; color:var(--c-blue); margin-top:.15rem; flex:none; }
+.modal-includes{
+  display:grid; gap:.5rem; margin-top:1.2rem; padding-top:1.2rem; border-top:1px solid var(--c-line); font-size:.86rem;
 }
-.modal-nav svg{ width:18px; height:18px; }
-.modal-nav:hover{ background:var(--c-black); border-color:var(--c-black); color:var(--c-white); }
-.modal-prev{ left:.75rem; } .modal-next{ right:.75rem; }
-.modal-media.has-gallery .modal-count{
-  display:block; position:absolute; z-index:1; left:.75rem; bottom:.75rem;
-  background:var(--c-white); padding:.25rem .55rem; font-size:.7rem; letter-spacing:.08em;
-}
-/* Servicios incluidos y recorrido por etapas (viajes completos) */
-.modal-includes{ display:flex; flex-wrap:wrap; gap:.5rem 1.1rem; margin-bottom:.4rem; font-size:.84rem; }
-.modal-includes li{ display:flex; align-items:center; gap:.4rem; }
-.modal-includes svg{ width:14px; height:14px; color:var(--c-olive); flex:none; }
-.modal-route{ margin-top:1.2rem; }
-.modal-route h4{
+.modal-includes li{ display:flex; align-items:center; gap:.6rem; }
+.modal-includes svg{ width:16px; height:16px; color:var(--c-olive); flex:none; }
+.modal-side .btn{ margin-top:1.6rem; width:100%; justify-content:center; }
+
+.modal-route{ margin-top:1.8rem; }
+.modal-route h4, .modal-tips h4{
   font-family:var(--f-body); font-size:.78rem; letter-spacing:.06em; text-transform:uppercase;
-  color:var(--c-blue); margin:0 0 .3rem;
+  color:var(--c-blue); margin:0 0 .4rem;
 }
 .modal-route ol{ list-style:none; margin:0; padding:0; }
-.modal-route li{ padding:.8rem 0; border-bottom:1px solid var(--c-line); font-size:.86rem; color:#333; }
+.modal-route li{ padding:.85rem 0; border-bottom:1px solid var(--c-line); font-size:.88rem; color:#333; }
 .modal-route li strong{ display:block; font-weight:600; color:var(--c-black); margin-bottom:.15rem; }
-.modal-route p{ font-size:.78rem; color:#666; margin:.8rem 0 0; }
+.modal-route p{ font-size:.78rem; color:#666; margin:.8rem 0 0; max-width:none; }
 .modal-tips{
   background:var(--c-ivory); border-left:2px solid var(--c-olive);
-  padding:1rem 1.1rem; margin-top:1.4rem;
+  padding:1rem 1.1rem; margin-top:1.8rem;
 }
-.modal-tips h4{
-  font-family:var(--f-body); font-size:.78rem; letter-spacing:.06em; text-transform:uppercase;
-  color:var(--c-blue); margin:0 0 .7rem;
-}
+.modal-tips h4{ margin-bottom:.7rem; }
 .modal-tips ul{ display:grid; gap:.55rem; }
 .modal-tips li{ display:flex; gap:.55rem; align-items:flex-start; font-size:.86rem; color:#333; }
 .modal-tips svg{ width:15px; height:15px; color:var(--c-olive); margin-top:.15rem; flex:none; }
+
+/* ---------- Animaciones ----------
+   Entrada suave al hacer scroll (.reveal la añade main.js), zoom lento del hero
+   y elevación de las tarjetas. Con "reducir movimiento" no se anima nada. */
+@keyframes reveal-up{ from{ opacity:0; transform:translateY(22px); } to{ opacity:1; transform:none; } }
+@keyframes hero-zoom{ from{ transform:scale(1.08); } to{ transform:none; } }
+.reveal{ opacity:0; }
+.reveal.is-in{ opacity:1; animation:reveal-up .9s var(--ease-out) backwards; animation-delay:var(--d, 0ms); }
+.reveal.no-anim{ animation:none; }
+.hero-media img{ animation:hero-zoom 14s var(--ease-out) both; }
+.card, .ally-card{ transition:transform .5s var(--ease-out), box-shadow .5s var(--ease-out), border-color .5s var(--ease-out); }
+.card:hover, .ally-card:hover{
+  transform:translateY(-5px); border-color:transparent; box-shadow:0 22px 44px -18px rgba(0,0,0,.28);
+}
+.card-media img{ transition:transform 1.2s var(--ease-out); }
+.card:hover .card-media img, .ally-card:hover .card-media img{ transform:scale(1.06); }
+.ally-media img{ transition:transform 1.2s var(--ease-out); }
+.ally:hover .ally-media img{ transform:scale(1.06); }
+.btn{ transition:background .3s var(--ease), color .3s var(--ease), border-color .3s var(--ease), transform .3s var(--ease-out); }
+.btn:active{ transform:translateY(1px); }
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1 !important; animation:none !important; }
+  .modal, .card:hover, .ally-card:hover{ transform:none !important; }
+}
 
 /* ---------- Página interior (destinos.html / experiencias.html) ---------- */
 .page-hero{
@@ -444,8 +508,7 @@ section{ padding-block:clamp(3.5rem, 7vw, 6.5rem); position:relative; }
   .split{ grid-template-columns:1fr; }
   .contact-wrap{ grid-template-columns:1fr; }
   .footer-grid{ grid-template-columns:1fr 1fr; }
-  .modal{ grid-template-columns:1fr; }
-  .modal-media{ min-height:clamp(220px, 62vw, 420px); }
+  .modal-body{ grid-template-columns:1fr; }
 }
 @media (max-width: 720px){
   .main-nav{
@@ -463,6 +526,10 @@ section{ padding-block:clamp(3.5rem, 7vw, 6.5rem); position:relative; }
   .card-grid{ grid-template-columns:1fr; }
   .form-grid{ grid-template-columns:1fr; }
   .footer-grid{ grid-template-columns:1fr; gap:2rem; }
+  .modal-overlay{ padding:.75rem; }
+  .modal{ --mp:1.25rem; max-height:94vh; }
+  .modal-gallery{ --gh:clamp(210px, 40vh, 320px); }
+  .mg-btn{ width:36px; height:36px; }
 }
 
 /* ---------- Carrusel de celebraciones (experiencias.html) ---------- */
