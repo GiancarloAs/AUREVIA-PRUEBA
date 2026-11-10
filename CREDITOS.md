@@ -4,6 +4,7 @@
 |---|---|
 | hero-portada-01.jpg | Paul Daly / Unsplash (Licencia Unsplash) |
 | destino-cusco-ciudad-01.jpg | Hongbin / Unsplash (Licencia Unsplash) |
+| destino-cusco-ciudad-02.jpg | PENDIENTE |
 | destino-valle-sagrado-01.jpg | Viajes con Astro Cartografía / Unsplash (Licencia Unsplash) |
 | destino-valle-sagrado-02.jpg | joejett / Pixabay (Licencia de contenido de Pixabay) |
 | destino-valle-sagrado-03.jpg | jdbenthien / Pixabay (Licencia de contenido de Pixabay) |

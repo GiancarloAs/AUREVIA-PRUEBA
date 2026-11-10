@@ -58,6 +58,43 @@
     "focus": [
       0.66,
       0.5
+    ],
+    "caption": {
+      "es": "La Compañía de Jesús y los portales de la Plaza de Armas, con la luz dorada de la tarde.",
+      "en": "The Compañía de Jesús and the arcades of the Plaza de Armas in golden afternoon light."
+    }
+  },
+  {
+    "file": "destino-cusco-ciudad-02.jpg",
+    "w": 1200,
+    "h": 800,
+    "title": {
+      "es": "Plaza de Armas de Cusco",
+      "en": "Cusco's Plaza de Armas"
+    },
+    "alt": {
+      "es": "Iglesia de la Compañía de Jesús vista desde la Plaza de Armas de Cusco, bajo un cielo azul con nubes",
+      "en": "Church of the Compañía de Jesús seen from Cusco's Plaza de Armas, under a blue sky with clouds"
+    },
+    "caption": {
+      "es": "El corazón de la ciudad: la Compañía de Jesús vista desde la plaza, a plena luz del día.",
+      "en": "The heart of the city: the Compañía de Jesús seen from the square in full daylight."
+    },
+    "description": "Plaza de Armas e iglesia de la Compañía de Jesús, Cusco, Perú.",
+    "keywords": [
+      "Plaza de Armas",
+      "Cusco",
+      "Compañía de Jesús",
+      "centro histórico",
+      "Cusco main square"
+    ],
+    "brief": "Horizontal: Plaza de Armas con buena luz de día.",
+    "avoid": "Autos y multitudes dominando el primer plano.",
+    "source_hint": "Unsplash / Pexels / Wikimedia Commons (licencia libre)",
+    "credit": "",
+    "focus": [
+      0.5,
+      0.45
     ]
   },
   {
@@ -88,7 +125,11 @@
     "focus": [
       0.43,
       0.6
-    ]
+    ],
+    "caption": {
+      "es": "Terrazas circulares que, se cree, sirvieron a los incas para ensayar cultivos a distintas alturas.",
+      "en": "Circular terraces believed to have let the Incas trial crops at different altitudes."
+    }
   },
   {
     "file": "destino-valle-sagrado-02.jpg",
@@ -118,7 +159,11 @@
     "focus": [
       0.5,
       0.45
-    ]
+    ],
+    "caption": {
+      "es": "Uno de los pocos pueblos incas que sigue habitado, al pie del cerro Pinkuylluna.",
+      "en": "One of the few Inca towns still lived in, at the foot of Pinkuylluna hill."
+    }
   },
   {
     "file": "destino-valle-sagrado-03.jpg",
@@ -148,7 +193,11 @@
     "focus": [
       0.42,
       0.4
-    ]
+    ],
+    "caption": {
+      "es": "Miles de pozas de sal que las familias de Maras siguen trabajando a mano.",
+      "en": "Thousands of salt pans still worked by hand by the families of Maras."
+    }
   },
   {
     "file": "destino-valle-sagrado-04.jpg",
@@ -177,7 +226,11 @@
     "focus": [
       0.5,
       0.75
-    ]
+    ],
+    "caption": {
+      "es": "Andenes y muros de piedra que suben por la ladera de la fortaleza.",
+      "en": "Terraces and stone walls climbing the hillside of the fortress."
+    }
   },
   {
     "file": "destino-machu-picchu-01.jpg",
@@ -207,7 +260,11 @@
     "focus": [
       0.47,
       0.5
-    ]
+    ],
+    "caption": {
+      "es": "La ciudadela con la primera luz de la mañana y el Huayna Picchu al fondo.",
+      "en": "The citadel in the first morning light, with Huayna Picchu behind."
+    }
   },
   {
     "file": "destino-montana-7-colores-01.jpg",
@@ -237,7 +294,11 @@
     "focus": [
       0.5,
       0.85
-    ]
+    ],
+    "caption": {
+      "es": "Las franjas minerales de Vinicunca, a más de 5,000 metros de altura.",
+      "en": "The mineral stripes of Vinicunca, more than 5,000 meters above sea level."
+    }
   },
   {
     "file": "destino-laguna-humantay-01.jpg",
@@ -267,7 +328,11 @@
     "focus": [
       0.55,
       0.5
-    ]
+    ],
+    "caption": {
+      "es": "Aguas turquesa al pie del glaciar, tras una caminata corta y empinada.",
+      "en": "Turquoise water at the foot of the glacier, after a short, steep hike."
+    }
   },
   {
     "file": "destino-siete-lagunas-01.jpg",
@@ -297,7 +362,11 @@
     "focus": [
       0.62,
       0.5
-    ]
+    ],
+    "caption": {
+      "es": "Lagunas glaciares en una ruta remota, a la sombra del Ausangate.",
+      "en": "Glacial lakes on a remote route in the shadow of Ausangate."
+    }
   },
   {
     "file": "destino-camino-inka-01.jpg",
@@ -327,7 +396,11 @@
     "focus": [
       0.5,
       0.7
-    ]
+    ],
+    "caption": {
+      "es": "Un alto en el camino frente a los nevados, antes de seguir hacia Machu Picchu.",
+      "en": "A pause on the trail facing the snow peaks, before pressing on to Machu Picchu."
+    }
   },
   {
     "file": "experiencia-boda-andina-01.jpg",
@@ -381,7 +454,11 @@
     "focus": [
       0.5,
       0.55
-    ]
+    ],
+    "caption": {
+      "es": "Papas nativas, maíces y ajíes recién cosechados, listos para la cocina.",
+      "en": "Freshly harvested native potatoes, corn and chilies, ready for the kitchen."
+    }
   },
   {
     "file": "experiencia-desayuno-huaynapicchu-01.jpg",

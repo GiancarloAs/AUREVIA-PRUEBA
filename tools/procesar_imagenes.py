@@ -61,7 +61,9 @@ def main():
             hechas += 1
         creditos.append(f"| {it['file']} | {it.get('credit') or 'PENDIENTE'} |")
     (ROOT / "CREDITOS.md").write_text("\n".join(creditos) + "\n", encoding="utf-8")
-    seo = {it["file"]: {"alt": it["alt"], "title": it["title"]} for it in DATA}
+    # w/h: proporción de cada foto (la usa el carrusel de la ficha); caption: descripción bajo la foto (opcional)
+    seo = {it["file"]: {"alt": it["alt"], "title": it["title"], "w": it["w"], "h": it["h"],
+                        **({"caption": it["caption"]} if it.get("caption") else {})} for it in DATA}
     (ROOT / "js" / "img-seo.js").write_text(
         "/* Generado desde tools/imagenes-seo.json — alt y títulos por imagen (ES/EN) */\n"
         "const AUREVIA_IMG_SEO = " + json.dumps(seo, ensure_ascii=False, indent=2) + ";\n",
