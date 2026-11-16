@@ -731,11 +731,41 @@ function initContactForm(){
     setTimeout(() => document.getElementById("contacto")?.scrollIntoView({ behavior: "smooth" }), 300);
   }
 
-  /* Envío real por correo a concierge@aurevia-luxury.com vía FormSubmit (sin backend).
-     IMPORTANTE: la primera vez que se envía, FormSubmit manda un correo de activación
-     a esa casilla; hay que pulsar "Activate Form" una sola vez. Cuando esté listo
-     Supabase, se añade aquí el guardado en base de datos junto al envío. */
+  /* Cada solicitud va a dos sitios a la vez:
+     1) Base de datos (Supabase, tabla "solicitudes"): es lo que se ve en el panel /gestion/.
+        La clave de abajo es la pública: solo permite INSERTAR, nunca leer.
+     2) Correo a concierge@aurevia-luxury.com vía FormSubmit. La primera vez, FormSubmit manda
+        un correo de activación a esa casilla; hay que pulsar "Activate Form" una sola vez. */
+  const SUPABASE_URL = "https://ddxuhxuwsnygwidutuhs.supabase.co";
+  const SUPABASE_KEY = "sb_publishable_za5B5swJm-gmYjGoCIqHqg_HyKFJUUU";
   const FORM_ENDPOINT = "https://formsubmit.co/ajax/concierge@aurevia-luxury.com";
+
+  const txt = (v, max) => { const s = String(v == null ? "" : v).trim().slice(0, max); return s || null; };
+  const num = (v) => { const n = parseInt(v, 10); return Number.isFinite(n) && n >= 1 && n <= 500 ? n : null; };
+  async function guardarEnBaseDeDatos(data, itemText){
+    const esDestino = data.get("tipo-viaje") === "destino";
+    const fila = {
+      idioma: getLang() === "en" ? "en" : "es",
+      nombre: txt(data.get("nombre"), 80), apellido: txt(data.get("apellido"), 80),
+      pais: txt(data.get("pais"), 80), pasaporte: txt(data.get("pasaporte"), 40),
+      telefono: txt(data.get("telefono"), 40), correo: txt(data.get("correo"), 160),
+      tipo: esDestino ? "destino" : "experiencia",
+      item_id: txt(data.get("item-select"), 80), item_nombre: txt(itemText, 160),
+      // solo se guardan los campos del bloque visible (destino o experiencia)
+      num_personas: esDestino ? num(data.get("num-personas")) : null,
+      categoria_hotel: esDestino ? txt(data.get("categoria-hotel"), 80) : null,
+      guia: esDestino ? txt(data.get("guia"), 40) : null,
+      num_invitados: esDestino ? null : num(data.get("num-invitados")),
+      fecha_tentativa: esDestino ? null : (data.get("fecha-tentativa") || null),
+      mensaje: txt(data.get("mensaje"), 2000)
+    };
+    const res = await fetch(SUPABASE_URL + "/rest/v1/solicitudes", {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "apikey": SUPABASE_KEY, "Prefer": "return=minimal" },
+      body: JSON.stringify(fila)
+    });
+    if (!res.ok) throw new Error("BD " + res.status);
+  }
   const submitBtn = form.querySelector('button[type="submit"]');
   const successEl = document.getElementById("form-success");
   const showMsg = (key, ok) => {
@@ -761,11 +791,16 @@ function initContactForm(){
     const label = submitBtn.textContent;
     submitBtn.disabled = true; submitBtn.textContent = t("form_enviando");
     try {
-      const res = await fetch(FORM_ENDPOINT, {
-        method: "POST", headers: { "Content-Type": "application/json", "Accept": "application/json" },
-        body: JSON.stringify(payload)
-      });
-      if (!res.ok) throw new Error("HTTP " + res.status);
+      // Se intenta guardar y enviar el correo a la vez; basta con que uno de los dos
+      // funcione para no perder la solicitud. Solo si fallan ambos se avisa al viajero.
+      const [bd, correo] = await Promise.allSettled([
+        guardarEnBaseDeDatos(data, itemText),
+        fetch(FORM_ENDPOINT, {
+          method: "POST", headers: { "Content-Type": "application/json", "Accept": "application/json" },
+          body: JSON.stringify(payload)
+        }).then(res => { if (!res.ok) throw new Error("HTTP " + res.status); })
+      ]);
+      if (bd.status === "rejected" && correo.status === "rejected") throw new Error("sin envío");
       form.reset();
       fillItemOptions(tipoSelect.value);
       toggleDynamicFields(tipoSelect.value);
