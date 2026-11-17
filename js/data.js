@@ -21,6 +21,7 @@
      - ruta:       { es, en }  lugares del recorrido (tarjeta y ficha)
      - incluye:    { es:[...], en:[...] }  servicios incluidos (ficha)
      - itinerario: { es:[[etapa, texto], ...], en:[...] }  recorrido por etapas (ficha)
+     - destacados: { es:[...], en:[...] }  lo más destacado, en lista con check (ficha)
    ========================================================= */
 
 const AUREVIA_DATA = {
@@ -41,6 +42,14 @@ const AUREVIA_DATA = {
       descripcion: {
         es: "Un recorrido curado por el centro histórico, la Plaza de Armas, Qorikancha y los miradores de San Blas, con tiempo reservado para talleres textiles y gastronomía local de autor.",
         en: "A curated walk through the historic center, the Plaza de Armas, Qorikancha and the San Blas viewpoints, with time set aside for textile workshops and local fine dining."
+      },
+      destacados: {
+        es: [
+          "Cusco histórico, la capital del Imperio inca, en recorrido privado."
+        ],
+        en: [
+          "Historic Cusco, capital of the Inca Empire, on a private tour."
+        ]
       },
       consejos: {
         es: [
@@ -71,6 +80,22 @@ const AUREVIA_DATA = {
         es: "Una jornada privada por Pisac y Ollantaytambo con guía especializado en historia andina, transporte con chofer dedicado y paradas fotográficas exclusivas.",
         en: "A private day through Pisac and Ollantaytambo with an Andean-history specialist guide, dedicated driver and exclusive photo stops."
       },
+      destacados: {
+        es: [
+          "Terrazas incas de Pisac, con vistas abiertas sobre el Valle Sagrado.",
+          "Almuerzo gourmet en la Hacienda Sarapampa.",
+          "Moray, el laboratorio agrícola de los incas.",
+          "El arte textil de Chinchero, una tradición andina viva.",
+          "Degustación de cocina andina de alto nivel."
+        ],
+        en: [
+          "The Inca terraces of Pisac, with sweeping views over the Sacred Valley.",
+          "Gourmet lunch at Hacienda Sarapampa.",
+          "Moray, the agricultural laboratory of the Incas.",
+          "Chinchero's textile art, a living Andean tradition.",
+          "A tasting of refined Andean cuisine."
+        ]
+      },
       consejos: {
         es: [
           "Menor altitud que Cusco: buen primer día para aclimatar antes de subir a zonas más altas.",
@@ -98,6 +123,16 @@ const AUREVIA_DATA = {
       descripcion: {
         es: "Tren de lujo desde el Valle Sagrado, ingreso en horario preferente para evitar aglomeraciones y guía privado certificado durante todo el recorrido.",
         en: "Luxury train from the Sacred Valley, preferred-time entry to avoid crowds, and a certified private guide throughout the visit."
+      },
+      destacados: {
+        es: [
+          "Tren panorámico Vistadome hasta Machu Picchu.",
+          "Machu Picchu, una maravilla del mundo, en una visita exclusiva."
+        ],
+        en: [
+          "Vistadome panoramic train to Machu Picchu.",
+          "Machu Picchu, a wonder of the world, on an exclusive visit."
+        ]
       },
       consejos: {
         es: [

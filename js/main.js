@@ -81,7 +81,7 @@ const UI_STRINGS = {
     closing_text: "Un especialista de AUREVIA te responderá en menos de 24 horas con una propuesta inicial.",
 
     modal_tips_heading: "Consejos para tu viaje",
-    modal_req_label: "Requisito", modal_route_heading: "El recorrido", modal_includes_label: "Incluye", altitud_label: "Altitud",
+    modal_highlights_heading: "Destacados", modal_req_label: "Requisito", modal_route_heading: "El recorrido", modal_includes_label: "Incluye", altitud_label: "Altitud",
     modal_route_note: "Este recorrido es un punto de partida: fechas, ritmo y alojamientos se ajustan a cada viajero.",
     aria_foto_anterior: "Foto anterior", aria_foto_siguiente: "Foto siguiente",
     aria_abrir_menu: "Abrir menú", aria_cerrar_menu: "Cerrar menú", aria_cerrar: "Cerrar"
@@ -163,7 +163,7 @@ const UI_STRINGS = {
     closing_text: "An AUREVIA specialist will respond within 24 hours with an initial proposal.",
 
     modal_tips_heading: "Travel tips",
-    modal_req_label: "Requirement", modal_route_heading: "The route", modal_includes_label: "Includes", altitud_label: "Altitude",
+    modal_highlights_heading: "Highlights", modal_req_label: "Requirement", modal_route_heading: "The route", modal_includes_label: "Includes", altitud_label: "Altitude",
     modal_route_note: "This route is a starting point: dates, pace and accommodation are adjusted to each traveler.",
     aria_foto_anterior: "Previous photo", aria_foto_siguiente: "Next photo",
     aria_abrir_menu: "Open menu", aria_cerrar_menu: "Close menu", aria_cerrar: "Close"
@@ -529,6 +529,17 @@ function fillModal(keepScroll){
     routeWrap.hidden = true;
   }
 
+  // Lo más destacado (opcional)
+  const hlWrap = q(".modal-highlights");
+  const hl = pick(item.destacados);
+  if (Array.isArray(hl) && hl.length){
+    hlWrap.hidden = false;
+    hlWrap.querySelector("h4").textContent = t("modal_highlights_heading");
+    hlWrap.querySelector("ul").innerHTML = hl.map(x => `<li>${ICONS.check}<span>${x}</span></li>`).join("");
+  } else {
+    hlWrap.hidden = true;
+  }
+
   const tipsWrap = q(".modal-tips");
   const tips = pick(item.consejos);
   if (Array.isArray(tips) && tips.length){
@@ -603,6 +614,7 @@ function initModal(){
     <div class="modal-body">
       <div class="modal-main">
         <p class="modal-desc"></p>
+        <div class="modal-highlights" hidden><h4></h4><ul></ul></div>
         <div class="modal-route" hidden><h4></h4><ol></ol><p></p></div>
         <div class="modal-tips"><h4></h4><ul></ul></div>
       </div>

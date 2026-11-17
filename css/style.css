@@ -444,6 +444,18 @@ section{ padding-block:clamp(3.5rem, 7vw, 6.5rem); position:relative; }
 .modal-includes svg{ width:16px; height:16px; color:var(--c-olive); flex:none; }
 .modal-side .btn{ margin-top:1.6rem; width:100%; justify-content:center; }
 
+/* Lo más destacado: lista con check */
+.modal-highlights{ margin-top:1.8rem; }
+.modal-highlights h4{
+  font-family:var(--f-body); font-size:.78rem; letter-spacing:.06em; text-transform:uppercase;
+  color:var(--c-blue); margin:0 0 .7rem;
+}
+.modal-highlights ul{ display:grid; gap:.6rem; }
+.modal-highlights li{ display:flex; gap:.65rem; align-items:flex-start; font-size:.92rem; line-height:1.5; }
+.modal-highlights svg{
+  width:20px; height:20px; flex:none; margin-top:.05rem; padding:4px;
+  border-radius:50%; background:var(--c-olive); color:var(--c-white); stroke-width:3;
+}
 .modal-route{ margin-top:1.8rem; }
 .modal-route h4, .modal-tips h4{
   font-family:var(--f-body); font-size:.78rem; letter-spacing:.06em; text-transform:uppercase;
