@@ -335,12 +335,12 @@ const AUREVIA_DATA = {
       },
       nombre: { es: "Desayuno con Vista al Huaynapicchu", en: "Breakfast with a View of Huaynapicchu" },
       resumen: {
-        es: "Un desayuno privado frente a Machu Picchu y el Huaynapicchu, reservado para huéspedes del Sanctuary Lodge.",
-        en: "A private breakfast facing Machu Picchu and Huaynapicchu, reserved for guests of Sanctuary Lodge."
+        es: "Los desayunos de Belmond: comienza el día contemplando la belleza de Machu Picchu, con el Huaynapicchu enfrente. Reservado para huéspedes del Sanctuary Lodge.",
+        en: "Belmond breakfasts: start the day taking in the beauty of Machu Picchu, with Huaynapicchu right in front of you. Reserved for guests of Sanctuary Lodge."
       },
       descripcion: {
-        es: "Acceso anticipado antes de la apertura general, mesa dispuesta en mirador reservado y menú de desayuno gourmet con productos peruanos.",
-        en: "Early access before general opening, table set at a reserved viewpoint, and a gourmet breakfast menu featuring Peruvian ingredients."
+        es: "Comienza el día desayunando y contemplando la belleza de Machu Picchu en la terraza del Sanctuary Lodge de Belmond, el único hotel junto al ingreso a la ciudadela. Una mesa servida con calma entre el bosque, con productos peruanos y el Huaynapicchu enfrente, mientras la luz de la mañana va descubriendo las montañas.",
+        en: "Start the day with breakfast while taking in the beauty of Machu Picchu on the terrace of Belmond's Sanctuary Lodge, the only hotel beside the entrance to the citadel. An unhurried table among the forest, with Peruvian produce and Huaynapicchu in front of you, as the morning light slowly reveals the mountains."
       },
       consejos: {
         es: [
