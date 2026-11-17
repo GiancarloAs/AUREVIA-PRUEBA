@@ -73,12 +73,12 @@ const AUREVIA_DATA = {
       altitud: "2,800 m s.n.m.",
       nombre: { es: "Valle Sagrado", en: "Sacred Valley" },
       resumen: {
-        es: "Andenes agrícolas, mercados tradicionales y los pueblos vivos de Pisac y Ollantaytambo.",
-        en: "Agricultural terraces, traditional markets and the living villages of Pisac and Ollantaytambo."
+        es: "Andenes, salineras y pueblos vivos: Chinchero, Moray, Maras, Urubamba, Ollantaytambo y Pisac.",
+        en: "Terraces, salt pans and living villages: Chinchero, Moray, Maras, Urubamba, Ollantaytambo and Pisac."
       },
       descripcion: {
-        es: "Una jornada privada por Pisac y Ollantaytambo con guía especializado en historia andina, transporte con chofer dedicado y paradas fotográficas exclusivas.",
-        en: "A private day through Pisac and Ollantaytambo with an Andean-history specialist guide, dedicated driver and exclusive photo stops."
+        es: "Una jornada privada por Chinchero, Moray, las Salineras de Maras, Urubamba, Ollantaytambo y Pisac, con guía especializado en historia andina, transporte con chofer dedicado y paradas fotográficas exclusivas.",
+        en: "A private journey through Chinchero, Moray, the Maras salt pans, Urubamba, Ollantaytambo and Pisac, with an Andean-history specialist guide, dedicated driver and exclusive photo stops."
       },
       destacados: {
         es: [
