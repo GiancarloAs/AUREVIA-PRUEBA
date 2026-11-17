@@ -190,17 +190,21 @@ const AUREVIA_IMG_SEO = {
   },
   "experiencia-boda-andina-01.jpg": {
     "alt": {
-      "es": "Ceremonia de boda al aire libre con paisaje andino de fondo",
-      "en": "Outdoor wedding ceremony with Andean landscape in the background"
+      "es": "Novios con atuendos tradicionales andinos tomados de la mano frente a un nevado, bajo un cielo despejado",
+      "en": "Bride and groom in traditional Andean dress holding hands in front of a snow-capped peak under a clear sky"
     },
     "title": {
       "es": "Boda Andina",
       "en": "Andean Wedding"
     },
-    "w": 1000,
-    "h": 1250
+    "w": 800,
+    "h": 1000,
+    "caption": {
+      "es": "Atuendos tejidos a mano y un nevado como testigo: una boda con raíces andinas.",
+      "en": "Handwoven Andean dress with a snow peak as witness: a wedding with Andean roots."
+    }
   },
-  "experiencia-pedida-de-mano-01.jpg": {
+  "experiencia-boda-andina-02.jpg": {
     "alt": {
       "es": "Pareja sentada sobre mantas tejidas junto a una laguna altoandina, mientras sabios andinos preparan una ofrenda",
       "en": "Couple seated on woven blankets beside a high Andean lake while Andean elders prepare an offering"
@@ -212,13 +216,13 @@ const AUREVIA_IMG_SEO = {
     "w": 1000,
     "h": 1250,
     "caption": {
-      "es": "Junto a una laguna de altura, los sabios andinos preparan la ofrenda que bendice a la pareja.",
-      "en": "Beside a high-altitude lake, Andean elders prepare the offering that blesses the couple."
+      "es": "Junto a una laguna de altura, los sabios andinos preparan la ofrenda a la Pachamama.",
+      "en": "Beside a high-altitude lake, Andean elders prepare the offering to Pachamama."
     }
   },
-  "experiencia-pedida-de-mano-02.jpg": {
+  "experiencia-boda-andina-03.jpg": {
     "alt": {
-      "es": "Sabio andino con chullo de colores sostiene un ramo de flores blancas junto a la pareja durante la ceremonia",
+      "es": "Sabio andino con chullo de colores sostiene un ramo de flores blancas junto a los novios durante la ceremonia",
       "en": "Andean elder in a colorful chullo hat holds a bouquet of white flowers beside the couple during the ceremony"
     },
     "title": {
@@ -230,6 +234,38 @@ const AUREVIA_IMG_SEO = {
     "caption": {
       "es": "Flores y textiles tejidos a mano acompañan la ofrenda: cada elemento tiene un sentido.",
       "en": "Flowers and handwoven textiles accompany the offering: every element has a meaning."
+    }
+  },
+  "experiencia-pedida-de-mano-01.jpg": {
+    "alt": {
+      "es": "Pareja arrodillada abrazándose dentro de un arco de flores sobre una explanada dorada, con montañas nevadas al fondo",
+      "en": "Couple kneeling in an embrace inside a floral arch on a golden plateau, with snow-capped mountains behind"
+    },
+    "title": {
+      "es": "Pedida de mano en los Andes",
+      "en": "Proposal in the Andes"
+    },
+    "w": 1000,
+    "h": 1250,
+    "caption": {
+      "es": "Un arco de flores frescas sobre la explanada, con los nevados como único testigo.",
+      "en": "An arch of fresh flowers on the plateau, with the snow peaks as the only witness."
+    }
+  },
+  "experiencia-pedida-de-mano-02.jpg": {
+    "alt": {
+      "es": "Pareja vestida de blanco abrazándose con alegría junto a un arco de flores, con alpacas pastando y nubes de tormenta sobre las montañas",
+      "en": "Couple dressed in white embracing joyfully beside a floral arch, with alpacas grazing and storm clouds over the mountains"
+    },
+    "title": {
+      "es": "Dijo que sí",
+      "en": "She said yes"
+    },
+    "w": 1000,
+    "h": 1250,
+    "caption": {
+      "es": "El momento después del sí, entre alpacas y con las montañas de fondo.",
+      "en": "The moment after the yes, among alpacas with the mountains behind."
     }
   },
   "experiencia-huerto-mesa-01.jpg": {
@@ -282,18 +318,34 @@ const AUREVIA_IMG_SEO = {
   },
   "experiencia-luna-de-miel-01.jpg": {
     "alt": {
-      "es": "Pareja con atuendos tradicionales andinos tomada de la mano frente a un nevado, bajo un cielo despejado",
-      "en": "Couple in traditional Andean dress holding hands in front of a snow-capped peak under a clear sky"
+      "es": "Pareja sentada al borde de un jacuzzi al aire libre, con llamas pastando y montañas de fondo",
+      "en": "Couple sitting on the edge of an outdoor hot tub, with llamas grazing and mountains behind"
     },
     "title": {
       "es": "Luna de miel en los Andes",
       "en": "Honeymoon in the Andes"
     },
-    "w": 800,
-    "h": 1000,
+    "w": 1000,
+    "h": 1250,
     "caption": {
-      "es": "Atuendos tejidos a mano y un nevado de fondo: el comienzo de una luna de miel distinta.",
-      "en": "Handwoven Andean dress and a snow peak behind: the start of a different kind of honeymoon."
+      "es": "Un jacuzzi al aire libre frente a las montañas, para cerrar el día a dos.",
+      "en": "An outdoor hot tub facing the mountains, to end the day for two."
+    }
+  },
+  "experiencia-luna-de-miel-02.jpg": {
+    "alt": {
+      "es": "Pareja de pie sobre dos cuatrimotos con los brazos en alto, frente a una montaña nevada al atardecer",
+      "en": "Couple standing on two quad bikes with arms raised, facing a snow-capped mountain at sunset"
+    },
+    "title": {
+      "es": "En cuatrimoto por las alturas",
+      "en": "By quad bike across the highlands"
+    },
+    "w": 470,
+    "h": 588,
+    "caption": {
+      "es": "Un paseo en cuatrimoto por la meseta, con los nevados encendidos por el atardecer.",
+      "en": "A quad bike ride across the plateau, with the snow peaks lit by the sunset."
     }
   },
   "experiencia-peru-a-la-mesa-01.jpg": {

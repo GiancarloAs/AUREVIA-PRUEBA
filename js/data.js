@@ -236,17 +236,18 @@ const AUREVIA_DATA = {
     {
       id: "boda-andina",
       imagen: "experiencia-boda-andina-01.jpg",
+      galeria: ["experiencia-boda-andina-02.jpg", "experiencia-boda-andina-03.jpg"],
       categoria: "celebracion",
       duracion: { es: "Personalizado", en: "Custom" },
       grupo: { es: "2 – 80 invitados", en: "2 – 80 guests" },
       nombre: { es: "Boda Andina", en: "Andean Wedding" },
       resumen: {
-        es: "Una ceremonia íntima con ritual andino, vistas a los Andes y producción integral a cargo de AUREVIA.",
-        en: "An intimate ceremony with Andean ritual, Andes views and full production handled by AUREVIA."
+        es: "Una antigua tradición andina celebrada en plena naturaleza del Valle Sagrado: una boda distinta, con producción integral a cargo de AUREVIA.",
+        en: "An ancient Andean tradition celebrated in the heart of the Sacred Valley's nature: a different kind of wedding, fully produced by AUREVIA."
       },
       descripcion: {
-        es: "Diseño de ceremonia con pago a la tierra (Pachamama), locación exclusiva, coordinación de banquete, música en vivo y logística completa de invitados internacionales.",
-        en: "Ceremony design with an offering to Pachamama, exclusive venue, banquet coordination, live music and full logistics for international guests."
+        es: "En la tradición andina, el matrimonio une profundamente a dos personas a través de las fuerzas de la naturaleza, que las protegen para una vida llena de felicidad. Celebramos esta antigua ceremonia en un entorno natural del Valle Sagrado de los Incas, guiada por sabios andinos y su ofrenda a la Pachamama. Del resto nos encargamos nosotros: locación, banquete, música en vivo y la logística de los invitados que llegan de fuera. Una opción ideal para quienes buscan una boda diferente.",
+        en: "In Andean tradition, marriage deeply unites two people through the forces of nature, which protect them for a life full of happiness. We celebrate this ancient ceremony in a natural setting in the Sacred Valley of the Incas, guided by Andean elders and their offering to Pachamama. We take care of everything else: venue, banquet, live music and logistics for guests arriving from abroad. An ideal choice for couples looking for a different kind of wedding."
       },
       consejos: {
         es: [
@@ -270,22 +271,22 @@ const AUREVIA_DATA = {
       grupo: { es: "Para dos", en: "For two" },
       nombre: { es: "Pedida de Mano en los Andes", en: "Proposal in the Andes" },
       resumen: {
-        es: "Una propuesta íntima junto a una laguna de altura, con una ceremonia de bendición andina y un fotógrafo que registra el momento sin que se note.",
-        en: "An intimate proposal beside a high-altitude lake, with an Andean blessing ceremony and a photographer who captures the moment unseen."
+        es: "Un arco de flores en lo alto de los Andes, con los nevados de fondo y un fotógrafo que registra el momento sin que se note.",
+        en: "A floral arch high in the Andes, with snow peaks behind and a photographer who captures the moment unseen."
       },
       descripcion: {
-        es: "Organizamos la sorpresa de principio a fin: traslado privado a una laguna altoandina, un espacio preparado con textiles tejidos a mano y flores, y una ceremonia de bendición andina guiada por sabios de las comunidades para pedir buena fortuna a la pareja. Un fotógrafo acompaña a distancia para que la propuesta se viva sin interrupciones.",
-        en: "We plan the surprise from start to finish: a private transfer to a high Andean lake, a setting dressed with handwoven textiles and flowers, and an Andean blessing ceremony led by community elders to ask for good fortune for the couple. A photographer follows from a distance so the proposal unfolds without interruption."
+        es: "Organizamos la sorpresa de principio a fin: traslado privado a una explanada en las alturas, un arco decorado con flores frescas frente a los nevados y un fotógrafo que acompaña a distancia para que la propuesta se viva sin interrupciones.",
+        en: "We plan the surprise from start to finish: a private transfer to a high plateau, an arch dressed with fresh flowers facing the snow peaks, and a photographer who follows from a distance so the proposal unfolds without interruption."
       },
       consejos: {
         es: [
           "Cuéntanos la idea con tiempo: coordinamos todo contigo de forma discreta para que tu pareja no sospeche nada.",
-          "La laguna está a gran altitud: conviene programar la propuesta después de dos o tres días en Cusco.",
+          "La explanada está a gran altitud: conviene programar la propuesta después de dos o tres días en Cusco.",
           "Lleva abrigo aunque haya sol: en la altura el viento es frío y el clima cambia rápido."
         ],
         en: [
           "Tell us your idea early: we coordinate everything with you discreetly so your partner suspects nothing.",
-          "The lake sits at high altitude: plan the proposal after two or three days in Cusco.",
+          "The plateau sits at high altitude: plan the proposal after two or three days in Cusco.",
           "Bring a warm layer even on sunny days: at altitude the wind is cold and the weather changes fast."
         ]
       }
@@ -360,7 +361,7 @@ const AUREVIA_DATA = {
     {
       id: "luna-de-miel-andes",
       imagen: "experiencia-luna-de-miel-01.jpg",
-      galeria: ["destino-valle-sagrado-01.jpg", "destino-valle-sagrado-03.jpg", "destino-machu-picchu-01.jpg", "destino-cusco-ciudad-01.jpg"],
+      galeria: ["experiencia-luna-de-miel-02.jpg", "destino-valle-sagrado-01.jpg", "destino-valle-sagrado-03.jpg", "destino-machu-picchu-01.jpg", "destino-cusco-ciudad-01.jpg"],
       categoria: "viaje",
       duracion: { es: "10 días / 9 noches", en: "10 days / 9 nights" },
       grupo: { es: "Viaje privado", en: "Private journey" },
