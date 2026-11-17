@@ -40,7 +40,8 @@ def procesar(item):
     exif = Image.Exif()
     exif[0x010E] = item["description"]                                   # ImageDescription
     exif[0x013B] = item.get("credit") or "AUREVIA Luxury Travel Concierge"  # Artist
-    exif[0x8298] = "© AUREVIA Luxury Travel Concierge"                   # Copyright
+    # Copyright: el autor de la foto si se conoce; AUREVIA solo si la foto es propia
+    exif[0x8298] = item.get("credit") or "© AUREVIA Luxury Travel Concierge"
     exif[0x9C9B] = utf16(item["title"]["es"])                            # XPTitle
     exif[0x9C9C] = utf16(item["alt"]["es"])                              # XPComment
     exif[0x9C9E] = utf16(";".join(item["keywords"]))                     # XPKeywords

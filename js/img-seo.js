@@ -200,6 +200,38 @@ const AUREVIA_IMG_SEO = {
     "w": 1000,
     "h": 1250
   },
+  "experiencia-pedida-de-mano-01.jpg": {
+    "alt": {
+      "es": "Pareja sentada sobre mantas tejidas junto a una laguna altoandina, mientras sabios andinos preparan una ofrenda",
+      "en": "Couple seated on woven blankets beside a high Andean lake while Andean elders prepare an offering"
+    },
+    "title": {
+      "es": "Ceremonia junto a la laguna",
+      "en": "Ceremony by the lake"
+    },
+    "w": 1000,
+    "h": 1250,
+    "caption": {
+      "es": "Junto a una laguna de altura, los sabios andinos preparan la ofrenda que bendice a la pareja.",
+      "en": "Beside a high-altitude lake, Andean elders prepare the offering that blesses the couple."
+    }
+  },
+  "experiencia-pedida-de-mano-02.jpg": {
+    "alt": {
+      "es": "Sabio andino con chullo de colores sostiene un ramo de flores blancas junto a la pareja durante la ceremonia",
+      "en": "Andean elder in a colorful chullo hat holds a bouquet of white flowers beside the couple during the ceremony"
+    },
+    "title": {
+      "es": "La bendición andina",
+      "en": "The Andean blessing"
+    },
+    "w": 1000,
+    "h": 1250,
+    "caption": {
+      "es": "Flores y textiles tejidos a mano acompañan la ofrenda: cada elemento tiene un sentido.",
+      "en": "Flowers and handwoven textiles accompany the offering: every element has a meaning."
+    }
+  },
   "experiencia-huerto-mesa-01.jpg": {
     "alt": {
       "es": "Plato peruano de ceviche con camote, choclo y calamares crocantes, junto a cancha y conchas gratinadas",
@@ -230,15 +262,19 @@ const AUREVIA_IMG_SEO = {
   },
   "experiencia-luna-de-miel-01.jpg": {
     "alt": {
-      "es": "Pareja contemplando el Valle Sagrado al amanecer",
-      "en": "Couple looking out over the Sacred Valley at sunrise"
+      "es": "Pareja con atuendos tradicionales andinos tomada de la mano frente a un nevado, bajo un cielo despejado",
+      "en": "Couple in traditional Andean dress holding hands in front of a snow-capped peak under a clear sky"
     },
     "title": {
       "es": "Luna de miel en los Andes",
       "en": "Honeymoon in the Andes"
     },
-    "w": 1000,
-    "h": 1250
+    "w": 800,
+    "h": 1000,
+    "caption": {
+      "es": "Atuendos tejidos a mano y un nevado de fondo: el comienzo de una luna de miel distinta.",
+      "en": "Handwoven Andean dress and a snow peak behind: the start of a different kind of honeymoon."
+    }
   },
   "experiencia-peru-a-la-mesa-01.jpg": {
     "alt": {

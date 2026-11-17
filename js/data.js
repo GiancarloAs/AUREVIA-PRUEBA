@@ -262,6 +262,35 @@ const AUREVIA_DATA = {
       }
     },
     {
+      id: "pedida-de-mano",
+      imagen: "experiencia-pedida-de-mano-01.jpg",
+      galeria: ["experiencia-pedida-de-mano-02.jpg"],
+      categoria: "celebracion",
+      duracion: { es: "Medio día", en: "Half day" },
+      grupo: { es: "Para dos", en: "For two" },
+      nombre: { es: "Pedida de Mano en los Andes", en: "Proposal in the Andes" },
+      resumen: {
+        es: "Una propuesta íntima junto a una laguna de altura, con una ceremonia de bendición andina y un fotógrafo que registra el momento sin que se note.",
+        en: "An intimate proposal beside a high-altitude lake, with an Andean blessing ceremony and a photographer who captures the moment unseen."
+      },
+      descripcion: {
+        es: "Organizamos la sorpresa de principio a fin: traslado privado a una laguna altoandina, un espacio preparado con textiles tejidos a mano y flores, y una ceremonia de bendición andina guiada por sabios de las comunidades para pedir buena fortuna a la pareja. Un fotógrafo acompaña a distancia para que la propuesta se viva sin interrupciones.",
+        en: "We plan the surprise from start to finish: a private transfer to a high Andean lake, a setting dressed with handwoven textiles and flowers, and an Andean blessing ceremony led by community elders to ask for good fortune for the couple. A photographer follows from a distance so the proposal unfolds without interruption."
+      },
+      consejos: {
+        es: [
+          "Cuéntanos la idea con tiempo: coordinamos todo contigo de forma discreta para que tu pareja no sospeche nada.",
+          "La laguna está a gran altitud: conviene programar la propuesta después de dos o tres días en Cusco.",
+          "Lleva abrigo aunque haya sol: en la altura el viento es frío y el clima cambia rápido."
+        ],
+        en: [
+          "Tell us your idea early: we coordinate everything with you discreetly so your partner suspects nothing.",
+          "The lake sits at high altitude: plan the proposal after two or three days in Cusco.",
+          "Bring a warm layer even on sunny days: at altitude the wind is cold and the weather changes fast."
+        ]
+      }
+    },
+    {
       id: "huerto-mesa",
       imagen: "experiencia-huerto-mesa-01.jpg",
       categoria: "gastronomia",
@@ -330,7 +359,6 @@ const AUREVIA_DATA = {
     {
       id: "luna-de-miel-andes",
       imagen: "experiencia-luna-de-miel-01.jpg",
-      portadaProvisional: true,
       galeria: ["destino-valle-sagrado-01.jpg", "destino-valle-sagrado-03.jpg", "destino-machu-picchu-01.jpg", "destino-cusco-ciudad-01.jpg"],
       categoria: "viaje",
       duracion: { es: "10 días / 9 noches", en: "10 days / 9 nights" },

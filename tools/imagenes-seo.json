@@ -428,6 +428,72 @@
     "credit": ""
   },
   {
+    "file": "experiencia-pedida-de-mano-01.jpg",
+    "w": 1000,
+    "h": 1250,
+    "title": {
+      "es": "Ceremonia junto a la laguna",
+      "en": "Ceremony by the lake"
+    },
+    "alt": {
+      "es": "Pareja sentada sobre mantas tejidas junto a una laguna altoandina, mientras sabios andinos preparan una ofrenda",
+      "en": "Couple seated on woven blankets beside a high Andean lake while Andean elders prepare an offering"
+    },
+    "caption": {
+      "es": "Junto a una laguna de altura, los sabios andinos preparan la ofrenda que bendice a la pareja.",
+      "en": "Beside a high-altitude lake, Andean elders prepare the offering that blesses the couple."
+    },
+    "description": "Ceremonia de bendición andina para una pedida de mano junto a una laguna altoandina, Cusco, Perú.",
+    "keywords": [
+      "pedida de mano Perú",
+      "propuesta de matrimonio Cusco",
+      "marriage proposal Peru",
+      "ceremonia andina",
+      "pago a la tierra"
+    ],
+    "brief": "Vertical: la pareja y la ceremonia en un paisaje andino.",
+    "avoid": "Rostros reconocibles sin autorización de los fotografiados.",
+    "source_hint": "Foto enviada por el cliente",
+    "credit": "Autor por confirmar (foto enviada por el cliente)",
+    "focus": [
+      0.5,
+      0.62
+    ]
+  },
+  {
+    "file": "experiencia-pedida-de-mano-02.jpg",
+    "w": 1000,
+    "h": 1250,
+    "title": {
+      "es": "La bendición andina",
+      "en": "The Andean blessing"
+    },
+    "alt": {
+      "es": "Sabio andino con chullo de colores sostiene un ramo de flores blancas junto a la pareja durante la ceremonia",
+      "en": "Andean elder in a colorful chullo hat holds a bouquet of white flowers beside the couple during the ceremony"
+    },
+    "caption": {
+      "es": "Flores y textiles tejidos a mano acompañan la ofrenda: cada elemento tiene un sentido.",
+      "en": "Flowers and handwoven textiles accompany the offering: every element has a meaning."
+    },
+    "description": "Detalle de la ceremonia de bendición andina en una pedida de mano, Cusco, Perú.",
+    "keywords": [
+      "pedida de mano Perú",
+      "ceremonia andina",
+      "bendición andina",
+      "Andean blessing",
+      "Cusco"
+    ],
+    "brief": "Vertical: detalle de la ceremonia.",
+    "avoid": "Rostros reconocibles sin autorización de los fotografiados.",
+    "source_hint": "Foto enviada por el cliente",
+    "credit": "Autor por confirmar (foto enviada por el cliente)",
+    "focus": [
+      0.5,
+      0.42
+    ]
+  },
+  {
     "file": "experiencia-huerto-mesa-01.jpg",
     "w": 1000,
     "h": 1250,
@@ -487,28 +553,37 @@
   },
   {
     "file": "experiencia-luna-de-miel-01.jpg",
-    "w": 1000,
-    "h": 1250,
+    "w": 800,
+    "h": 1000,
     "title": {
       "es": "Luna de miel en los Andes",
       "en": "Honeymoon in the Andes"
     },
     "alt": {
-      "es": "Pareja contemplando el Valle Sagrado al amanecer",
-      "en": "Couple looking out over the Sacred Valley at sunrise"
+      "es": "Pareja con atuendos tradicionales andinos tomada de la mano frente a un nevado, bajo un cielo despejado",
+      "en": "Couple in traditional Andean dress holding hands in front of a snow-capped peak under a clear sky"
     },
-    "description": "Viaje de luna de miel por el Valle Sagrado y Machu Picchu, Perú.",
+    "description": "Pareja con atuendos andinos frente a un nevado, Cusco, Perú.",
     "keywords": [
       "luna de miel Perú",
       "honeymoon Peru",
-      "Valle Sagrado",
-      "Machu Picchu",
+      "boda andina",
+      "Cusco",
+      "nevado",
       "viaje en pareja"
     ],
     "brief": "Vertical: pareja de espaldas o de perfil frente al Valle Sagrado, luz cálida de amanecer. Sujeto al centro; el tercio superior e inferior quedan libres.",
     "avoid": "Rostros reconocibles sin autorización de modelo; poses de catálogo; fotos de hoteles concretos que no sean aliados.",
     "source_hint": "Unsplash / Pexels / Wikimedia Commons (licencia libre)",
-    "credit": ""
+    "credit": "Autor por confirmar (foto enviada por el cliente)",
+    "caption": {
+      "es": "Atuendos tejidos a mano y un nevado de fondo: el comienzo de una luna de miel distinta.",
+      "en": "Handwoven Andean dress and a snow peak behind: the start of a different kind of honeymoon."
+    },
+    "focus": [
+      0.5,
+      0.5
+    ]
   },
   {
     "file": "experiencia-peru-a-la-mesa-01.jpg",

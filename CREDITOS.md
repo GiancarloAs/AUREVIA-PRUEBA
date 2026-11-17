@@ -15,9 +15,11 @@
 | destino-siete-lagunas-01.jpg | Jacob Vizek / Unsplash (Licencia Unsplash) |
 | destino-camino-inka-01.jpg | Samuel Malmström / Unsplash (Licencia Unsplash) |
 | experiencia-boda-andina-01.jpg | PENDIENTE |
+| experiencia-pedida-de-mano-01.jpg | Autor por confirmar (foto enviada por el cliente) |
+| experiencia-pedida-de-mano-02.jpg | Autor por confirmar (foto enviada por el cliente) |
 | experiencia-huerto-mesa-01.jpg | Diego Arenas de Rodrigo / Unsplash (Licencia Unsplash) |
 | experiencia-desayuno-huaynapicchu-01.jpg | PENDIENTE |
-| experiencia-luna-de-miel-01.jpg | PENDIENTE |
+| experiencia-luna-de-miel-01.jpg | Autor por confirmar (foto enviada por el cliente) |
 | experiencia-peru-a-la-mesa-01.jpg | PENDIENTE |
 | experiencia-peru-en-familia-01.jpg | PENDIENTE |
 | aliado-hotel-01.jpg | PENDIENTE |
