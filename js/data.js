@@ -21,6 +21,8 @@
      - ruta:       { es, en }  lugares del recorrido (tarjeta y ficha)
      - incluye:    { es:[...], en:[...] }  servicios incluidos (ficha)
      - itinerario: { es:[[etapa, texto], ...], en:[...] }  recorrido por etapas (ficha)
+     - momentos:   { es:[[titulo, texto], ...], en:[...] }  en lugar de "itinerario", para
+                   viajes que se viven sin días numerados (ficha: "Momentos del viaje")
      - destacados: { es:[...], en:[...] }  lo más destacado, en lista con check (ficha)
    ========================================================= */
 
@@ -67,10 +69,10 @@ const AUREVIA_DATA = {
     {
       id: "valle-sagrado",
       imagen: "destino-valle-sagrado-01.jpg",
-      galeria: ["destino-valle-sagrado-02.jpg", "destino-valle-sagrado-03.jpg", "destino-valle-sagrado-04.jpg"],
+      galeria: ["destino-valle-sagrado-02.jpg", "destino-valle-sagrado-03.jpg"],
       categoria: "naturaleza",
-      duracion: { es: "1 día", en: "1 day" },
-      altitud: "2,800 m s.n.m.",
+      duracion: { es: "1 a 2 días", en: "1 to 2 days" },
+      altitud: "2,800 – 3,760 m s.n.m.",
       nombre: { es: "Valle Sagrado", en: "Sacred Valley" },
       resumen: {
         es: "Andenes, salineras y pueblos vivos: Chinchero, Moray, Maras, Urubamba, Ollantaytambo y Pisac.",
@@ -98,12 +100,14 @@ const AUREVIA_DATA = {
       },
       consejos: {
         es: [
-          "Menor altitud que Cusco: buen primer día para aclimatar antes de subir a zonas más altas.",
+          "El fondo del valle (unos 2,800 m) es más bajo que Cusco y es buena base para aclimatarse, pero Chinchero y Moray superan los 3,500 m: conviene visitarlos con al menos un día de aclimatación.",
+          "Recorrer los seis lugares en un solo día es una jornada larga, de la mañana a la noche: en dos días se disfruta con más calma.",
           "Lleva efectivo en soles para el mercado artesanal de Pisac — no todos los puestos tienen POS.",
           "Protector solar y sombrero: hay poca sombra en los andenes durante el día."
         ],
         en: [
-          "Lower altitude than Cusco: a good first day to acclimatize before heading higher.",
+          "The valley floor (around 2,800 m) is lower than Cusco and a good base to acclimatize, but Chinchero and Moray rise above 3,500 m: visit them after at least one day of acclimatization.",
+          "Covering all six places in a single day makes for a long day, from morning to night: over two days it's far more relaxed.",
           "Bring cash in soles for the Pisac craft market — not every stall takes cards.",
           "Sunscreen and a hat: there's little shade on the terraces during the day."
         ]
@@ -117,12 +121,12 @@ const AUREVIA_DATA = {
       altitud: "2,430 m s.n.m.",
       nombre: { es: "Machu Picchu", en: "Machu Picchu" },
       resumen: {
-        es: "La ciudadela inca más icónica del mundo, con acceso preferente y guía privado.",
-        en: "The world's most iconic Inca citadel, with preferred access and a private guide."
+        es: "La ciudadela inca más icónica del mundo, con guía privado y el horario de ingreso más tranquilo.",
+        en: "The world's most iconic Inca citadel, with a private guide and the quietest entry time."
       },
       descripcion: {
-        es: "Tren de lujo desde el Valle Sagrado, ingreso en horario preferente para evitar aglomeraciones y guía privado certificado durante todo el recorrido.",
-        en: "Luxury train from the Sacred Valley, preferred-time entry to avoid crowds, and a certified private guide throughout the visit."
+        es: "Tren panorámico Vistadome desde el Valle Sagrado, o el Hiram Bingham de Belmond para una experiencia de lujo; entrada reservada con anticipación en el circuito y la hora más tranquilos, y guía privado certificado durante todo el recorrido.",
+        en: "Vistadome panoramic train from the Sacred Valley, or Belmond's Hiram Bingham for a luxury experience; entry booked well ahead on the quietest circuit and time slot, and a certified private guide throughout the visit."
       },
       destacados: {
         es: [
@@ -137,13 +141,13 @@ const AUREVIA_DATA = {
       consejos: {
         es: [
           "Clima húmedo y cambiante: lleva capa impermeable ligera incluso en temporada seca.",
-          "El ingreso es por horario fijo marcado en tu boleto — no se puede cambiar el mismo día.",
+          "Las entradas se venden por circuito y horario, con cupos limitados: el horario de tu boleto es fijo y no se puede cambiar el mismo día.",
           "Lleva tu pasaporte físico: es obligatorio para el control de acceso a la ciudadela.",
           "Repelente de mosquitos — hay zonas con presencia de insectos cerca del río."
         ],
         en: [
           "Humid, changeable weather: bring a light waterproof layer even in the dry season.",
-          "Entry is by a fixed time slot on your ticket — it can't be changed on the same day.",
+          "Tickets are sold by circuit and time slot, with limited capacity: the time on your ticket is fixed and can't be changed on the same day.",
           "Bring your physical passport: it's required for entry control at the citadel.",
           "Insect repellent — there are mosquitoes near the river areas."
         ]
@@ -243,12 +247,12 @@ const AUREVIA_DATA = {
       altitud: "4,215 m s.n.m. (Warmiwañusca)",
       nombre: { es: "Camino Inka", en: "Inca Trail" },
       resumen: {
-        es: "El trekking histórico hacia Machu Picchu, con campamentos de lujo y equipo de porteadores certificados.",
-        en: "The historic trek to Machu Picchu, with luxury camping and certified porter crews."
+        es: "El trekking histórico hacia Machu Picchu, con servicio de campamento premium y porteadores certificados.",
+        en: "The historic trek to Machu Picchu, with premium camping service and certified porters."
       },
       descripcion: {
-        es: "Cuatro días de trekking con carpas de alta gama, chef de montaña, oxígeno de emergencia y llegada a la Puerta del Sol al amanecer.",
-        en: "Four days of trekking with high-end tents, a mountain chef, emergency oxygen, and sunrise arrival at the Sun Gate."
+        es: "Cuatro días de trekking con carpas de calidad superior en los campamentos autorizados del camino, chef de montaña, oxígeno de emergencia y llegada a la Puerta del Sol al amanecer.",
+        en: "Four days of trekking with superior-quality tents at the trail's authorized campsites, a mountain chef, emergency oxygen and arrival at the Sun Gate at sunrise."
       },
       consejos: {
         es: [
@@ -338,8 +342,8 @@ const AUREVIA_DATA = {
         en: "A guided harvest in an Andean orchard followed by a private culinary experience with a local chef."
       },
       descripcion: {
-        es: "Recolección de insumos de temporada junto a productores locales y almuerzo de autor preparado frente al comensal, maridado con bebidas regionales.",
-        en: "Seasonal ingredient gathering alongside local producers and a chef's-table lunch prepared in front of guests, paired with regional drinks."
+        es: "Recolección de insumos de temporada junto a productores locales y almuerzo de autor preparado frente al comensal, maridado con bebidas regionales. Puede vivirse por separado o como parte del viaje Perú a la Mesa.",
+        en: "Gathering seasonal produce with local growers, followed by a signature lunch cooked in front of you and paired with regional drinks. It can be enjoyed on its own or as part of the Peru at the Table journey."
       },
       consejos: {
         es: [
@@ -398,7 +402,7 @@ const AUREVIA_DATA = {
       imagen: "experiencia-luna-de-miel-01.jpg",
       galeria: ["experiencia-luna-de-miel-02.jpg", "destino-valle-sagrado-01.jpg", "destino-valle-sagrado-03.jpg", "destino-machu-picchu-01.jpg", "destino-cusco-ciudad-01.jpg"],
       categoria: "viaje",
-      duracion: { es: "10 días / 9 noches", en: "10 days / 9 nights" },
+      duracion: { es: "10 días sugeridos", en: "10 suggested days" },
       grupo: { es: "Viaje privado", en: "Private journey" },
       nombre: { es: "Luna de Miel en los Andes", en: "Honeymoon in the Andes" },
       ruta: {
@@ -410,27 +414,31 @@ const AUREVIA_DATA = {
         en: "Ten unhurried days to begin life together: sunrises over the Sacred Valley, arriving at Machu Picchu on foot, and private dinners you won't forget."
       },
       descripcion: {
-        es: "Un viaje para dos que avanza sin prisa, del silencio del Valle Sagrado a la llegada a pie a Machu Picchu, con tiempo de sobra para simplemente estar juntos.",
-        en: "A journey for two that moves at an easy pace, from the quiet of the Sacred Valley to arriving at Machu Picchu on foot, with plenty of time to simply be together."
+        es: "No es un tour con horarios: es un viaje para dos que avanza a su ritmo, del silencio del Valle Sagrado a la llegada a pie a Machu Picchu, con tiempo de sobra para simplemente estar juntos.",
+        en: "This isn't a tour with a timetable: it's a journey for two that moves at your own pace, from the quiet of the Sacred Valley to arriving at Machu Picchu on foot, with plenty of time to simply be together."
       },
       incluye: {
         es: ["Guía privado", "Traslados", "Alojamiento", "Entradas"],
         en: ["Private guide", "Transfers", "Accommodation", "Entrance tickets"]
       },
-      itinerario: {
+      momentos: {
         es: [
-          ["Días 1 a 3 · Valle Sagrado", "Llegada y aclimatación suave. Las tejedoras de Chinchero, las salineras de Maras y las terrazas circulares de Moray."],
-          ["Días 4 y 5 · Camino Inka y Machu Picchu", "Caminata por el tramo corto del Camino Inka hasta la Puerta del Sol y visita guiada a la ciudadela al día siguiente."],
-          ["Días 6 a 8 · Cusco", "El centro histórico y el barrio de San Blas a su ritmo, con una cena privada para celebrar."],
-          ["Día 9 · Palcoyo", "La montaña de colores por su ruta más tranquila, lejos de las multitudes."],
-          ["Día 10 · Regreso", "Traslado al aeropuerto y vuelo de retorno."]
+          ["Despertar en el Valle Sagrado", "Los primeros días, sin prisa y a menor altura que Cusco, mientras el cuerpo se acostumbra y el valle amanece."],
+          ["Cuatrimotos por Moray y Maras", "Un paseo por la meseta entre las terrazas circulares de Moray y las salineras de Maras, con los nevados de fondo."],
+          ["Las tejedoras de Chinchero", "Una tarde con las artesanas que mantienen vivo el tejido andino."],
+          ["Un jacuzzi frente a las montañas", "Al caer la tarde, agua caliente al aire libre con los Andes delante, en alojamientos seleccionados."],
+          ["Llegar a Machu Picchu a pie", "El tramo corto del Camino Inka hasta la Puerta del Sol y, al día siguiente, la ciudadela con calma."],
+          ["Cusco para dos", "San Blas y el centro histórico a su aire, con una cena privada para celebrar."],
+          ["Palcoyo, lejos de las multitudes", "La montaña de colores por su ruta más tranquila, ya aclimatados."]
         ],
         en: [
-          ["Days 1–3 · Sacred Valley", "Arrival and gentle acclimatization. The weavers of Chinchero, the Maras salt pans and the circular terraces of Moray."],
-          ["Days 4–5 · Inca Trail & Machu Picchu", "A hike along the short Inca Trail to the Sun Gate, with a guided visit to the citadel the following day."],
-          ["Days 6–8 · Cusco", "The historic center and the San Blas quarter at your own pace, with a private dinner to celebrate."],
-          ["Day 9 · Palcoyo", "The rainbow mountain by its quieter route, away from the crowds."],
-          ["Day 10 · Departure", "Airport transfer and return flight."]
+          ["Waking up in the Sacred Valley", "The first days, unhurried and lower than Cusco, while your body adjusts and the valley wakes up."],
+          ["Quad bikes through Moray and Maras", "A ride across the plateau between the circular terraces of Moray and the Maras salt pans, with snow peaks behind."],
+          ["The weavers of Chinchero", "An afternoon with the artisans who keep Andean weaving alive."],
+          ["A hot tub facing the mountains", "As evening falls, warm water in the open air with the Andes in front of you, at selected lodges."],
+          ["Arriving at Machu Picchu on foot", "The short Inca Trail to the Sun Gate and, the next day, the citadel at an easy pace."],
+          ["Cusco for two", "San Blas and the historic center on your own terms, with a private dinner to celebrate."],
+          ["Palcoyo, away from the crowds", "The rainbow mountain by its quietest route, once you're acclimatized."]
         ]
       },
       consejos: {
@@ -456,16 +464,16 @@ const AUREVIA_DATA = {
       grupo: { es: "Viaje privado", en: "Private journey" },
       nombre: { es: "Perú a la Mesa", en: "Peru at the Table" },
       ruta: {
-        es: "Lima · Cusco · San Blas · Moray · Valle Sagrado",
-        en: "Lima · Cusco · San Blas · Moray · Sacred Valley"
+        es: "Lima · Valle Sagrado · Moray · Cusco",
+        en: "Lima · Sacred Valley · Moray · Cusco"
       },
       resumen: {
         es: "Un recorrido por la cocina que puso al Perú en el mapa: de las mesas más buscadas de Lima a los cultivos de altura del Valle Sagrado.",
         en: "A journey through the cuisine that put Peru on the map: from Lima's most sought-after tables to the high-altitude crops of the Sacred Valley."
       },
       descripcion: {
-        es: "La cocina peruana contada desde su origen: los mercados y las grandes mesas de Lima, las picanterías de Cusco y los cultivos de altura que lo sostienen todo.",
-        en: "Peruvian cuisine told from its source: the markets and great tables of Lima, the picanterías of Cusco and the high-altitude crops behind it all."
+        es: "Un circuito gastronómico completo por el Perú: los mercados y las grandes mesas de Lima, los cultivos de altura del Valle Sagrado y las picanterías de Cusco, con experiencias del huerto a la mesa en hoteles del valle.",
+        en: "A complete culinary circuit through Peru: the markets and great tables of Lima, the high-altitude crops of the Sacred Valley and the picanterías of Cusco, with farm-to-table experiences at hotels in the valley."
       },
       incluye: {
         es: ["Guía privado", "Traslados", "Alojamiento", "Reservas en restaurantes"],
@@ -474,14 +482,14 @@ const AUREVIA_DATA = {
       itinerario: {
         es: [
           ["Días 1 a 4 · Lima", "Mercados al amanecer, cebicherías de barrio, alta cocina y una tarde por Barranco."],
-          ["Días 5 a 7 · Cusco y San Blas", "Cocina cusqueña tradicional, picanterías y un taller con cocineros locales."],
-          ["Días 8 a 10 · Valle Sagrado y Moray", "Visita a productores, cultivos de papas y maíces nativos, y una pachamanca preparada en tierra."],
+          ["Días 5 a 7 · Valle Sagrado y Moray", "Llegada directa al valle, más bajo que Cusco, para aclimatarse. Visita a productores de papas y maíces nativos, una pachamanca preparada en tierra y una experiencia del huerto a la mesa en hoteles del valle como Tambo del Inka."],
+          ["Días 8 a 10 · Cusco", "Cocina cusqueña tradicional, picanterías del barrio de San Blas y un taller con cocineros locales."],
           ["Día 11 · Regreso", "Traslado al aeropuerto y vuelo de retorno."]
         ],
         en: [
           ["Days 1–4 · Lima", "Markets at dawn, neighborhood cebicherías, fine dining and an afternoon in Barranco."],
-          ["Days 5–7 · Cusco & San Blas", "Traditional Cusco cooking, picanterías and a workshop with local cooks."],
-          ["Days 8–10 · Sacred Valley & Moray", "Visits to producers, native potato and corn fields, and a pachamanca cooked in the earth."],
+          ["Days 5–7 · Sacred Valley & Moray", "Straight to the valley, lower than Cusco, to acclimatize. Visits to native potato and corn growers, a pachamanca cooked in the earth, and a farm-to-table experience at valley hotels such as Tambo del Inka."],
+          ["Days 8–10 · Cusco", "Traditional Cusco cooking, picanterías in the San Blas quarter and a workshop with local cooks."],
           ["Day 11 · Departure", "Airport transfer and return flight."]
         ]
       },
@@ -489,12 +497,12 @@ const AUREVIA_DATA = {
         es: [
           "Los restaurantes más solicitados se reservan con semanas o meses de anticipación: cuanto antes confirmes fechas, mejor.",
           "Avísanos con anticipación sobre alergias o restricciones alimentarias del grupo.",
-          "El viaje empieza en Lima, a nivel del mar, y sube a Cusco a mitad de camino: el primer día allí es de ritmo suave."
+          "De Lima se sube directo al Valle Sagrado, más bajo que Cusco: el cuerpo se aclimata mientras se come bien, y Cusco llega al final."
         ],
         en: [
           "The most sought-after restaurants book up weeks or months ahead: the sooner you confirm dates, the better.",
           "Let us know in advance about any allergies or dietary restrictions in the group.",
-          "The trip starts in Lima, at sea level, and climbs to Cusco midway: the first day there is kept light."
+          "From Lima you fly up straight to the Sacred Valley, lower than Cusco: your body acclimatizes while you eat well, and Cusco comes last."
         ]
       }
     },
@@ -502,14 +510,14 @@ const AUREVIA_DATA = {
       id: "peru-en-familia",
       imagen: "experiencia-peru-en-familia-01.jpg",
       portadaProvisional: true,
-      galeria: ["destino-cusco-ciudad-02.jpg", "destino-machu-picchu-01.jpg", "destino-valle-sagrado-02.jpg"],
+      galeria: ["destino-valle-sagrado-02.jpg", "destino-machu-picchu-01.jpg", "destino-cusco-ciudad-02.jpg"],
       categoria: "viaje",
       duracion: { es: "8 días / 7 noches", en: "8 days / 7 nights" },
       grupo: { es: "Viaje privado", en: "Private journey" },
       nombre: { es: "Perú en Familia", en: "Peru with the Family" },
       ruta: {
-        es: "Lima · Cusco · Laguna Piuray · Machu Picchu · Huaynapicchu · Circuito Mágico del Agua",
-        en: "Lima · Cusco · Piuray Lake · Machu Picchu · Huaynapicchu · Magic Water Circuit"
+        es: "Lima · Valle Sagrado · Laguna Piuray · Machu Picchu · Huaynapicchu · Cusco · Circuito Mágico del Agua",
+        en: "Lima · Sacred Valley · Piuray Lake · Machu Picchu · Huaynapicchu · Cusco · Magic Water Circuit"
       },
       resumen: {
         es: "Un viaje pensado para que grandes y chicos lo disfruten por igual: kayak en la laguna Piuray, picnic entre montañas y Machu Picchu a un ritmo cómodo.",
@@ -526,15 +534,17 @@ const AUREVIA_DATA = {
       itinerario: {
         es: [
           ["Día 1 · Lima", "Llegada, traslado y primera tarde tranquila en la ciudad."],
-          ["Días 2 a 4 · Cusco y laguna Piuray", "Recorrido por Cusco pensado para niños, kayak en la laguna Piuray y picnic entre montañas."],
-          ["Días 5 y 6 · Machu Picchu", "Viaje en tren y visita guiada a la ciudadela. Subida al Huaynapicchu opcional, según la edad de los viajeros."],
+          ["Días 2 y 3 · Valle Sagrado y laguna Piuray", "Vuelo a Cusco y bajada directa al valle, más bajo, para aclimatarse. Al día siguiente, kayak en la laguna Piuray y picnic entre montañas."],
+          ["Días 4 y 5 · Machu Picchu", "Tren desde Ollantaytambo y visita guiada a la ciudadela. Subida al Huaynapicchu opcional, según la edad de los viajeros."],
+          ["Día 6 · Cusco", "Un recorrido por la ciudad pensado para niños, ya aclimatados."],
           ["Día 7 · Lima", "Regreso a Lima y noche en el Circuito Mágico del Agua."],
           ["Día 8 · Regreso", "Traslado al aeropuerto y vuelo de retorno."]
         ],
         en: [
           ["Day 1 · Lima", "Arrival, transfer and a relaxed first afternoon in the city."],
-          ["Days 2–4 · Cusco & Piuray Lake", "A kid-friendly tour of Cusco, kayaking on Piuray Lake and a picnic among the mountains."],
-          ["Days 5–6 · Machu Picchu", "Train journey and guided visit to the citadel. Optional Huaynapicchu climb, depending on the travelers' ages."],
+          ["Days 2–3 · Sacred Valley & Piuray Lake", "Flight to Cusco and straight down to the lower valley to acclimatize. The next day, kayaking on Piuray Lake and a picnic among the mountains."],
+          ["Days 4–5 · Machu Picchu", "Train from Ollantaytambo and a guided visit to the citadel. Optional Huaynapicchu climb, depending on the travelers' ages."],
+          ["Day 6 · Cusco", "A kid-friendly tour of the city, now acclimatized."],
           ["Day 7 · Lima", "Return to Lima and an evening at the Magic Water Circuit."],
           ["Day 8 · Departure", "Airport transfer and return flight."]
         ]
@@ -543,12 +553,14 @@ const AUREVIA_DATA = {
         es: [
           "Lleva el pasaporte físico de cada viajero, incluidos los niños: es obligatorio para ingresar a Machu Picchu.",
           "La subida al Huaynapicchu tiene restricción de edad y cupos limitados; la confirmamos según las edades del grupo.",
-          "El primer día en Cusco se deja libre de actividades exigentes para que todos se aclimaten."
+          "Se duerme primero en el Valle Sagrado, más bajo que Cusco, y el primer día allí no tiene actividades exigentes: así todos se aclimatan.",
+          "El Circuito Mágico del Agua no abre todos los días: ajustamos la noche en Lima a su horario."
         ],
         en: [
           "Bring every traveler's physical passport, children included: it's required to enter Machu Picchu.",
           "The Huaynapicchu climb has an age restriction and limited spaces; we confirm it based on the group's ages.",
-          "The first day in Cusco is kept free of demanding activities so everyone can acclimatize."
+          "The first nights are in the Sacred Valley, lower than Cusco, and the first day there has no demanding activities: that way everyone acclimatizes.",
+          "The Magic Water Circuit isn't open every day: we fit the Lima evening to its schedule."
         ]
       }
     }
