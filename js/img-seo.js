@@ -250,15 +250,35 @@ const AUREVIA_IMG_SEO = {
   },
   "experiencia-desayuno-huaynapicchu-01.jpg": {
     "alt": {
-      "es": "Desayuno privado con vista a la montaña Huayna Picchu",
-      "en": "Private breakfast overlooking Huayna Picchu mountain"
+      "es": "Mesa de desayuno servida en una terraza de madera entre árboles, con la montaña Huayna Picchu al fondo",
+      "en": "Breakfast table set on a wooden terrace among the trees, with Huayna Picchu mountain behind"
     },
     "title": {
-      "es": "Desayuno con vista al Huaynapicchu",
-      "en": "Breakfast with a view of Huayna Picchu"
+      "es": "La terraza frente al Huaynapicchu",
+      "en": "The terrace facing Huayna Picchu"
     },
-    "w": 1000,
-    "h": 1250
+    "w": 960,
+    "h": 1200,
+    "caption": {
+      "es": "Fruta, jugos y pan recién horneado en la terraza del hotel, con el Huaynapicchu enmarcado por el bosque.",
+      "en": "Fruit, juices and freshly baked bread on the hotel terrace, with Huayna Picchu framed by the forest."
+    }
+  },
+  "experiencia-desayuno-huaynapicchu-02.jpg": {
+    "alt": {
+      "es": "Mujer con sombrero frente a una mesa con torre de dulces, tragos rosados y té, con el Huayna Picchu al fondo",
+      "en": "Woman in a hat at a table with a tiered pastry stand, pink drinks and tea, with Huayna Picchu behind"
+    },
+    "title": {
+      "es": "Té y dulces con vista",
+      "en": "Tea and pastries with a view"
+    },
+    "w": 960,
+    "h": 1200,
+    "caption": {
+      "es": "Una mesa servida con calma, a pocos pasos del ingreso a la ciudadela.",
+      "en": "An unhurried table, just steps from the entrance to the citadel."
+    }
   },
   "experiencia-luna-de-miel-01.jpg": {
     "alt": {

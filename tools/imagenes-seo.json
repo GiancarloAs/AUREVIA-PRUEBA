@@ -528,28 +528,68 @@
   },
   {
     "file": "experiencia-desayuno-huaynapicchu-01.jpg",
-    "w": 1000,
-    "h": 1250,
+    "w": 960,
+    "h": 1200,
     "title": {
-      "es": "Desayuno con vista al Huaynapicchu",
-      "en": "Breakfast with a view of Huayna Picchu"
+      "es": "La terraza frente al Huaynapicchu",
+      "en": "The terrace facing Huayna Picchu"
     },
     "alt": {
-      "es": "Desayuno privado con vista a la montaña Huayna Picchu",
-      "en": "Private breakfast overlooking Huayna Picchu mountain"
+      "es": "Mesa de desayuno servida en una terraza de madera entre árboles, con la montaña Huayna Picchu al fondo",
+      "en": "Breakfast table set on a wooden terrace among the trees, with Huayna Picchu mountain behind"
     },
-    "description": "Desayuno exclusivo con vista al Huayna Picchu, Machu Picchu, Perú.",
+    "description": "Desayuno en la terraza del Sanctuary Lodge con vista al Huayna Picchu, Machu Picchu, Perú.",
     "keywords": [
-      "desayuno privado",
-      "Huaynapicchu",
+      "desayuno Huaynapicchu",
+      "Sanctuary Lodge",
       "Machu Picchu",
-      "Aguas Calientes",
-      "experiencia de lujo"
+      "Huayna Picchu",
+      "breakfast Machu Picchu"
     ],
     "brief": "Vertical: mesa de desayuno en terraza de hotel con vista a la montaña.",
     "avoid": "Tomas de interior sin vista a la montaña.",
-    "source_hint": "Unsplash / Pexels / Wikimedia Commons (licencia libre)",
-    "credit": ""
+    "source_hint": "Foto enviada por el cliente (Sanctuary Lodge)",
+    "credit": "Sanctuary Lodge (Belmond) — permiso de uso por confirmar con el hotel",
+    "caption": {
+      "es": "Fruta, jugos y pan recién horneado en la terraza del hotel, con el Huaynapicchu enmarcado por el bosque.",
+      "en": "Fruit, juices and freshly baked bread on the hotel terrace, with Huayna Picchu framed by the forest."
+    },
+    "focus": [
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "file": "experiencia-desayuno-huaynapicchu-02.jpg",
+    "w": 960,
+    "h": 1200,
+    "title": {
+      "es": "Té y dulces con vista",
+      "en": "Tea and pastries with a view"
+    },
+    "alt": {
+      "es": "Mujer con sombrero frente a una mesa con torre de dulces, tragos rosados y té, con el Huayna Picchu al fondo",
+      "en": "Woman in a hat at a table with a tiered pastry stand, pink drinks and tea, with Huayna Picchu behind"
+    },
+    "caption": {
+      "es": "Una mesa servida con calma, a pocos pasos del ingreso a la ciudadela.",
+      "en": "An unhurried table, just steps from the entrance to the citadel."
+    },
+    "description": "Mesa servida en la terraza del Sanctuary Lodge con vista al Huayna Picchu, Machu Picchu, Perú.",
+    "keywords": [
+      "desayuno Huaynapicchu",
+      "Sanctuary Lodge",
+      "Machu Picchu",
+      "Huayna Picchu"
+    ],
+    "brief": "Vertical: mesa con la montaña de fondo.",
+    "avoid": "Rostros reconocibles sin autorización.",
+    "source_hint": "Foto enviada por el cliente (Sanctuary Lodge)",
+    "credit": "Sanctuary Lodge (Belmond) — permiso de uso por confirmar con el hotel",
+    "focus": [
+      0.5,
+      0.5
+    ]
   },
   {
     "file": "experiencia-luna-de-miel-01.jpg",

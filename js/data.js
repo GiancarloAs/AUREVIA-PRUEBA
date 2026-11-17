@@ -321,6 +321,7 @@ const AUREVIA_DATA = {
     {
       id: "desayuno-huaynapicchu",
       imagen: "experiencia-desayuno-huaynapicchu-01.jpg",
+      galeria: ["experiencia-desayuno-huaynapicchu-02.jpg"],
       categoria: "icono",
       duracion: { es: "Medio día", en: "Half day" },
       grupo: { es: "2 – 6 personas", en: "2 – 6 people" },
