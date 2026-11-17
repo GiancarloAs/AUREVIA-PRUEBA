@@ -83,7 +83,7 @@ const UI_STRINGS = {
     modal_tips_heading: "Consejos para tu viaje",
     modal_highlights_heading: "Destacados", modal_req_label: "Requisito", modal_route_heading: "El recorrido", modal_includes_label: "Incluye", altitud_label: "Altitud",
     modal_route_note: "Este recorrido es un punto de partida: fechas, ritmo y alojamientos se ajustan a cada viajero.",
-    modal_moments_heading: "Momentos del viaje",
+    modal_moments_heading: "Momentos del viaje", modal_moments_experience_heading: "Momentos de la experiencia",
     modal_moments_note: "Sin horarios rígidos: el ritmo lo deciden ustedes.",
     aria_foto_anterior: "Foto anterior", aria_foto_siguiente: "Foto siguiente",
     aria_abrir_menu: "Abrir menú", aria_cerrar_menu: "Cerrar menú", aria_cerrar: "Cerrar"
@@ -167,7 +167,7 @@ const UI_STRINGS = {
     modal_tips_heading: "Travel tips",
     modal_highlights_heading: "Highlights", modal_req_label: "Requirement", modal_route_heading: "The route", modal_includes_label: "Includes", altitud_label: "Altitude",
     modal_route_note: "This route is a starting point: dates, pace and accommodation are adjusted to each traveler.",
-    modal_moments_heading: "Moments of the journey",
+    modal_moments_heading: "Moments of the journey", modal_moments_experience_heading: "Moments of the experience",
     modal_moments_note: "No rigid schedule: you set the pace.",
     aria_foto_anterior: "Previous photo", aria_foto_siguiente: "Next photo",
     aria_abrir_menu: "Open menu", aria_cerrar_menu: "Close menu", aria_cerrar: "Close"
@@ -528,7 +528,8 @@ function fillModal(keepScroll){
   const esMomentos = steps === momentos;
   if (Array.isArray(steps) && steps.length){
     routeWrap.hidden = false;
-    routeWrap.querySelector("h4").textContent = t(esMomentos ? "modal_moments_heading" : "modal_route_heading");
+    routeWrap.querySelector("h4").textContent = t(!esMomentos ? "modal_route_heading"
+      : item.categoria === "viaje" ? "modal_moments_heading" : "modal_moments_experience_heading");
     routeWrap.querySelector("ol").innerHTML = steps.map(([etapa, texto]) => `<li><strong>${etapa}</strong><span>${texto}</span></li>`).join("");
     routeWrap.querySelector("p").textContent = t(esMomentos ? "modal_moments_note" : "modal_route_note");
   } else {

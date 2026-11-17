@@ -342,8 +342,8 @@ const AUREVIA_DATA = {
         en: "A guided harvest in an Andean orchard followed by a private culinary experience with a local chef."
       },
       descripcion: {
-        es: "Recolección de insumos de temporada junto a productores locales y almuerzo de autor preparado frente al comensal, maridado con bebidas regionales. Puede vivirse por separado o como parte del viaje Perú a la Mesa.",
-        en: "Gathering seasonal produce with local growers, followed by a signature lunch cooked in front of you and paired with regional drinks. It can be enjoyed on its own or as part of the Peru at the Table journey."
+        es: "Recolección de insumos de temporada junto a productores locales y almuerzo de autor preparado frente al comensal, maridado con bebidas regionales. Puede vivirse por separado o como parte de la experiencia Perú a la Mesa.",
+        en: "Gathering seasonal produce with local growers, followed by a signature lunch cooked in front of you and paired with regional drinks. It can be enjoyed on its own or as part of the Peru at the Table experience."
       },
       consejos: {
         es: [
@@ -459,9 +459,9 @@ const AUREVIA_DATA = {
       imagen: "experiencia-peru-a-la-mesa-01.jpg",
       portadaProvisional: true,
       galeria: ["experiencia-huerto-mesa-01.jpg", "destino-valle-sagrado-01.jpg", "destino-cusco-ciudad-02.jpg"],
-      categoria: "viaje",
-      duracion: { es: "7 días / 6 noches", en: "7 days / 6 nights" },
-      grupo: { es: "Viaje privado", en: "Private journey" },
+      categoria: "gastronomia",
+      duracion: { es: "1 a 3 días, a medida", en: "1 to 3 days, tailored" },
+      grupo: { es: "2 – 12 personas", en: "2 – 12 people" },
       nombre: { es: "Perú a la Mesa", en: "Peru at the Table" },
       ruta: {
         es: "Valle Sagrado · Moray · Cusco",
@@ -472,35 +472,41 @@ const AUREVIA_DATA = {
         en: "Andean cuisine from its source: from the high-altitude crops of the Sacred Valley to the picanterías and finest tables of Cusco."
       },
       descripcion: {
-        es: "Un circuito gastronómico completo por Cusco y el Valle Sagrado: productores de papas y maíces nativos, experiencias del huerto a la mesa en hoteles del valle, mercados tradicionales, picanterías y la cocina de autor que hoy reinterpreta los ingredientes andinos.",
-        en: "A complete culinary circuit through Cusco and the Sacred Valley: native potato and corn growers, farm-to-table experiences at valley hotels, traditional markets, picanterías and the signature cooking that reinterprets Andean ingredients today."
+        es: "Una experiencia gastronómica por Cusco y el Valle Sagrado, a la medida de cada viajero: se puede vivir en un día o repartida a lo largo del viaje. Del huerto y los productores de altura a las picanterías y la cocina de autor que hoy reinterpreta los ingredientes andinos.",
+        en: "A culinary experience through Cusco and the Sacred Valley, tailored to each traveler: enjoy it in a single day or spread across your trip. From gardens and highland growers to picanterías and the signature cooking that reinterprets Andean ingredients today."
       },
       incluye: {
-        es: ["Guía privado", "Traslados", "Alojamiento", "Reservas en restaurantes"],
-        en: ["Private guide", "Transfers", "Accommodation", "Restaurant reservations"]
+        es: ["Guía privado", "Traslados", "Reservas en restaurantes"],
+        en: ["Private guide", "Transfers", "Restaurant reservations"]
       },
-      itinerario: {
+      momentos: {
         es: [
-          ["Días 1 a 3 · Valle Sagrado y Moray", "Del aeropuerto de Cusco directo al valle, más bajo, para aclimatarse. Visita a productores de papas y maíces nativos, una pachamanca preparada en tierra y una experiencia del huerto a la mesa en hoteles del valle como Tambo del Inka."],
-          ["Días 4 a 6 · Cusco", "El mercado de San Pedro, picanterías del barrio de San Blas, un taller con cocineros locales y una cena de cocina andina de autor."],
-          ["Día 7 · Regreso", "Traslado al aeropuerto y vuelo de retorno."]
+          ["Del huerto a la mesa en el valle", "Cosecha con productores de papas y maíces nativos y un almuerzo preparado con lo recogido, en hoteles del valle como Tambo del Inka."],
+          ["Una pachamanca en tierra", "La cocción andina más antigua: carnes, tubérculos y hierbas cocinados bajo piedras calientes."],
+          ["Moray, el laboratorio de los incas", "Las terrazas donde los incas ensayaron cultivos a distintas alturas, para entender de dónde viene lo que se come."],
+          ["El mercado de San Pedro", "Frutas, panes y quesos de la región, de la mano de alguien que conoce cada puesto."],
+          ["Picanterías de San Blas", "La cocina cusqueña de siempre, en las casas donde se sigue sirviendo."],
+          ["Cena de cocina andina de autor", "Los ingredientes de altura reinterpretados por los cocineros que hoy marcan la escena de Cusco."]
         ],
         en: [
-          ["Days 1–3 · Sacred Valley & Moray", "From Cusco airport straight down to the lower valley to acclimatize. Visits to native potato and corn growers, a pachamanca cooked in the earth, and a farm-to-table experience at valley hotels such as Tambo del Inka."],
-          ["Days 4–6 · Cusco", "San Pedro market, picanterías in the San Blas quarter, a workshop with local cooks and a dinner of signature Andean cuisine."],
-          ["Day 7 · Departure", "Airport transfer and return flight."]
+          ["Farm to table in the valley", "Harvesting with native potato and corn growers, then a lunch cooked with what you picked, at valley hotels such as Tambo del Inka."],
+          ["A pachamanca in the earth", "The oldest Andean way of cooking: meats, tubers and herbs cooked under hot stones."],
+          ["Moray, the Incas' laboratory", "The terraces where the Incas trialed crops at different altitudes, to understand where the food comes from."],
+          ["San Pedro market", "Regional fruit, breads and cheeses, guided by someone who knows every stall."],
+          ["Picanterías of San Blas", "Classic Cusco cooking, in the homes where it is still served."],
+          ["A signature Andean dinner", "Highland ingredients reinterpreted by the cooks now shaping Cusco's food scene."]
         ]
       },
       consejos: {
         es: [
           "Los restaurantes más solicitados se reservan con semanas o meses de anticipación: cuanto antes confirmes fechas, mejor.",
           "Avísanos con anticipación sobre alergias o restricciones alimentarias del grupo.",
-          "Del aeropuerto de Cusco se baja directo al Valle Sagrado, más bajo que la ciudad: el cuerpo se aclimata mientras se come bien, y Cusco llega al final."
+          "Si recién llegas a Cusco, empieza por el Valle Sagrado, más bajo que la ciudad, y deja las cenas en Cusco para cuando ya estés aclimatado."
         ],
         en: [
           "The most sought-after restaurants book up weeks or months ahead: the sooner you confirm dates, the better.",
           "Let us know in advance about any allergies or dietary restrictions in the group.",
-          "From Cusco airport you head straight down to the Sacred Valley, lower than the city: your body acclimatizes while you eat well, and Cusco comes last."
+          "If you've just arrived in Cusco, start in the Sacred Valley, lower than the city, and save the Cusco dinners for once you're acclimatized."
         ]
       }
     },
