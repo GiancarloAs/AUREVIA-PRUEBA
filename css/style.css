@@ -534,6 +534,8 @@ section{ padding-block:clamp(3.5rem, 7vw, 6.5rem); position:relative; }
   font-size:.78rem; letter-spacing:.03em;
 }
 .filter-row button.is-active{ background:var(--c-black); border-color:var(--c-black); color:var(--c-white); }
+/* Pestañas junto al título de una sección (Estancias) */
+.filter-row--inline{ margin-top:0; }
 
 /* ---------- Página de Aliados (aliados.html) ---------- */
 .ally-card{

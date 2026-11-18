@@ -17,6 +17,10 @@ const UI_STRINGS = {
     destinos_home_title: "Lugares que definen un viaje por el Perú andino",
     experiencias_home_title: "Momentos diseñados, no solo visitados",
     aliados_kicker: "Aliados estratégicos",
+    estancias_kicker: "Hoteles aliados", estancias_title: "Estancias",
+    estancias_lede: "Hoteles evaluados uno a uno por AUREVIA, en tres categorías para cada tipo de viaje.",
+    trenes_kicker: "Trenes aliados", trenes_title: "Trenes a Machu Picchu",
+    trenes_lede: "Del vagón panorámico al tren de lujo: el trayecto también es parte del viaje.",
     aliados_home_title: "Hoteles y trenes seleccionados por su estándar de servicio",
     aliados_page_title: "Los aliados con los que viajas",
     aliados_page_lede: "Cada hotel y cada tren de este listado pasó por una evaluación directa de AUREVIA antes de sumarse como aliado — no son acuerdos comerciales genéricos.",
@@ -103,6 +107,10 @@ const UI_STRINGS = {
     destinos_home_title: "Places that define a journey through the Peruvian Andes",
     experiencias_home_title: "Moments designed, not just visited",
     aliados_kicker: "Strategic partners",
+    estancias_kicker: "Partner hotels", estancias_title: "Stays",
+    estancias_lede: "Hotels vetted one by one by AUREVIA, in three categories for every kind of trip.",
+    trenes_kicker: "Partner trains", trenes_title: "Trains to Machu Picchu",
+    trenes_lede: "From panoramic carriages to luxury trains: the journey is part of the trip.",
     aliados_home_title: "Hotels and trains selected for their standard of service",
     aliados_page_title: "The partners you travel with",
     aliados_page_lede: "Every hotel and train on this list went through a direct AUREVIA evaluation before joining as a partner — these aren't generic commercial deals.",
@@ -319,7 +327,7 @@ function renderAllGrids(){
   if (document.getElementById("experiencias-grid")){
     renderFilteredGrid("experiencias-grid", "experiencia", AUREVIA_DATA.experiencias);
   }
-  if (document.getElementById("aliados-grid")){
+  if (document.getElementById("estancias-grid")){
     renderAliadosGrid();
   }
   if (document.getElementById("allies-track")){
@@ -404,35 +412,46 @@ function allyCardTemplate(a){
 }
 
 function renderAliadosGrid(){
-  const el = document.getElementById("aliados-grid");
-  const filterRow = document.querySelector('[data-filter-for="aliados-grid"]');
-  if (!("aliados-grid" in ACTIVE_FILTERS)) ACTIVE_FILTERS["aliados-grid"] = "all";
-  const list = AUREVIA_DATA.aliados;
+  const hoteles = AUREVIA_DATA.aliados.filter(a => a.categoria === "hotel");
+  const trenes = AUREVIA_DATA.aliados.filter(a => a.categoria === "tren");
 
+  // Estancias: una pestaña por categoría de hotel
+  const estGrid = document.getElementById("estancias-grid");
+  const tabs = document.querySelector('[data-filter-for="estancias-grid"]');
+  const niveles = HOTEL_LEVELS.filter(n => hoteles.some(h => h.nivel === n));
+  if (!("estancias-grid" in ACTIVE_FILTERS)) ACTIVE_FILTERS["estancias-grid"] = niveles[0];
   const draw = () => {
-    const cat = ACTIVE_FILTERS["aliados-grid"];
-    const filtered = cat === "all" ? list : list.filter(i => allyFilterKey(i) === cat);
-    el.innerHTML = filtered.map(allyCardTemplate).join("");
+    const nivel = ACTIVE_FILTERS["estancias-grid"];
+    estGrid.innerHTML = hoteles.filter(h => h.nivel === nivel).map(allyCardTemplate).join("");
     markReveal();
   };
-
-  if (filterRow){
-    const cats = ["all", ...HOTEL_LEVELS.filter(n => list.some(i => i.nivel === n)), "tren"];
-    filterRow.innerHTML = cats.map(c =>
-      `<button data-cat="${c}" class="${c === ACTIVE_FILTERS["aliados-grid"] ? "is-active" : ""}">${c === "all" ? t("todas") : c === "tren" ? t("trenes") : categoryLabel(c)}</button>`
-    ).join("");
-    if (!filterRow.dataset.bound){
-      filterRow.addEventListener("click", (e) => {
+  if (tabs){
+    tabs.innerHTML = niveles.map(n => {
+      const on = n === ACTIVE_FILTERS["estancias-grid"];
+      return `<button type="button" role="tab" aria-selected="${on}" data-cat="${n}" class="${on ? "is-active" : ""}">${categoryLabel(n)}</button>`;
+    }).join("");
+    if (!tabs.dataset.bound){
+      tabs.addEventListener("click", (e) => {
         const btn = e.target.closest("button");
         if (!btn) return;
-        ACTIVE_FILTERS["aliados-grid"] = btn.dataset.cat;
-        filterRow.querySelectorAll("button").forEach(b => b.classList.toggle("is-active", b === btn));
+        ACTIVE_FILTERS["estancias-grid"] = btn.dataset.cat;
+        tabs.querySelectorAll("button").forEach(b => {
+          b.classList.toggle("is-active", b === btn);
+          b.setAttribute("aria-selected", b === btn);
+        });
         draw();
       });
-      filterRow.dataset.bound = "true";
+      tabs.dataset.bound = "true";
     }
   }
-  draw();
+  if (estGrid) draw();
+
+  // Trenes a Machu Picchu
+  const trenGrid = document.getElementById("trenes-grid");
+  if (trenGrid){
+    trenGrid.innerHTML = trenes.map(allyCardTemplate).join("");
+    markReveal();
+  }
 }
 
 /* ---------- 5. Modal de detalle (con consejos de viaje) ---------- */

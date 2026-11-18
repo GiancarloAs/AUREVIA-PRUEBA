@@ -62,13 +62,35 @@
       <span class="section-kicker" data-i18n="aliados_kicker">Aliados estratégicos</span>
       <h1 data-i18n="aliados_page_title">Los aliados con los que viajas</h1>
       <p class="lede" style="color:rgba(255,255,255,.78);max-width:56ch;margin-top:1rem" data-i18n="aliados_page_lede">Cada hotel y cada tren de este listado pasó por una evaluación directa de AUREVIA antes de sumarse como aliado — no son acuerdos comerciales genéricos.</p>
-      <div class="filter-row" data-filter-for="aliados-grid"></div>
     </div>
   </section>
 
-  <section>
+  <!-- Estancias: hoteles aliados por categoría -->
+  <section id="estancias">
     <div class="container">
-      <div class="card-grid" id="aliados-grid"></div>
+      <div class="section-head">
+        <div>
+          <span class="section-kicker" data-i18n="estancias_kicker">Hoteles aliados</span>
+          <h2 data-i18n="estancias_title">Estancias</h2>
+          <p data-i18n="estancias_lede">Hoteles evaluados uno a uno por AUREVIA, en tres categorías para cada tipo de viaje.</p>
+        </div>
+        <div class="filter-row filter-row--inline" data-filter-for="estancias-grid" role="tablist"></div>
+      </div>
+      <div class="card-grid" id="estancias-grid"></div>
+    </div>
+  </section>
+
+  <!-- Trenes a Machu Picchu -->
+  <section id="trenes" class="bg-ivory">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="section-kicker" data-i18n="trenes_kicker">Trenes aliados</span>
+          <h2 data-i18n="trenes_title">Trenes a Machu Picchu</h2>
+          <p data-i18n="trenes_lede">Del vagón panorámico al tren de lujo: el trayecto también es parte del viaje.</p>
+        </div>
+      </div>
+      <div class="card-grid" id="trenes-grid"></div>
     </div>
   </section>
 
