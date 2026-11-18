@@ -24,11 +24,14 @@
     ["creado_en", "Fecha"], ["nombre", "Nombre"], ["apellido", "Apellido"], ["pais", "Nacionalidad"],
     ["telefono", "Teléfono"], ["correo", "Correo"], ["pasaporte", "Pasaporte"],
     ["tipo", "Interés"], ["item_nombre", "Destino / experiencia"],
-    ["num_personas", "Personas"], ["categoria_hotel", "Hotel"], ["guia", "Guía"],
+    ["num_personas", "Personas"], ["categoria_hotel", "Categoría de hotel"], ["hotel_preferido", "Hotel preferido"], ["guia", "Guía"],
     ["num_invitados", "Invitados"], ["fecha_tentativa", "Fecha tentativa"],
     ["mensaje", "Mensaje"], ["idioma", "Idioma"]
   ];
   const NUMERICAS = ["num_personas", "num_invitados"];
+  // Códigos que guarda el formulario → texto que se ve en la tabla y el Excel
+  const CATEGORIAS_HOTEL = { "4-estrellas": "Categoría 4 Estrellas", "5-estrellas": "Categoría 5 Estrellas", "luxury": "Luxury" };
+  const GUIAS = { es: "Español", en: "Inglés", fr: "Francés", pt: "Portugués" };
 
   const $ = id => document.getElementById(id);
   let sesion = null;      // { access_token, refresh_token, correo }
@@ -153,6 +156,8 @@
       return p.length === 3 ? p[2] + "/" + p[1] + "/" + p[0] : String(valor);
     }
     if (clave === "tipo") return valor === "destino" ? "Destino" : "Experiencia";
+    if (clave === "categoria_hotel") return CATEGORIAS_HOTEL[valor] || String(valor);
+    if (clave === "guia") return GUIAS[valor] || String(valor);
     if (clave === "idioma") return String(valor).toUpperCase();
     return String(valor);
   }

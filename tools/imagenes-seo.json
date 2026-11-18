@@ -848,6 +848,174 @@
     "credit": ""
   },
   {
+    "file": "aliado-hotel-04.jpg",
+    "w": 600,
+    "h": 600,
+    "title": {
+      "es": "Costa del Sol Cusco, Cusco",
+      "en": "Costa del Sol Cusco, Cusco"
+    },
+    "alt": {
+      "es": "Hotel Costa del Sol Cusco en Cusco",
+      "en": "Costa del Sol Cusco hotel in Cusco"
+    },
+    "description": "Hotel aliado Costa del Sol Cusco, Cusco, Perú. Categoría 4 Estrellas.",
+    "keywords": [
+      "Costa del Sol Cusco",
+      "hotel Cusco",
+      "hotel aliado AUREVIA",
+      "Categoría 4 Estrellas"
+    ],
+    "brief": "Foto oficial del hotel (press kit). Cuadrada 1:1.",
+    "avoid": "Fotos de huéspedes o de terceros sin permiso.",
+    "source_hint": "Press kit del hotel",
+    "credit": ""
+  },
+  {
+    "file": "aliado-hotel-05.jpg",
+    "w": 600,
+    "h": 600,
+    "title": {
+      "es": "Novotel Cusco, Cusco",
+      "en": "Novotel Cusco, Cusco"
+    },
+    "alt": {
+      "es": "Hotel Novotel Cusco en Cusco",
+      "en": "Novotel Cusco hotel in Cusco"
+    },
+    "description": "Hotel aliado Novotel Cusco, Cusco, Perú. Categoría 4 Estrellas.",
+    "keywords": [
+      "Novotel Cusco",
+      "hotel Cusco",
+      "hotel aliado AUREVIA",
+      "Categoría 4 Estrellas"
+    ],
+    "brief": "Foto oficial del hotel (press kit). Cuadrada 1:1.",
+    "avoid": "Fotos de huéspedes o de terceros sin permiso.",
+    "source_hint": "Press kit del hotel",
+    "credit": ""
+  },
+  {
+    "file": "aliado-hotel-06.jpg",
+    "w": 600,
+    "h": 600,
+    "title": {
+      "es": "San Agustín Plaza, Cusco",
+      "en": "San Agustín Plaza, Cusco"
+    },
+    "alt": {
+      "es": "Hotel San Agustín Plaza en Cusco",
+      "en": "San Agustín Plaza hotel in Cusco"
+    },
+    "description": "Hotel aliado San Agustín Plaza, Cusco, Perú. Categoría 4 Estrellas.",
+    "keywords": [
+      "San Agustín Plaza",
+      "hotel Cusco",
+      "hotel aliado AUREVIA",
+      "Categoría 4 Estrellas"
+    ],
+    "brief": "Foto oficial del hotel (press kit). Cuadrada 1:1.",
+    "avoid": "Fotos de huéspedes o de terceros sin permiso.",
+    "source_hint": "Press kit del hotel",
+    "credit": ""
+  },
+  {
+    "file": "aliado-hotel-07.jpg",
+    "w": 600,
+    "h": 600,
+    "title": {
+      "es": "Aranwa Cusco, Cusco",
+      "en": "Aranwa Cusco, Cusco"
+    },
+    "alt": {
+      "es": "Hotel Aranwa Cusco en Cusco",
+      "en": "Aranwa Cusco hotel in Cusco"
+    },
+    "description": "Hotel aliado Aranwa Cusco, Cusco, Perú. Categoría 5 Estrellas.",
+    "keywords": [
+      "Aranwa Cusco",
+      "hotel Cusco",
+      "hotel aliado AUREVIA",
+      "Categoría 5 Estrellas"
+    ],
+    "brief": "Foto oficial del hotel (press kit). Cuadrada 1:1.",
+    "avoid": "Fotos de huéspedes o de terceros sin permiso.",
+    "source_hint": "Press kit del hotel",
+    "credit": ""
+  },
+  {
+    "file": "aliado-hotel-08.jpg",
+    "w": 600,
+    "h": 600,
+    "title": {
+      "es": "Casa Andina Premium, Cusco",
+      "en": "Casa Andina Premium, Cusco"
+    },
+    "alt": {
+      "es": "Hotel Casa Andina Premium en Cusco",
+      "en": "Casa Andina Premium hotel in Cusco"
+    },
+    "description": "Hotel aliado Casa Andina Premium, Cusco, Perú. Categoría 5 Estrellas.",
+    "keywords": [
+      "Casa Andina Premium",
+      "hotel Cusco",
+      "hotel aliado AUREVIA",
+      "Categoría 5 Estrellas"
+    ],
+    "brief": "Foto oficial del hotel (press kit). Cuadrada 1:1.",
+    "avoid": "Fotos de huéspedes o de terceros sin permiso.",
+    "source_hint": "Press kit del hotel",
+    "credit": ""
+  },
+  {
+    "file": "aliado-hotel-09.jpg",
+    "w": 600,
+    "h": 600,
+    "title": {
+      "es": "Palacio del Inka, Cusco",
+      "en": "Palacio del Inka, Cusco"
+    },
+    "alt": {
+      "es": "Hotel Palacio del Inka en Cusco",
+      "en": "Palacio del Inka hotel in Cusco"
+    },
+    "description": "Hotel aliado Palacio del Inka, Cusco, Perú. Categoría 5 Estrellas.",
+    "keywords": [
+      "Palacio del Inka",
+      "hotel Cusco",
+      "hotel aliado AUREVIA",
+      "Categoría 5 Estrellas"
+    ],
+    "brief": "Foto oficial del hotel (press kit). Cuadrada 1:1.",
+    "avoid": "Fotos de huéspedes o de terceros sin permiso.",
+    "source_hint": "Press kit del hotel",
+    "credit": ""
+  },
+  {
+    "file": "aliado-hotel-10.jpg",
+    "w": 600,
+    "h": 600,
+    "title": {
+      "es": "Belmond Monasterio, Cusco",
+      "en": "Belmond Monasterio, Cusco"
+    },
+    "alt": {
+      "es": "Hotel Belmond Monasterio en Cusco",
+      "en": "Belmond Monasterio hotel in Cusco"
+    },
+    "description": "Hotel aliado Belmond Monasterio, Cusco, Perú. Luxury.",
+    "keywords": [
+      "Belmond Monasterio",
+      "hotel Cusco",
+      "hotel aliado AUREVIA",
+      "Luxury"
+    ],
+    "brief": "Foto oficial del hotel (press kit). Cuadrada 1:1.",
+    "avoid": "Fotos de huéspedes o de terceros sin permiso.",
+    "source_hint": "Press kit del hotel",
+    "credit": ""
+  },
+  {
     "file": "aliado-tren-01.jpg",
     "w": 600,
     "h": 600,

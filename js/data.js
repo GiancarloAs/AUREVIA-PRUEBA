@@ -16,6 +16,9 @@
      - requisito:  { etiqueta:{es,en}, texto:{es,en} }  condición para reservar.
                    La etiqueta sale como franja sobre la foto de la tarjeta y el
                    texto como aviso destacado al inicio de la ficha
+     - nivel (solo hoteles): "4-estrellas" | "5-estrellas" | "luxury"  categoría del hotel
+     - ciudad (solo hoteles): id del destino donde está el hotel; su ficha muestra
+                   el bloque "Hotel recomendado" con los hoteles de ese destino
      - portadaProvisional: true  la imagen de la tarjeta es un placeholder:
                    el carrusel muestra solo las fotos de "galeria"
      - ruta:       { es, en }  lugares del recorrido (tarjeta y ficha)
@@ -572,9 +575,115 @@ const AUREVIA_DATA = {
 
   aliados: [
     {
+      id: "costa-del-sol-cusco",
+      nombre: "Costa del Sol Cusco",
+      categoria: "hotel",
+      nivel: "4-estrellas",
+      ciudad: "cusco-ciudad",
+      tipo: { es: "Hotel aliado", en: "Partner hotel" },
+      imagen: "aliado-hotel-04.jpg",
+      descripcion: {
+        es: "Hotel de categoría 4 estrellas en una casona colonial con patio de arcos, en el centro histórico de Cusco.",
+        en: "A 4-star hotel in a colonial mansion with an arched courtyard, in Cusco's historic center."
+      }
+    },
+    {
+      id: "novotel-cusco",
+      nombre: "Novotel Cusco",
+      categoria: "hotel",
+      nivel: "4-estrellas",
+      ciudad: "cusco-ciudad",
+      tipo: { es: "Hotel aliado", en: "Partner hotel" },
+      imagen: "aliado-hotel-05.jpg",
+      descripcion: {
+        es: "Casona colonial restaurada a pocas cuadras de la Plaza de Armas, con el confort de una cadena internacional.",
+        en: "A restored colonial mansion a few blocks from the Plaza de Armas, with the comfort of an international chain."
+      }
+    },
+    {
+      id: "san-agustin-plaza",
+      nombre: "San Agustín Plaza",
+      categoria: "hotel",
+      nivel: "4-estrellas",
+      ciudad: "cusco-ciudad",
+      tipo: { es: "Hotel aliado", en: "Partner hotel" },
+      imagen: "aliado-hotel-06.jpg",
+      descripcion: {
+        es: "Hotel de categoría 4 estrellas a pasos de la Plaza de Armas, con vistas a los techos de la ciudad.",
+        en: "A 4-star hotel steps from the Plaza de Armas, with views over the city's rooftops."
+      }
+    },
+    {
+      id: "aranwa-cusco",
+      nombre: "Aranwa Cusco Boutique Hotel",
+      categoria: "hotel",
+      nivel: "5-estrellas",
+      ciudad: "cusco-ciudad",
+      tipo: { es: "Hotel aliado", en: "Partner hotel" },
+      imagen: "aliado-hotel-07.jpg",
+      descripcion: {
+        es: "Casona colonial convertida en hotel boutique, con arte virreinal en sus salones, en el centro de Cusco.",
+        en: "A colonial mansion turned boutique hotel, with colonial-era art in its lounges, in central Cusco."
+      }
+    },
+    {
+      id: "casa-andina-premium-cusco",
+      nombre: "Casa Andina Premium Cusco",
+      categoria: "hotel",
+      nivel: "5-estrellas",
+      ciudad: "cusco-ciudad",
+      tipo: { es: "Hotel aliado", en: "Partner hotel" },
+      imagen: "aliado-hotel-08.jpg",
+      descripcion: {
+        es: "Casona colonial con patio central y fuente de piedra, cerca de la Plaza de Armas.",
+        en: "A colonial mansion with a central courtyard and stone fountain, near the Plaza de Armas."
+      }
+    },
+    {
+      id: "palacio-del-inka",
+      nombre: "Palacio del Inka, a Luxury Collection Hotel",
+      categoria: "hotel",
+      nivel: "5-estrellas",
+      ciudad: "cusco-ciudad",
+      tipo: { es: "Hotel aliado", en: "Partner hotel" },
+      imagen: "aliado-hotel-09.jpg",
+      descripcion: {
+        es: "Casona histórica frente al Qorikancha, con un gran patio cubierto y salones de época.",
+        en: "A historic mansion facing the Qorikancha, with a grand covered courtyard and period lounges."
+      }
+    },
+    {
+      id: "sumaq-machu-picchu",
+      nombre: "Sumaq Machu Picchu",
+      categoria: "hotel",
+      nivel: "5-estrellas",
+      ciudad: "machu-picchu",
+      tipo: { es: "Hotel aliado", en: "Partner hotel" },
+      imagen: "aliado-hotel-03.jpg",
+      descripcion: {
+        es: "Hotel 5 estrellas junto al río Vilcanota en Aguas Calientes, a minutos de la ciudadela.",
+        en: "A 5-star hotel beside the Vilcanota River in Aguas Calientes, minutes from the citadel."
+      }
+    },
+    {
+      id: "belmond-monasterio",
+      nombre: "Belmond Hotel Monasterio",
+      categoria: "hotel",
+      nivel: "luxury",
+      ciudad: "cusco-ciudad",
+      tipo: { es: "Hotel aliado", en: "Partner hotel" },
+      imagen: "aliado-hotel-10.jpg",
+      descripcion: {
+        es: "Antiguo seminario del siglo XVI con claustro de piedra y capilla barroca, en pleno centro de Cusco.",
+        en: "A 16th-century former seminary with a stone cloister and baroque chapel, in the heart of Cusco."
+      }
+    },
+    {
       id: "palacio-nazarenas",
       nombre: "Palacio Nazarenas",
       categoria: "hotel",
+      nivel: "luxury",
+      ciudad: "cusco-ciudad",
       tipo: { es: "Hotel aliado", en: "Partner hotel" },
       imagen: "aliado-hotel-01.jpg",
       descripcion: {
@@ -586,22 +695,13 @@ const AUREVIA_DATA = {
       id: "inkaterra-la-casona",
       nombre: "Inkaterra La Casona",
       categoria: "hotel",
+      nivel: "luxury",
+      ciudad: "cusco-ciudad",
       tipo: { es: "Hotel aliado", en: "Partner hotel" },
       imagen: "aliado-hotel-02.jpg",
       descripcion: {
         es: "Mansión del siglo XVI convertida en boutique hotel íntimo, a pasos de la Plaza de Armas de Cusco.",
         en: "A 16th-century mansion turned intimate boutique hotel, steps from Cusco's Plaza de Armas."
-      }
-    },
-    {
-      id: "sumaq-machu-picchu",
-      nombre: "Sumaq Machu Picchu",
-      categoria: "hotel",
-      tipo: { es: "Hotel aliado", en: "Partner hotel" },
-      imagen: "aliado-hotel-03.jpg",
-      descripcion: {
-        es: "Hotel 5 estrellas junto al río Vilcanota en Aguas Calientes, a minutos de la ciudadela.",
-        en: "A 5-star hotel beside the Vilcanota River in Aguas Calientes, minutes from the citadel."
       }
     },
     {

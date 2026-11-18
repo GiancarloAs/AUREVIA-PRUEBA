@@ -12,7 +12,7 @@ const UI_STRINGS = {
     hero_lede: "AUREVIA diseña itinerarios privados, guías especializados y logística impecable para quienes viajan pocas veces al año, pero quieren que cada una sea inolvidable.",
     hero_cta_1: "Explorar destinos", hero_cta_2: "Ver experiencias",
     ver_todos: "Ver todos", ver_detalle: "Ver detalle", reservar_esto: "Consultar disponibilidad",
-    todas: "Todas",
+    todas: "Todas", trenes: "Trenes",
 
     destinos_home_title: "Lugares que definen un viaje por el Perú andino",
     experiencias_home_title: "Momentos diseñados, no solo visitados",
@@ -36,7 +36,9 @@ const UI_STRINGS = {
     opt_destino: "Un destino", opt_experiencia: "Una experiencia",
     label_item_select: "Selecciona", label_num_personas: "Número de personas",
     label_categoria_hotel: "Categoría de hotel",
-    opt_hotel_boutique: "Boutique de lujo", opt_hotel_5estrellas: "5 estrellas", opt_hotel_premium: "Premium con encanto",
+    opt_hotel_4: "Categoría 4 Estrellas", opt_hotel_5: "Categoría 5 Estrellas", opt_hotel_luxury: "Luxury",
+    label_hotel_preferido: "Hotel preferido", opt_sin_preferencia: "Sin preferencia",
+    modal_hotels_heading: "Hotel recomendado",
     label_guia: "Idioma del guía", opt_guia_es: "Español", opt_guia_en: "Inglés", opt_guia_fr: "Francés", opt_guia_pt: "Portugués",
     label_num_invitados: "Número de invitados", label_fecha: "Fecha tentativa",
     label_mensaje: "Cuéntanos algo más sobre tu viaje (opcional)",
@@ -96,7 +98,7 @@ const UI_STRINGS = {
     hero_lede: "AUREVIA designs private itineraries, specialist guides and flawless logistics for travelers who journey only a few times a year — and want every one to be unforgettable.",
     hero_cta_1: "Explore destinations", hero_cta_2: "View experiences",
     ver_todos: "View all", ver_detalle: "View detail", reservar_esto: "Check availability",
-    todas: "All",
+    todas: "All", trenes: "Trains",
 
     destinos_home_title: "Places that define a journey through the Peruvian Andes",
     experiencias_home_title: "Moments designed, not just visited",
@@ -120,7 +122,9 @@ const UI_STRINGS = {
     opt_destino: "A destination", opt_experiencia: "An experience",
     label_item_select: "Select", label_num_personas: "Number of travelers",
     label_categoria_hotel: "Hotel category",
-    opt_hotel_boutique: "Luxury boutique", opt_hotel_5estrellas: "5-star", opt_hotel_premium: "Premium with charm",
+    opt_hotel_4: "4-Star Category", opt_hotel_5: "5-Star Category", opt_hotel_luxury: "Luxury",
+    label_hotel_preferido: "Preferred hotel", opt_sin_preferencia: "No preference",
+    modal_hotels_heading: "Recommended hotel",
     label_guia: "Guide language", opt_guia_es: "Spanish", opt_guia_en: "English", opt_guia_fr: "French", opt_guia_pt: "Portuguese",
     label_num_invitados: "Number of guests", label_fecha: "Tentative date",
     label_mensaje: "Tell us more about your trip (optional)",
@@ -183,6 +187,9 @@ const CATEGORY_LABELS = {
   gastronomia: { es: "Gastronomía", en: "Gastronomy" },
   viaje: { es: "Viaje completo", en: "Full journey" },
   hotel: { es: "Hotel", en: "Hotel" },
+  "4-estrellas": { es: "Categoría 4 Estrellas", en: "4-Star Category" },
+  "5-estrellas": { es: "Categoría 5 Estrellas", en: "5-Star Category" },
+  luxury: { es: "Luxury", en: "Luxury" },
   tren: { es: "Tren", en: "Train" }
 };
 
@@ -362,7 +369,7 @@ function renderAllies(){
   track.innerHTML = AUREVIA_DATA.aliados.map(a => `
     <div class="ally">
       <div class="ally-media"><img src="img/${a.imagen}" alt="${imgAlt(a.imagen, a.nombre)}" width="600" height="600" loading="lazy" decoding="async"></div>
-      <span>${a.nombre}<br><small>${pick(a.tipo)}</small></span>
+      <span>${a.nombre}<br><small>${a.nivel ? categoryLabel(a.nivel) : pick(a.tipo)}</small></span>
     </div>`).join("");
 
   const prev = document.getElementById("allies-prev");
@@ -377,13 +384,16 @@ function renderAllies(){
 }
 
 /* ---------- 4b. Página completa de aliados (aliados.html) ---------- */
+// Categorías de hotel, en el orden en que se muestran (pestañas, filtros y formulario)
+const HOTEL_LEVELS = ["4-estrellas", "5-estrellas", "luxury"];
+const allyFilterKey = a => a.categoria === "hotel" ? a.nivel : a.categoria;
 function allyCardTemplate(a){
   const icon = a.categoria === "hotel" ? ICONS.bed : ICONS.train;
   return `
   <article class="ally-card" data-id="${a.id}">
     <div class="card-media">
       <img src="img/${a.imagen}" alt="${imgAlt(a.imagen, a.nombre)}" width="600" height="600" loading="lazy" decoding="async">
-      <span class="card-tag">${categoryLabel(a.categoria)}</span>
+      <span class="card-tag">${categoryLabel(a.nivel || a.categoria)}</span>
     </div>
     <div class="card-body">
       <span class="ally-kind">${icon}&nbsp; ${pick(a.tipo)}</span>
@@ -401,15 +411,15 @@ function renderAliadosGrid(){
 
   const draw = () => {
     const cat = ACTIVE_FILTERS["aliados-grid"];
-    const filtered = cat === "all" ? list : list.filter(i => i.categoria === cat);
+    const filtered = cat === "all" ? list : list.filter(i => allyFilterKey(i) === cat);
     el.innerHTML = filtered.map(allyCardTemplate).join("");
     markReveal();
   };
 
   if (filterRow){
-    const cats = ["all", ...new Set(list.map(i => i.categoria))];
+    const cats = ["all", ...HOTEL_LEVELS.filter(n => list.some(i => i.nivel === n)), "tren"];
     filterRow.innerHTML = cats.map(c =>
-      `<button data-cat="${c}" class="${c === ACTIVE_FILTERS["aliados-grid"] ? "is-active" : ""}">${c === "all" ? t("todas") : categoryLabel(c)}</button>`
+      `<button data-cat="${c}" class="${c === ACTIVE_FILTERS["aliados-grid"] ? "is-active" : ""}">${c === "all" ? t("todas") : c === "tren" ? t("trenes") : categoryLabel(c)}</button>`
     ).join("");
     if (!filterRow.dataset.bound){
       filterRow.addEventListener("click", (e) => {
@@ -547,6 +557,34 @@ function fillModal(keepScroll){
     hlWrap.hidden = true;
   }
 
+  // Hotel recomendado (destinos con hoteles aliados en "ciudad"): pestañas por categoría
+  const hotWrap = q(".modal-hotels");
+  const hoteles = kind === "destino" ? AUREVIA_DATA.aliados.filter(a => a.categoria === "hotel" && a.ciudad === item.id) : [];
+  const niveles = HOTEL_LEVELS.filter(n => hoteles.some(h => h.nivel === n));
+  if (niveles.length){
+    hotWrap.hidden = false;
+    hotWrap.querySelector("h4").textContent = t("modal_hotels_heading");
+    const tabs = hotWrap.querySelector(".mh-tabs");
+    const grid = hotWrap.querySelector(".mh-grid");
+    const show = (nivel) => {
+      tabs.querySelectorAll("button").forEach(b => {
+        const on = b.dataset.nivel === nivel;
+        b.classList.toggle("is-active", on);
+        b.setAttribute("aria-selected", on);
+      });
+      grid.innerHTML = hoteles.filter(h => h.nivel === nivel).map(h => `
+        <figure class="mh-hotel">
+          <img src="img/${h.imagen}" alt="${imgAlt(h.imagen, h.nombre)}" width="600" height="600" loading="lazy" decoding="async">
+          <figcaption>${h.nombre}</figcaption>
+        </figure>`).join("");
+    };
+    tabs.innerHTML = niveles.map(n => `<button type="button" role="tab" data-nivel="${n}">${categoryLabel(n)}</button>`).join("");
+    tabs.onclick = (e) => { const b = e.target.closest("button"); if (b) show(b.dataset.nivel); };
+    show(niveles[0]);
+  } else {
+    hotWrap.hidden = true;
+  }
+
   const tipsWrap = q(".modal-tips");
   const tips = pick(item.consejos);
   if (Array.isArray(tips) && tips.length){
@@ -622,6 +660,7 @@ function initModal(){
       <div class="modal-main">
         <p class="modal-desc"></p>
         <div class="modal-highlights" hidden><h4></h4><ul></ul></div>
+        <div class="modal-hotels" hidden><h4></h4><div class="mh-tabs" role="tablist"></div><div class="mh-grid"></div></div>
         <div class="modal-route" hidden><h4></h4><ol></ol><p></p></div>
         <div class="modal-tips"><h4></h4><ul></ul></div>
       </div>
@@ -736,6 +775,21 @@ function initContactForm(){
     toggleDynamicFields(tipoSelect.value);
   });
 
+  // "Hotel preferido" muestra solo los hoteles aliados de la categoría elegida
+  const catHotel = form.querySelector("#categoria-hotel");
+  const hotelSelect = form.querySelector("#hotel-preferido");
+  function fillHotelOptions(){
+    if (!hotelSelect) return;
+    const prev = hotelSelect.value;
+    const hoteles = AUREVIA_DATA.aliados.filter(a => a.categoria === "hotel" && a.nivel === catHotel.value);
+    hotelSelect.innerHTML = `<option value="">${t("opt_sin_preferencia")}</option>` +
+      hoteles.map(h => `<option value="${h.id}">${h.nombre}</option>`).join("");
+    if (hoteles.some(h => h.id === prev)) hotelSelect.value = prev;
+  }
+  catHotel?.addEventListener("change", fillHotelOptions);
+  document.addEventListener("aurevia:lang-changed", fillHotelOptions);
+  fillHotelOptions();
+
   // Preselección desde la URL (ej. viene de una tarjeta de destinos.html)
   const params = new URLSearchParams(location.search);
   const urlKind = params.get("tipo");
@@ -761,6 +815,15 @@ function initContactForm(){
 
   const txt = (v, max) => { const s = String(v == null ? "" : v).trim().slice(0, max); return s || null; };
   const num = (v) => { const n = parseInt(v, 10); return Number.isFinite(n) && n >= 1 && n <= 500 ? n : null; };
+  function nombreEnEspanol(data){
+    const lista = data.get("tipo-viaje") === "destino" ? AUREVIA_DATA.destinos : AUREVIA_DATA.experiencias;
+    const item = lista.find(i => i.id === data.get("item-select"));
+    return item ? (item.nombre.es || item.nombre) : "";
+  }
+  function hotelNombre(id){
+    const h = id ? AUREVIA_DATA.aliados.find(a => a.id === id) : null;
+    return h ? h.nombre : "";
+  }
   async function guardarEnBaseDeDatos(data, itemText){
     const esDestino = data.get("tipo-viaje") === "destino";
     const fila = {
@@ -769,11 +832,14 @@ function initContactForm(){
       pais: txt(data.get("pais"), 80), pasaporte: txt(data.get("pasaporte"), 40),
       telefono: txt(data.get("telefono"), 40), correo: txt(data.get("correo"), 160),
       tipo: esDestino ? "destino" : "experiencia",
-      item_id: txt(data.get("item-select"), 80), item_nombre: txt(itemText, 160),
+      // el nombre se guarda siempre en español, para que el panel y el Excel no mezclen idiomas
+      item_id: txt(data.get("item-select"), 80), item_nombre: txt(nombreEnEspanol(data), 160),
       // solo se guardan los campos del bloque visible (destino o experiencia)
       num_personas: esDestino ? num(data.get("num-personas")) : null,
-      categoria_hotel: esDestino ? txt(data.get("categoria-hotel"), 80) : null,
-      guia: esDestino ? txt(data.get("guia"), 40) : null,
+      // categoría y guía van como código fijo (4-estrellas, luxury, es, en…), igual en ambos idiomas
+      categoria_hotel: esDestino ? txt(data.get("categoria-hotel"), 20) : null,
+      hotel_preferido: esDestino ? txt(hotelNombre(data.get("hotel-preferido")), 120) : null,
+      guia: esDestino ? txt(data.get("guia"), 5) : null,
       num_invitados: esDestino ? null : num(data.get("num-invitados")),
       fecha_tentativa: esDestino ? null : (data.get("fecha-tentativa") || null),
       mensaje: txt(data.get("mensaje"), 2000)
@@ -807,6 +873,11 @@ function initContactForm(){
       Interes: data.get("tipo-viaje") + " — " + itemText
     };
     data.forEach((v, k) => { if (!k.startsWith("_") && v !== "") payload[k] = v; });
+    // en el correo, la categoría, el hotel y el guía van con su nombre legible, no con el código
+    ["categoria-hotel", "hotel-preferido", "guia"].forEach(k => {
+      const sel = form.elements[k];
+      if (payload[k] && sel && sel.selectedOptions[0]) payload[k] = sel.selectedOptions[0].text;
+    });
     const label = submitBtn.textContent;
     submitBtn.disabled = true; submitBtn.textContent = t("form_enviando");
     try {

@@ -207,18 +207,22 @@
           <div class="field dynamic-field is-required" data-dynamic="destino">
             <label for="categoria-hotel" data-i18n="label_categoria_hotel">Categoría de hotel</label>
             <select id="categoria-hotel" name="categoria-hotel">
-              <option data-i18n="opt_hotel_boutique">Boutique de lujo</option>
-              <option data-i18n="opt_hotel_5estrellas">5 estrellas</option>
-              <option data-i18n="opt_hotel_premium">Premium con encanto</option>
+              <option value="4-estrellas" data-i18n="opt_hotel_4">Categoría 4 Estrellas</option>
+              <option value="5-estrellas" data-i18n="opt_hotel_5">Categoría 5 Estrellas</option>
+              <option value="luxury" data-i18n="opt_hotel_luxury">Luxury</option>
             </select>
+          </div>
+          <div class="field dynamic-field" data-dynamic="destino">
+            <label for="hotel-preferido" data-i18n="label_hotel_preferido">Hotel preferido</label>
+            <select id="hotel-preferido" name="hotel-preferido"></select>
           </div>
           <div class="field dynamic-field full" data-dynamic="destino">
             <label for="guia" data-i18n="label_guia">Idioma del guía</label>
             <select id="guia" name="guia">
-              <option data-i18n="opt_guia_es">Español</option>
-              <option data-i18n="opt_guia_en">Inglés</option>
-              <option data-i18n="opt_guia_fr">Francés</option>
-              <option data-i18n="opt_guia_pt">Portugués</option>
+              <option value="es" data-i18n="opt_guia_es">Español</option>
+              <option value="en" data-i18n="opt_guia_en">Inglés</option>
+              <option value="fr" data-i18n="opt_guia_fr">Francés</option>
+              <option value="pt" data-i18n="opt_guia_pt">Portugués</option>
             </select>
           </div>
 

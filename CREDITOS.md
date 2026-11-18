@@ -29,6 +29,13 @@
 | aliado-hotel-01.jpg | PENDIENTE |
 | aliado-hotel-02.jpg | PENDIENTE |
 | aliado-hotel-03.jpg | PENDIENTE |
+| aliado-hotel-04.jpg | PENDIENTE |
+| aliado-hotel-05.jpg | PENDIENTE |
+| aliado-hotel-06.jpg | PENDIENTE |
+| aliado-hotel-07.jpg | PENDIENTE |
+| aliado-hotel-08.jpg | PENDIENTE |
+| aliado-hotel-09.jpg | PENDIENTE |
+| aliado-hotel-10.jpg | PENDIENTE |
 | aliado-tren-01.jpg | PENDIENTE |
 | aliado-tren-02.jpg | PENDIENTE |
 | aliado-tren-03.jpg | PENDIENTE |

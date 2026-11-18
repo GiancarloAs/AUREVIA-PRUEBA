@@ -408,6 +408,90 @@ const AUREVIA_IMG_SEO = {
     "w": 600,
     "h": 600
   },
+  "aliado-hotel-04.jpg": {
+    "alt": {
+      "es": "Hotel Costa del Sol Cusco en Cusco",
+      "en": "Costa del Sol Cusco hotel in Cusco"
+    },
+    "title": {
+      "es": "Costa del Sol Cusco, Cusco",
+      "en": "Costa del Sol Cusco, Cusco"
+    },
+    "w": 600,
+    "h": 600
+  },
+  "aliado-hotel-05.jpg": {
+    "alt": {
+      "es": "Hotel Novotel Cusco en Cusco",
+      "en": "Novotel Cusco hotel in Cusco"
+    },
+    "title": {
+      "es": "Novotel Cusco, Cusco",
+      "en": "Novotel Cusco, Cusco"
+    },
+    "w": 600,
+    "h": 600
+  },
+  "aliado-hotel-06.jpg": {
+    "alt": {
+      "es": "Hotel San Agustín Plaza en Cusco",
+      "en": "San Agustín Plaza hotel in Cusco"
+    },
+    "title": {
+      "es": "San Agustín Plaza, Cusco",
+      "en": "San Agustín Plaza, Cusco"
+    },
+    "w": 600,
+    "h": 600
+  },
+  "aliado-hotel-07.jpg": {
+    "alt": {
+      "es": "Hotel Aranwa Cusco en Cusco",
+      "en": "Aranwa Cusco hotel in Cusco"
+    },
+    "title": {
+      "es": "Aranwa Cusco, Cusco",
+      "en": "Aranwa Cusco, Cusco"
+    },
+    "w": 600,
+    "h": 600
+  },
+  "aliado-hotel-08.jpg": {
+    "alt": {
+      "es": "Hotel Casa Andina Premium en Cusco",
+      "en": "Casa Andina Premium hotel in Cusco"
+    },
+    "title": {
+      "es": "Casa Andina Premium, Cusco",
+      "en": "Casa Andina Premium, Cusco"
+    },
+    "w": 600,
+    "h": 600
+  },
+  "aliado-hotel-09.jpg": {
+    "alt": {
+      "es": "Hotel Palacio del Inka en Cusco",
+      "en": "Palacio del Inka hotel in Cusco"
+    },
+    "title": {
+      "es": "Palacio del Inka, Cusco",
+      "en": "Palacio del Inka, Cusco"
+    },
+    "w": 600,
+    "h": 600
+  },
+  "aliado-hotel-10.jpg": {
+    "alt": {
+      "es": "Hotel Belmond Monasterio en Cusco",
+      "en": "Belmond Monasterio hotel in Cusco"
+    },
+    "title": {
+      "es": "Belmond Monasterio, Cusco",
+      "en": "Belmond Monasterio, Cusco"
+    },
+    "w": 600,
+    "h": 600
+  },
   "aliado-tren-01.jpg": {
     "alt": {
       "es": "Tren de lujo Belmond Hiram Bingham rumbo a Machu Picchu",
