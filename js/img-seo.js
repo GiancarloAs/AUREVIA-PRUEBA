@@ -348,14 +348,14 @@ const AUREVIA_IMG_SEO = {
       "en": "A quad bike ride across the plateau, with the snow peaks lit by the sunset."
     }
   },
-  "experiencia-peru-a-la-mesa-01.jpg": {
+  "experiencia-cusco-a-la-mesa-01.jpg": {
     "alt": {
       "es": "Platos de cocina peruana contemporánea con ingredientes andinos",
       "en": "Contemporary Peruvian dishes made with Andean ingredients"
     },
     "title": {
-      "es": "Perú a la mesa",
-      "en": "Peru at the Table"
+      "es": "Cusco a la Mesa",
+      "en": "Cusco at the Table"
     },
     "w": 1000,
     "h": 1250

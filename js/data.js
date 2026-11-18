@@ -345,8 +345,8 @@ const AUREVIA_DATA = {
         en: "A guided harvest in an Andean orchard followed by a private culinary experience with a local chef."
       },
       descripcion: {
-        es: "Recolección de insumos de temporada junto a productores locales y almuerzo de autor preparado frente al comensal, maridado con bebidas regionales. Puede vivirse por separado o como parte de la experiencia Perú a la Mesa.",
-        en: "Gathering seasonal produce with local growers, followed by a signature lunch cooked in front of you and paired with regional drinks. It can be enjoyed on its own or as part of the Peru at the Table experience."
+        es: "Recolección de insumos de temporada junto a productores locales y almuerzo de autor preparado frente al comensal, maridado con bebidas regionales. Puede vivirse por separado o como parte de la experiencia Cusco a la Mesa.",
+        en: "Gathering seasonal produce with local growers, followed by a signature lunch cooked in front of you and paired with regional drinks. It can be enjoyed on its own or as part of the Cusco at the Table experience."
       },
       consejos: {
         es: [
@@ -458,25 +458,25 @@ const AUREVIA_DATA = {
       }
     },
     {
-      id: "peru-a-la-mesa",
-      imagen: "experiencia-peru-a-la-mesa-01.jpg",
+      id: "cusco-a-la-mesa",
+      imagen: "experiencia-cusco-a-la-mesa-01.jpg",
       portadaProvisional: true,
       galeria: ["experiencia-huerto-mesa-01.jpg", "destino-valle-sagrado-01.jpg", "destino-cusco-ciudad-02.jpg"],
       categoria: "gastronomia",
-      duracion: { es: "1 a 3 días, a medida", en: "1 to 3 days, tailored" },
+      duracion: { es: "1 día", en: "1 day" },
       grupo: { es: "2 – 12 personas", en: "2 – 12 people" },
-      nombre: { es: "Perú a la Mesa", en: "Peru at the Table" },
+      nombre: { es: "Cusco a la Mesa", en: "Cusco at the Table" },
       ruta: {
-        es: "Valle Sagrado · Moray · Cusco",
-        en: "Sacred Valley · Moray · Cusco"
+        es: "Cusco · Moray · Valle Sagrado",
+        en: "Cusco · Moray · Sacred Valley"
       },
       resumen: {
-        es: "La cocina andina desde su origen: de los cultivos de altura del Valle Sagrado a las picanterías y las mejores mesas de Cusco.",
-        en: "Andean cuisine from its source: from the high-altitude crops of the Sacred Valley to the picanterías and finest tables of Cusco."
+        es: "La cocina andina desde su origen, en un solo día: del mercado de San Pedro a los cultivos de altura del Valle Sagrado y una cena de autor en Cusco.",
+        en: "Andean cuisine from its source, in a single day: from San Pedro market to the high-altitude crops of the Sacred Valley and a signature dinner in Cusco."
       },
       descripcion: {
-        es: "Una experiencia gastronómica por Cusco y el Valle Sagrado, a la medida de cada viajero: se puede vivir en un día o repartida a lo largo del viaje. Del huerto y los productores de altura a las picanterías y la cocina de autor que hoy reinterpreta los ingredientes andinos.",
-        en: "A culinary experience through Cusco and the Sacred Valley, tailored to each traveler: enjoy it in a single day or spread across your trip. From gardens and highland growers to picanterías and the signature cooking that reinterprets Andean ingredients today."
+        es: "Un día para recorrer la cocina andina de principio a fin: el mercado donde compran los cusqueños, las terrazas de Moray donde los incas ensayaban sus cultivos, un almuerzo con lo cosechado en el valle y, de vuelta en Cusco, una cena de autor que reinterpreta los ingredientes de altura.",
+        en: "A day to experience Andean cuisine from start to finish: the market where locals shop, the Moray terraces where the Incas trialed their crops, a lunch made with produce harvested in the valley and, back in Cusco, a signature dinner that reinterprets highland ingredients."
       },
       incluye: {
         es: ["Guía privado", "Traslados", "Reservas en restaurantes"],
@@ -484,32 +484,28 @@ const AUREVIA_DATA = {
       },
       momentos: {
         es: [
-          ["Del huerto a la mesa en el valle", "Cosecha con productores de papas y maíces nativos y un almuerzo preparado con lo recogido, en hoteles del valle como Tambo del Inka."],
-          ["Una pachamanca en tierra", "La cocción andina más antigua: carnes, tubérculos y hierbas cocinados bajo piedras calientes."],
+          ["Mañana en el mercado de San Pedro", "Frutas, panes y quesos de la región, de la mano de alguien que conoce cada puesto."],
           ["Moray, el laboratorio de los incas", "Las terrazas donde los incas ensayaron cultivos a distintas alturas, para entender de dónde viene lo que se come."],
-          ["El mercado de San Pedro", "Frutas, panes y quesos de la región, de la mano de alguien que conoce cada puesto."],
-          ["Picanterías de San Blas", "La cocina cusqueña de siempre, en las casas donde se sigue sirviendo."],
-          ["Cena de cocina andina de autor", "Los ingredientes de altura reinterpretados por los cocineros que hoy marcan la escena de Cusco."]
+          ["Almuerzo en el Valle Sagrado", "Del huerto a la mesa en hoteles del valle como Tambo del Inka, con lo recién cosechado, o una pachamanca cocinada bajo piedras calientes."],
+          ["Cena de cocina andina de autor", "De vuelta en Cusco, los ingredientes de altura reinterpretados por los cocineros que hoy marcan la escena de la ciudad."]
         ],
         en: [
-          ["Farm to table in the valley", "Harvesting with native potato and corn growers, then a lunch cooked with what you picked, at valley hotels such as Tambo del Inka."],
-          ["A pachamanca in the earth", "The oldest Andean way of cooking: meats, tubers and herbs cooked under hot stones."],
+          ["Morning at San Pedro market", "Regional fruit, breads and cheeses, guided by someone who knows every stall."],
           ["Moray, the Incas' laboratory", "The terraces where the Incas trialed crops at different altitudes, to understand where the food comes from."],
-          ["San Pedro market", "Regional fruit, breads and cheeses, guided by someone who knows every stall."],
-          ["Picanterías of San Blas", "Classic Cusco cooking, in the homes where it is still served."],
-          ["A signature Andean dinner", "Highland ingredients reinterpreted by the cooks now shaping Cusco's food scene."]
+          ["Lunch in the Sacred Valley", "Farm to table at valley hotels such as Tambo del Inka, with freshly harvested produce, or a pachamanca cooked under hot stones."],
+          ["A signature Andean dinner", "Back in Cusco, highland ingredients reinterpreted by the cooks now shaping the city's food scene."]
         ]
       },
       consejos: {
         es: [
-          "Los restaurantes más solicitados se reservan con semanas o meses de anticipación: cuanto antes confirmes fechas, mejor.",
-          "Avísanos con anticipación sobre alergias o restricciones alimentarias del grupo.",
-          "Si recién llegas a Cusco, empieza por el Valle Sagrado, más bajo que la ciudad, y deja las cenas en Cusco para cuando ya estés aclimatado."
+          "Es una jornada completa, de la mañana a la noche: conviene programarla después de uno o dos días en Cusco, ya aclimatados (Moray está a unos 3,500 m).",
+          "Los restaurantes más solicitados se reservan con semanas de anticipación: cuanto antes confirmes la fecha, mejor.",
+          "Avísanos con anticipación sobre alergias o restricciones alimentarias del grupo."
         ],
         en: [
-          "The most sought-after restaurants book up weeks or months ahead: the sooner you confirm dates, the better.",
-          "Let us know in advance about any allergies or dietary restrictions in the group.",
-          "If you've just arrived in Cusco, start in the Sacred Valley, lower than the city, and save the Cusco dinners for once you're acclimatized."
+          "It's a full day, from morning to night: plan it after one or two days in Cusco, once acclimatized (Moray sits at around 3,500 m).",
+          "The most sought-after restaurants book up weeks ahead: the sooner you confirm the date, the better.",
+          "Let us know in advance about any allergies or dietary restrictions in the group."
         ]
       }
     },

@@ -24,7 +24,7 @@
 | experiencia-desayuno-huaynapicchu-02.jpg | Sanctuary Lodge (Belmond) — permiso de uso por confirmar con el hotel |
 | experiencia-luna-de-miel-01.jpg | Autor por confirmar (foto enviada por el cliente) |
 | experiencia-luna-de-miel-02.jpg | Autor por confirmar (foto enviada por el cliente) |
-| experiencia-peru-a-la-mesa-01.jpg | PENDIENTE |
+| experiencia-cusco-a-la-mesa-01.jpg | PENDIENTE |
 | experiencia-peru-en-familia-01.jpg | PENDIENTE |
 | aliado-hotel-01.jpg | PENDIENTE |
 | aliado-hotel-02.jpg | PENDIENTE |
