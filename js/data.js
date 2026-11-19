@@ -338,6 +338,7 @@ const AUREVIA_DATA = {
     {
       id: "huerto-mesa",
       imagen: "experiencia-huerto-mesa-01.jpg",
+      galeria: ["experiencia-cusco-a-la-mesa-01.jpg"],
       categoria: "gastronomia",
       duracion: { es: "Medio día", en: "Half day" },
       grupo: { es: "2 – 12 personas", en: "2 – 12 people" },
@@ -405,7 +406,7 @@ const AUREVIA_DATA = {
     {
       id: "luna-de-miel-andes",
       imagen: "experiencia-luna-de-miel-01.jpg",
-      galeria: ["experiencia-luna-de-miel-02.jpg", "destino-valle-sagrado-01.jpg", "destino-valle-sagrado-03.jpg", "destino-machu-picchu-01.jpg", "destino-cusco-ciudad-01.jpg"],
+      galeria: ["experiencia-luna-de-miel-02.jpg", "destino-valle-sagrado-01.jpg", "destino-valle-sagrado-03.jpg", "destino-valle-sagrado-06.jpg", "destino-machu-picchu-01.jpg", "destino-cusco-ciudad-01.jpg"],
       categoria: "viaje",
       duracion: { es: "10 días sugeridos", en: "10 suggested days" },
       grupo: { es: "Viaje privado", en: "Private journey" },
@@ -462,7 +463,7 @@ const AUREVIA_DATA = {
     {
       id: "cusco-a-la-mesa",
       imagen: "experiencia-cusco-a-la-mesa-01.jpg",
-      galeria: ["experiencia-cusco-a-la-mesa-02.jpg", "experiencia-huerto-mesa-01.jpg", "destino-valle-sagrado-01.jpg"],
+      galeria: ["destino-valle-sagrado-01.jpg"],
       categoria: "gastronomia",
       duracion: { es: "1 día", en: "1 day" },
       grupo: { es: "2 – 12 personas", en: "2 – 12 people" },
