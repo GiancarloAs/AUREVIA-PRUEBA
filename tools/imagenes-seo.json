@@ -1619,5 +1619,104 @@
     "avoid": "Solo material autorizado del aliado.",
     "source_hint": "Press kit de Inca Rail (solicitar permiso por escrito)",
     "credit": ""
+  },
+  {
+    "file": "experiencia-cusco-a-la-mesa-03.jpg",
+    "w": 1200,
+    "h": 800,
+    "title": {
+      "es": "Puestos de fruta en San Pedro",
+      "en": "Fruit stalls at San Pedro"
+    },
+    "alt": {
+      "es": "Vendedoras con mandil turquesa entre puestos de mangos, plátanos, papayas y naranjas en el mercado de San Pedro de Cusco",
+      "en": "Vendors in turquoise aprons among stalls of mangoes, bananas, papayas and oranges at San Pedro market in Cusco"
+    },
+    "description": "Mercado de San Pedro, Cusco, Perú.",
+    "keywords": [
+      "Mercado de San Pedro",
+      "Cusco",
+      "gastronomía Cusco",
+      "San Pedro market",
+      "Cusco food experience"
+    ],
+    "brief": "Foto enviada por el cliente.",
+    "avoid": "",
+    "source_hint": "Enviada por el cliente en el chat",
+    "credit": "Autor por confirmar (foto enviada por el cliente)",
+    "focus": [
+      0.5,
+      0.6
+    ],
+    "caption": {
+      "es": "Las caseras de San Pedro, entre frutas de la selva y del valle.",
+      "en": "San Pedro's market women, among fruit from the jungle and the valley."
+    }
+  },
+  {
+    "file": "experiencia-cusco-a-la-mesa-04.jpg",
+    "w": 1200,
+    "h": 800,
+    "title": {
+      "es": "Pasillo de jugos en San Pedro",
+      "en": "Juice aisle at San Pedro"
+    },
+    "alt": {
+      "es": "Pasillo de juguerías del mercado de San Pedro con taburetes blancos y frutas apiladas en cada puesto",
+      "en": "Juice-stall aisle at San Pedro market with white stools and fruit piled high at each stand"
+    },
+    "description": "Mercado de San Pedro, Cusco, Perú.",
+    "keywords": [
+      "Mercado de San Pedro",
+      "Cusco",
+      "gastronomía Cusco",
+      "San Pedro market",
+      "Cusco food experience"
+    ],
+    "brief": "Foto enviada por el cliente.",
+    "avoid": "",
+    "source_hint": "Enviada por el cliente en el chat",
+    "credit": "Autor por confirmar (foto enviada por el cliente)",
+    "focus": [
+      0.5,
+      0.5
+    ],
+    "caption": {
+      "es": "El pasillo de jugos, donde desayunan los cusqueños.",
+      "en": "The juice aisle, where Cusco locals have breakfast."
+    }
+  },
+  {
+    "file": "experiencia-cusco-a-la-mesa-05.jpg",
+    "w": 1200,
+    "h": 800,
+    "title": {
+      "es": "Mercado de San Pedro",
+      "en": "San Pedro market"
+    },
+    "alt": {
+      "es": "Fachada del mercado de San Pedro de Cusco con su techo de calamina y vendedores en la plaza",
+      "en": "Facade of Cusco's San Pedro market with its corrugated roof and vendors on the square"
+    },
+    "description": "Mercado de San Pedro, Cusco, Perú.",
+    "keywords": [
+      "Mercado de San Pedro",
+      "Cusco",
+      "gastronomía Cusco",
+      "San Pedro market",
+      "Cusco food experience"
+    ],
+    "brief": "Foto enviada por el cliente.",
+    "avoid": "",
+    "source_hint": "Enviada por el cliente en el chat",
+    "credit": "Autor por confirmar (foto enviada por el cliente)",
+    "focus": [
+      0.5,
+      0.6
+    ],
+    "caption": {
+      "es": "El mercado de San Pedro, a pocas cuadras de la Plaza de Armas.",
+      "en": "San Pedro market, a few blocks from the Plaza de Armas."
+    }
   }
 ]

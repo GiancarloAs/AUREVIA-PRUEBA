@@ -799,5 +799,53 @@ const AUREVIA_IMG_SEO = {
     },
     "w": 600,
     "h": 600
+  },
+  "experiencia-cusco-a-la-mesa-03.jpg": {
+    "alt": {
+      "es": "Vendedoras con mandil turquesa entre puestos de mangos, plátanos, papayas y naranjas en el mercado de San Pedro de Cusco",
+      "en": "Vendors in turquoise aprons among stalls of mangoes, bananas, papayas and oranges at San Pedro market in Cusco"
+    },
+    "title": {
+      "es": "Puestos de fruta en San Pedro",
+      "en": "Fruit stalls at San Pedro"
+    },
+    "w": 1200,
+    "h": 800,
+    "caption": {
+      "es": "Las caseras de San Pedro, entre frutas de la selva y del valle.",
+      "en": "San Pedro's market women, among fruit from the jungle and the valley."
+    }
+  },
+  "experiencia-cusco-a-la-mesa-04.jpg": {
+    "alt": {
+      "es": "Pasillo de juguerías del mercado de San Pedro con taburetes blancos y frutas apiladas en cada puesto",
+      "en": "Juice-stall aisle at San Pedro market with white stools and fruit piled high at each stand"
+    },
+    "title": {
+      "es": "Pasillo de jugos en San Pedro",
+      "en": "Juice aisle at San Pedro"
+    },
+    "w": 1200,
+    "h": 800,
+    "caption": {
+      "es": "El pasillo de jugos, donde desayunan los cusqueños.",
+      "en": "The juice aisle, where Cusco locals have breakfast."
+    }
+  },
+  "experiencia-cusco-a-la-mesa-05.jpg": {
+    "alt": {
+      "es": "Fachada del mercado de San Pedro de Cusco con su techo de calamina y vendedores en la plaza",
+      "en": "Facade of Cusco's San Pedro market with its corrugated roof and vendors on the square"
+    },
+    "title": {
+      "es": "Mercado de San Pedro",
+      "en": "San Pedro market"
+    },
+    "w": 1200,
+    "h": 800,
+    "caption": {
+      "es": "El mercado de San Pedro, a pocas cuadras de la Plaza de Armas.",
+      "en": "San Pedro market, a few blocks from the Plaza de Armas."
+    }
   }
 };

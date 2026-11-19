@@ -58,3 +58,6 @@
 | aliado-tren-05.jpg | PENDIENTE |
 | aliado-tren-06.jpg | PENDIENTE |
 | aliado-tren-07.jpg | PENDIENTE |
+| experiencia-cusco-a-la-mesa-03.jpg | Autor por confirmar (foto enviada por el cliente) |
+| experiencia-cusco-a-la-mesa-04.jpg | Autor por confirmar (foto enviada por el cliente) |
+| experiencia-cusco-a-la-mesa-05.jpg | Autor por confirmar (foto enviada por el cliente) |

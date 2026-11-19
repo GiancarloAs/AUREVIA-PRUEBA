@@ -463,7 +463,7 @@ const AUREVIA_DATA = {
     {
       id: "cusco-a-la-mesa",
       imagen: "experiencia-cusco-a-la-mesa-01.jpg",
-      galeria: ["destino-valle-sagrado-01.jpg"],
+      galeria: ["experiencia-cusco-a-la-mesa-05.jpg", "experiencia-cusco-a-la-mesa-03.jpg", "experiencia-cusco-a-la-mesa-04.jpg", "destino-valle-sagrado-01.jpg"],
       categoria: "gastronomia",
       duracion: { es: "1 día", en: "1 day" },
       grupo: { es: "2 – 12 personas", en: "2 – 12 people" },
