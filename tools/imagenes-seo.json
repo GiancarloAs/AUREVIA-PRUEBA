@@ -1070,8 +1070,8 @@
     "w": 600,
     "h": 600,
     "title": {
-      "es": "Inca Rail Private",
-      "en": "Inca Rail Private"
+      "es": "Inca Rail The Private",
+      "en": "Inca Rail The Private"
     },
     "alt": {
       "es": "Tren privado de Inca Rail con salones panorámicos",
@@ -1527,5 +1527,97 @@
       "es": "El toque final de la cena de autor, servido en la mesa.",
       "en": "The finishing touch of the signature dinner, served at the table."
     }
+  },
+  {
+    "file": "aliado-tren-04.jpg",
+    "w": 600,
+    "h": 600,
+    "title": {
+      "es": "PeruRail Vistadome Observatory",
+      "en": "PeruRail Vistadome Observatory"
+    },
+    "alt": {
+      "es": "Tren PeruRail Vistadome Observatory con vagón observatorio de balcón abierto",
+      "en": "PeruRail Vistadome Observatory train with an open-balcony observatory car"
+    },
+    "description": "Tren aliado PeruRail Vistadome Observatory, Cusco, Perú.",
+    "keywords": [
+      "PeruRail",
+      "Observatory",
+      "tren Machu Picchu"
+    ],
+    "brief": "Foto oficial del tren (press kit). Cuadrada 1:1.",
+    "avoid": "Solo material autorizado del aliado.",
+    "source_hint": "Press kit de PeruRail (solicitar permiso por escrito)",
+    "credit": ""
+  },
+  {
+    "file": "aliado-tren-05.jpg",
+    "w": 600,
+    "h": 600,
+    "title": {
+      "es": "Inca Rail The 360°",
+      "en": "Inca Rail The 360°"
+    },
+    "alt": {
+      "es": "Tren The 360° de Inca Rail con vagón observatorio al aire libre",
+      "en": "Inca Rail The 360° train with an open-air observatory car"
+    },
+    "description": "Tren aliado Inca Rail The 360°, Cusco, Perú.",
+    "keywords": [
+      "Inca Rail",
+      "The 360°",
+      "tren Machu Picchu"
+    ],
+    "brief": "Foto oficial del tren (press kit). Cuadrada 1:1.",
+    "avoid": "Solo material autorizado del aliado.",
+    "source_hint": "Press kit de Inca Rail (solicitar permiso por escrito)",
+    "credit": ""
+  },
+  {
+    "file": "aliado-tren-06.jpg",
+    "w": 600,
+    "h": 600,
+    "title": {
+      "es": "Inca Rail The Prime",
+      "en": "Inca Rail The Prime"
+    },
+    "alt": {
+      "es": "Tren The Prime de Inca Rail en el Valle Sagrado",
+      "en": "Inca Rail The Prime train in the Sacred Valley"
+    },
+    "description": "Tren aliado Inca Rail The Prime, Cusco, Perú.",
+    "keywords": [
+      "Inca Rail",
+      "The Prime",
+      "tren Machu Picchu"
+    ],
+    "brief": "Foto oficial del tren (press kit). Cuadrada 1:1.",
+    "avoid": "Solo material autorizado del aliado.",
+    "source_hint": "Press kit de Inca Rail (solicitar permiso por escrito)",
+    "credit": ""
+  },
+  {
+    "file": "aliado-tren-07.jpg",
+    "w": 600,
+    "h": 600,
+    "title": {
+      "es": "Inca Rail The First Class",
+      "en": "Inca Rail The First Class"
+    },
+    "alt": {
+      "es": "Tren The First Class de Inca Rail con balcón al aire libre",
+      "en": "Inca Rail The First Class train with an open-air balcony"
+    },
+    "description": "Tren aliado Inca Rail The First Class, Cusco, Perú.",
+    "keywords": [
+      "Inca Rail",
+      "The First Class",
+      "tren Machu Picchu"
+    ],
+    "brief": "Foto oficial del tren (press kit). Cuadrada 1:1.",
+    "avoid": "Solo material autorizado del aliado.",
+    "source_hint": "Press kit de Inca Rail (solicitar permiso por escrito)",
+    "credit": ""
   }
 ]

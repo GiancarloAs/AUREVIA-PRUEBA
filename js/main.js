@@ -21,6 +21,8 @@ const UI_STRINGS = {
     estancias_lede: "Hoteles evaluados uno a uno por AUREVIA, en tres categorías para cada tipo de viaje.",
     trenes_kicker: "Trenes aliados", trenes_title: "Trenes a Machu Picchu",
     trenes_lede: "Del vagón panorámico al tren de lujo: el trayecto también es parte del viaje.",
+    tren_salida: "Salida", tren_duracion: "Duración", tren_incluye: "Incluye",
+    trenes_nota: "Ordenados de menor a mayor exclusividad. Salvo en The Private, la entrada a Machu Picchu se compra aparte: AUREVIA la gestiona por ti junto con el tren.",
     aliados_home_title: "Hoteles y trenes seleccionados por su estándar de servicio",
     aliados_page_title: "Los aliados con los que viajas",
     aliados_page_lede: "Cada hotel y cada tren de este listado pasó por una evaluación directa de AUREVIA antes de sumarse como aliado — no son acuerdos comerciales genéricos.",
@@ -111,6 +113,8 @@ const UI_STRINGS = {
     estancias_lede: "Hotels vetted one by one by AUREVIA, in three categories for every kind of trip.",
     trenes_kicker: "Partner trains", trenes_title: "Trains to Machu Picchu",
     trenes_lede: "From panoramic carriages to luxury trains: the journey is part of the trip.",
+    tren_salida: "Departs", tren_duracion: "Duration", tren_incluye: "Includes",
+    trenes_nota: "Listed from least to most exclusive. Except on The Private, Machu Picchu entry is bought separately: AUREVIA arranges it for you along with the train.",
     aliados_home_title: "Hotels and trains selected for their standard of service",
     aliados_page_title: "The partners you travel with",
     aliados_page_lede: "Every hotel and train on this list went through a direct AUREVIA evaluation before joining as a partner — these aren't generic commercial deals.",
@@ -401,12 +405,18 @@ function allyCardTemplate(a){
   <article class="ally-card" data-id="${a.id}">
     <div class="card-media">
       <img src="img/${a.imagen}" alt="${imgAlt(a.imagen, a.nombre)}" width="600" height="600" loading="lazy" decoding="async">
-      <span class="card-tag">${categoryLabel(a.nivel || a.categoria)}</span>
+      <span class="card-tag">${a.clase ? pick(a.clase) : categoryLabel(a.nivel || a.categoria)}</span>
     </div>
     <div class="card-body">
       <span class="ally-kind">${icon}&nbsp; ${pick(a.tipo)}</span>
       <h3>${a.nombre}</h3>
-      <p>${pick(a.descripcion)}</p>
+      <p>${pick(a.descripcion)}</p>${a.incluye ? `
+      <dl class="ally-meta">
+        <div><dt>${ICONS.pin}${t("tren_salida")}</dt><dd>${pick(a.salida)}</dd></div>
+        <div><dt>${ICONS.clock}${t("tren_duracion")}</dt><dd>${pick(a.duracion)}</dd></div>
+      </dl>
+      <span class="ally-feats-title">${t("tren_incluye")}</span>
+      <ul class="ally-feats">${a.incluye.map(f => `<li>${ICONS.check}${pick(f)}</li>`).join("")}</ul>` : ""}
     </div>
   </article>`;
 }
@@ -416,25 +426,41 @@ function renderAliadosGrid(){
   const trenes = AUREVIA_DATA.aliados.filter(a => a.categoria === "tren");
 
   // Estancias: una pestaña por categoría de hotel
-  const estGrid = document.getElementById("estancias-grid");
-  const tabs = document.querySelector('[data-filter-for="estancias-grid"]');
   const niveles = HOTEL_LEVELS.filter(n => hoteles.some(h => h.nivel === n));
-  if (!("estancias-grid" in ACTIVE_FILTERS)) ACTIVE_FILTERS["estancias-grid"] = niveles[0];
+  renderTabbedGrid("estancias-grid", niveles, categoryLabel, (n) => hoteles.filter(h => h.nivel === n));
+
+  // Trenes a Machu Picchu: una pestaña por empresa, de menor a mayor exclusividad
+  const empresas = TRAIN_COMPANIES.filter(c => trenes.some(tr => tr.empresa === c.id));
+  renderTabbedGrid("trenes-grid", empresas.map(c => c.id),
+    (id) => empresas.find(c => c.id === id).nombre,
+    (id) => trenes.filter(tr => tr.empresa === id));
+}
+
+const TRAIN_COMPANIES = [
+  { id: "perurail", nombre: "PeruRail" },
+  { id: "incarail", nombre: "Inca Rail" }
+];
+
+/* Pestañas + rejilla de tarjetas de aliados (Estancias y Trenes) */
+function renderTabbedGrid(gridId, keys, labelFn, itemsFn){
+  const grid = document.getElementById(gridId);
+  const tabs = document.querySelector(`[data-filter-for="${gridId}"]`);
+  if (!grid) return;
+  if (!keys.includes(ACTIVE_FILTERS[gridId])) ACTIVE_FILTERS[gridId] = keys[0];
   const draw = () => {
-    const nivel = ACTIVE_FILTERS["estancias-grid"];
-    estGrid.innerHTML = hoteles.filter(h => h.nivel === nivel).map(allyCardTemplate).join("");
+    grid.innerHTML = itemsFn(ACTIVE_FILTERS[gridId]).map(allyCardTemplate).join("");
     markReveal();
   };
   if (tabs){
-    tabs.innerHTML = niveles.map(n => {
-      const on = n === ACTIVE_FILTERS["estancias-grid"];
-      return `<button type="button" role="tab" aria-selected="${on}" data-cat="${n}" class="${on ? "is-active" : ""}">${categoryLabel(n)}</button>`;
+    tabs.innerHTML = keys.map(k => {
+      const on = k === ACTIVE_FILTERS[gridId];
+      return `<button type="button" role="tab" aria-selected="${on}" data-cat="${k}" class="${on ? "is-active" : ""}">${labelFn(k)}</button>`;
     }).join("");
     if (!tabs.dataset.bound){
       tabs.addEventListener("click", (e) => {
         const btn = e.target.closest("button");
         if (!btn) return;
-        ACTIVE_FILTERS["estancias-grid"] = btn.dataset.cat;
+        ACTIVE_FILTERS[gridId] = btn.dataset.cat;
         tabs.querySelectorAll("button").forEach(b => {
           b.classList.toggle("is-active", b === btn);
           b.setAttribute("aria-selected", b === btn);
@@ -444,14 +470,7 @@ function renderAliadosGrid(){
       tabs.dataset.bound = "true";
     }
   }
-  if (estGrid) draw();
-
-  // Trenes a Machu Picchu
-  const trenGrid = document.getElementById("trenes-grid");
-  if (trenGrid){
-    trenGrid.innerHTML = trenes.map(allyCardTemplate).join("");
-    markReveal();
-  }
+  draw();
 }
 
 /* ---------- 5. Modal de detalle (con consejos de viaje) ---------- */

@@ -702,37 +702,151 @@ const AUREVIA_DATA = {
       }
     },
     {
-      id: "belmond-hiram-bingham",
-      nombre: "Belmond Hiram Bingham",
-      categoria: "tren",
-      tipo: { es: "Tren aliado", en: "Partner train" },
-      imagen: "aliado-tren-01.jpg",
-      descripcion: {
-        es: "El tren más exclusivo a Machu Picchu, con brunch de varios tiempos y música en vivo a bordo.",
-        en: "The most exclusive train to Machu Picchu, with a multi-course brunch and live music on board."
-      }
-    },
-    {
       id: "perurail-vistadome",
       nombre: "PeruRail Vistadome",
       categoria: "tren",
-      tipo: { es: "Tren aliado", en: "Partner train" },
+      empresa: "perurail",
+      tipo: { es: "PeruRail", en: "PeruRail" },
+      clase: { es: "Panorámico", en: "Panoramic" },
       imagen: "aliado-tren-02.jpg",
+      salida: { es: "Cusco, Urubamba u Ollantaytambo", en: "Cusco, Urubamba or Ollantaytambo" },
+      duracion: { es: "Aprox. 1 h 30 desde Ollantaytambo", en: "Approx. 1 h 30 from Ollantaytambo" },
       descripcion: {
-        es: "Ventanales panorámicos de piso a techo para no perder detalle del paisaje del Valle Sagrado.",
-        en: "Floor-to-ceiling panoramic windows so no view of the Sacred Valley landscape is missed."
-      }
+        es: "Ventanas en el techo y en los costados para seguir el Valle Sagrado y el cañón del Urubamba sin perder detalle.",
+        en: "Roof and side windows to follow the Sacred Valley and the Urubamba canyon in full detail."
+      },
+      incluye: [
+          { es: "Ventanas panorámicas en techo y laterales", en: "Panoramic roof and side windows" },
+          { es: "Snack andino incluido", en: "Andean snack included" },
+          { es: "Audioguía del recorrido", en: "Audio guide of the route" },
+          { es: "Danzas y desfile de baby alpaca al regreso", en: "Dances and baby alpaca show on the return" }
+      ]
+    },
+    {
+      id: "perurail-vistadome-observatory",
+      nombre: "PeruRail Vistadome Observatory",
+      categoria: "tren",
+      empresa: "perurail",
+      tipo: { es: "PeruRail", en: "PeruRail" },
+      clase: { es: "Panorámico premium", en: "Premium panoramic" },
+      imagen: "aliado-tren-04.jpg",
+      salida: { es: "Cusco u Ollantaytambo", en: "Cusco or Ollantaytambo" },
+      duracion: { es: "Aprox. 1 h 30 desde Ollantaytambo", en: "Approx. 1 h 30 from Ollantaytambo" },
+      descripcion: {
+        es: "Un vagón observatorio con balcón al aire libre para sentir el aire de los Andes, y un vagón bar con música y danzas en vivo.",
+        en: "An observatory car with an open-air balcony to feel the Andean air, and a bar car with live music and dances."
+      },
+      incluye: [
+          { es: "Vagón observatorio con balcón al aire libre", en: "Observatory car with open-air balcony" },
+          { es: "Vagón bar con música y danzas en vivo", en: "Bar car with live music and dances" },
+          { es: "Asientos con mesa individual", en: "Seats with individual tables" },
+          { es: "Snacks y bebidas incluidos", en: "Snacks and drinks included" }
+      ]
+    },
+    {
+      id: "belmond-hiram-bingham",
+      nombre: "Belmond Hiram Bingham",
+      categoria: "tren",
+      empresa: "perurail",
+      tipo: { es: "Belmond · vía PeruRail", en: "Belmond · via PeruRail" },
+      clase: { es: "Lujo", en: "Luxury" },
+      imagen: "aliado-tren-01.jpg",
+      salida: { es: "Estación Poroy (Cusco)", en: "Poroy station (Cusco)" },
+      duracion: { es: "Aprox. 3 h 30 desde Poroy", en: "Approx. 3 h 30 from Poroy" },
+      descripcion: {
+        es: "Vagones de madera al estilo de los años 20, alta cocina a bordo y el día completo resuelto hasta la ciudadela.",
+        en: "1920s-style wooden carriages, fine dining on board and the whole day arranged up to the citadel."
+      },
+      incluye: [
+          { es: "Brunch a la ida y cena a la vuelta", en: "Brunch on the way out, dinner on the way back" },
+          { es: "Vagón observatorio y bar con música en vivo", en: "Observation and bar car with live music" },
+          { es: "Bus exclusivo hasta Machu Picchu", en: "Exclusive bus up to Machu Picchu" },
+          { es: "Visita guiada a la ciudadela", en: "Guided visit of the citadel" }
+      ]
+    },
+    {
+      id: "inca-rail-360",
+      nombre: "Inca Rail The 360°",
+      categoria: "tren",
+      empresa: "incarail",
+      tipo: { es: "Inca Rail", en: "Inca Rail" },
+      clase: { es: "Panorámico", en: "Panoramic" },
+      imagen: "aliado-tren-05.jpg",
+      salida: { es: "Ollantaytambo · bus + tren desde Cusco", en: "Ollantaytambo · bus + train from Cusco" },
+      duracion: { es: "Aprox. 1 h 30 desde Ollantaytambo", en: "Approx. 1 h 30 from Ollantaytambo" },
+      descripcion: {
+        es: "Pensado para fotografiar: ventanas panorámicas y un vagón observatorio abierto para salir durante el trayecto.",
+        en: "Made for photographers: panoramic windows and an open observatory car you can step out to during the ride."
+      },
+      incluye: [
+          { es: "Vagón observatorio al aire libre", en: "Open-air observatory car" },
+          { es: "Ventanas panorámicas con protección UV", en: "Panoramic windows with UV protection" },
+          { es: "Snacks de cortesía con insumos locales", en: "Complimentary snacks with local ingredients" },
+          { es: "Música en vivo al regreso", en: "Live music on the return" }
+      ]
+    },
+    {
+      id: "inca-rail-prime",
+      nombre: "Inca Rail The Prime",
+      categoria: "tren",
+      empresa: "incarail",
+      tipo: { es: "Inca Rail", en: "Inca Rail" },
+      clase: { es: "Superior", en: "Superior" },
+      imagen: "aliado-tren-06.jpg",
+      salida: { es: "Ollantaytambo · bus + tren desde Cusco", en: "Ollantaytambo · bus + train from Cusco" },
+      duracion: { es: "Aprox. 1 h 30 desde Ollantaytambo", en: "Approx. 1 h 30 from Ollantaytambo" },
+      descripcion: {
+        es: "Asientos reclinables, vagón comedor y servicio atento en un ambiente tranquilo, ideal para familias.",
+        en: "Reclining seats, a dining car and attentive service in a calm setting, ideal for families."
+      },
+      incluye: [
+          { es: "Embarque prioritario", en: "Priority boarding" },
+          { es: "Asientos amplios y reclinables", en: "Spacious reclining seats" },
+          { es: "Vagón comedor y snack andino", en: "Dining car and Andean snack" },
+          { es: "Música andina en vivo", en: "Live Andean music" }
+      ]
+    },
+    {
+      id: "inca-rail-first-class",
+      nombre: "Inca Rail The First Class",
+      categoria: "tren",
+      empresa: "incarail",
+      tipo: { es: "Inca Rail", en: "Inca Rail" },
+      clase: { es: "Lujo", en: "Luxury" },
+      imagen: "aliado-tren-07.jpg",
+      salida: { es: "Ollantaytambo · bus VIP desde Cusco", en: "Ollantaytambo · VIP bus from Cusco" },
+      duracion: { es: "Aprox. 1 h 30 desde Ollantaytambo", en: "Approx. 1 h 30 from Ollantaytambo" },
+      descripcion: {
+        es: "El tren insignia de Inca Rail: menú gourmet, maridaje y un balcón abierto sobre el río Urubamba.",
+        en: "Inca Rail's flagship: a gourmet menu, wine pairing and an open balcony over the Urubamba river."
+      },
+      incluye: [
+          { es: "Menú gourmet de tres tiempos", en: "Three-course gourmet menu" },
+          { es: "Vinos, cócteles y cóctel de bienvenida", en: "Wines, cocktails and a welcome drink" },
+          { es: "Lounge y balcón al aire libre", en: "Lounge and open-air balcony" },
+          { es: "Embarque prioritario y bus VIP", en: "Priority boarding and VIP bus" }
+      ]
     },
     {
       id: "inca-rail-private",
-      nombre: "Inca Rail Private",
+      nombre: "Inca Rail The Private",
       categoria: "tren",
-      tipo: { es: "Tren aliado", en: "Partner train" },
+      empresa: "incarail",
+      tipo: { es: "Inca Rail", en: "Inca Rail" },
+      clase: { es: "Exclusivo", en: "Exclusive" },
       imagen: "aliado-tren-03.jpg",
+      salida: { es: "Ollantaytambo · traslado privado desde Cusco", en: "Ollantaytambo · private transfer from Cusco" },
+      duracion: { es: "Aprox. 1 h 30 desde Ollantaytambo", en: "Approx. 1 h 30 from Ollantaytambo" },
       descripcion: {
-        es: "Vagón privado reservable en exclusiva para el grupo, ideal para familias y celebraciones.",
-        en: "A private carriage bookable exclusively for your group, ideal for families and celebrations."
-      }
+        es: "Un vagón solo para tu grupo, con lounge, balcón propio y el ritmo que ustedes elijan. Ideal para celebraciones.",
+        en: "A carriage just for your group, with its own lounge and balcony at your own pace. Ideal for celebrations."
+      },
+      incluye: [
+          { es: "Vagón, lounge y balcón solo para tu grupo", en: "Carriage, lounge and balcony just for your group" },
+          { es: "Menú gourmet de cuatro tiempos", en: "Four-course gourmet menu" },
+          { es: "Lounge privado en la estación", en: "Private lounge at the station" },
+          { es: "Incluye guía privado, bus y entrada a Machu Picchu", en: "Includes private guide, bus and Machu Picchu entry" }
+      ]
     }
   ]
 };

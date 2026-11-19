@@ -526,8 +526,8 @@ const AUREVIA_IMG_SEO = {
       "en": "Inca Rail private train with panoramic lounges"
     },
     "title": {
-      "es": "Inca Rail Private",
-      "en": "Inca Rail Private"
+      "es": "Inca Rail The Private",
+      "en": "Inca Rail The Private"
     },
     "w": 600,
     "h": 600
@@ -751,5 +751,53 @@ const AUREVIA_IMG_SEO = {
       "es": "El toque final de la cena de autor, servido en la mesa.",
       "en": "The finishing touch of the signature dinner, served at the table."
     }
+  },
+  "aliado-tren-04.jpg": {
+    "alt": {
+      "es": "Tren PeruRail Vistadome Observatory con vagón observatorio de balcón abierto",
+      "en": "PeruRail Vistadome Observatory train with an open-balcony observatory car"
+    },
+    "title": {
+      "es": "PeruRail Vistadome Observatory",
+      "en": "PeruRail Vistadome Observatory"
+    },
+    "w": 600,
+    "h": 600
+  },
+  "aliado-tren-05.jpg": {
+    "alt": {
+      "es": "Tren The 360° de Inca Rail con vagón observatorio al aire libre",
+      "en": "Inca Rail The 360° train with an open-air observatory car"
+    },
+    "title": {
+      "es": "Inca Rail The 360°",
+      "en": "Inca Rail The 360°"
+    },
+    "w": 600,
+    "h": 600
+  },
+  "aliado-tren-06.jpg": {
+    "alt": {
+      "es": "Tren The Prime de Inca Rail en el Valle Sagrado",
+      "en": "Inca Rail The Prime train in the Sacred Valley"
+    },
+    "title": {
+      "es": "Inca Rail The Prime",
+      "en": "Inca Rail The Prime"
+    },
+    "w": 600,
+    "h": 600
+  },
+  "aliado-tren-07.jpg": {
+    "alt": {
+      "es": "Tren The First Class de Inca Rail con balcón al aire libre",
+      "en": "Inca Rail The First Class train with an open-air balcony"
+    },
+    "title": {
+      "es": "Inca Rail The First Class",
+      "en": "Inca Rail The First Class"
+    },
+    "w": 600,
+    "h": 600
   }
 };

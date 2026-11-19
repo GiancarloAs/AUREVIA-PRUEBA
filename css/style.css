@@ -550,6 +550,17 @@ section{ padding-block:clamp(3.5rem, 7vw, 6.5rem); position:relative; }
   display:flex; align-items:center; gap:.4rem;
 }
 .ally-card .card-body span.ally-kind svg{ width:14px; height:14px; }
+/* Trenes: salida, duración y lo que incluye */
+.ally-meta{ display:grid; gap:.35rem; margin:.5rem 0 0; padding-top:.85rem; border-top:1px solid var(--c-line); font-size:.85rem; }
+.ally-meta div{ display:flex; gap:.5rem; align-items:baseline; }
+.ally-meta dt{ display:flex; align-items:center; gap:.35rem; color:var(--c-blue); font-size:.72rem; letter-spacing:.08em; text-transform:uppercase; min-width:6.5rem; }
+.ally-meta dt svg{ width:13px; height:13px; flex:none; }
+.ally-meta dd{ margin:0; }
+.ally-feats-title{ margin-top:.6rem; font-size:.72rem; letter-spacing:.08em; text-transform:uppercase; color:var(--c-blue); }
+.ally-feats{ list-style:none; margin:0; padding:0; display:grid; gap:.4rem; font-size:.88rem; }
+.ally-feats li{ display:flex; gap:.5rem; align-items:flex-start; }
+.ally-feats li svg{ width:14px; height:14px; flex:none; margin-top:.25em; color:var(--c-olive); }
+.trenes-nota{ margin-top:2rem; font-size:.88rem; color:var(--c-muted, #666); max-width:720px; }
 
 /* ---------- Utilidades ---------- */
 .mt-lg{ margin-top:3rem; }

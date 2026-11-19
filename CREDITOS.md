@@ -54,3 +54,7 @@
 | destino-machu-picchu-03.jpg | Autor por confirmar (foto enviada por el cliente) |
 | destino-machu-picchu-04.jpg | Autor por confirmar (foto enviada por el cliente) |
 | experiencia-cusco-a-la-mesa-02.jpg | Autor por confirmar (foto enviada por el cliente) |
+| aliado-tren-04.jpg | PENDIENTE |
+| aliado-tren-05.jpg | PENDIENTE |
+| aliado-tren-06.jpg | PENDIENTE |
+| aliado-tren-07.jpg | PENDIENTE |
