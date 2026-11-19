@@ -44,7 +44,6 @@ const UI_STRINGS = {
     label_categoria_hotel: "Categoría de hotel",
     opt_hotel_4: "Categoría 4 Estrellas", opt_hotel_5: "Categoría 5 Estrellas", opt_hotel_luxury: "Luxury",
     label_hotel_preferido: "Hotel preferido", opt_sin_preferencia: "Sin preferencia",
-    modal_hotels_heading: "Hotel recomendado",
     label_guia: "Idioma del guía", opt_guia_es: "Español", opt_guia_en: "Inglés", opt_guia_fr: "Francés", opt_guia_pt: "Portugués",
     label_num_invitados: "Número de invitados", label_fecha: "Fecha tentativa",
     label_mensaje: "Cuéntanos algo más sobre tu viaje (opcional)",
@@ -136,7 +135,6 @@ const UI_STRINGS = {
     label_categoria_hotel: "Hotel category",
     opt_hotel_4: "4-Star Category", opt_hotel_5: "5-Star Category", opt_hotel_luxury: "Luxury",
     label_hotel_preferido: "Preferred hotel", opt_sin_preferencia: "No preference",
-    modal_hotels_heading: "Recommended hotel",
     label_guia: "Guide language", opt_guia_es: "Spanish", opt_guia_en: "English", opt_guia_fr: "French", opt_guia_pt: "Portuguese",
     label_num_invitados: "Number of guests", label_fecha: "Tentative date",
     label_mensaje: "Tell us more about your trip (optional)",
@@ -595,34 +593,6 @@ function fillModal(keepScroll){
     hlWrap.hidden = true;
   }
 
-  // Hotel recomendado (destinos con hoteles aliados en "ciudad"): pestañas por categoría
-  const hotWrap = q(".modal-hotels");
-  const hoteles = kind === "destino" ? AUREVIA_DATA.aliados.filter(a => a.categoria === "hotel" && a.ciudad === item.id) : [];
-  const niveles = HOTEL_LEVELS.filter(n => hoteles.some(h => h.nivel === n));
-  if (niveles.length){
-    hotWrap.hidden = false;
-    hotWrap.querySelector("h4").textContent = t("modal_hotels_heading");
-    const tabs = hotWrap.querySelector(".mh-tabs");
-    const grid = hotWrap.querySelector(".mh-grid");
-    const show = (nivel) => {
-      tabs.querySelectorAll("button").forEach(b => {
-        const on = b.dataset.nivel === nivel;
-        b.classList.toggle("is-active", on);
-        b.setAttribute("aria-selected", on);
-      });
-      grid.innerHTML = hoteles.filter(h => h.nivel === nivel).map(h => `
-        <figure class="mh-hotel">
-          <img src="img/${h.imagen}" alt="${imgAlt(h.imagen, h.nombre)}" width="600" height="600" loading="lazy" decoding="async">
-          <figcaption>${h.nombre}</figcaption>
-        </figure>`).join("");
-    };
-    tabs.innerHTML = niveles.map(n => `<button type="button" role="tab" data-nivel="${n}">${categoryLabel(n)}</button>`).join("");
-    tabs.onclick = (e) => { const b = e.target.closest("button"); if (b) show(b.dataset.nivel); };
-    show(niveles[0]);
-  } else {
-    hotWrap.hidden = true;
-  }
-
   const tipsWrap = q(".modal-tips");
   const tips = pick(item.consejos);
   if (Array.isArray(tips) && tips.length){
@@ -698,7 +668,6 @@ function initModal(){
       <div class="modal-main">
         <p class="modal-desc"></p>
         <div class="modal-highlights" hidden><h4></h4><ul></ul></div>
-        <div class="modal-hotels" hidden><h4></h4><div class="mh-tabs" role="tablist"></div><div class="mh-grid"></div></div>
         <div class="modal-route" hidden><h4></h4><ol></ol><p></p></div>
         <div class="modal-tips"><h4></h4><ul></ul></div>
       </div>
