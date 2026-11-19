@@ -32,36 +32,35 @@
   },
   {
     "file": "destino-cusco-ciudad-01.jpg",
-    "w": 1000,
-    "h": 1250,
+    "w": 736,
+    "h": 920,
     "title": {
-      "es": "Cusco Ciudad, Perú",
-      "en": "Cusco City, Peru"
+      "es": "Calle Siete Borreguitos, San Blas",
+      "en": "Siete Borreguitos street, San Blas"
     },
     "alt": {
-      "es": "Iglesia de la Compañía de Jesús y portales coloniales de la Plaza de Armas de Cusco con luz dorada",
-      "en": "Church of the Society of Jesus and colonial arcades of Cusco’s Plaza de Armas in golden light"
+      "es": "Casa blanca de balcones rojos con macetas de flores en la calle Siete Borreguitos del barrio de San Blas, Cusco",
+      "en": "White house with red balconies and flower pots on Siete Borreguitos street in the San Blas quarter, Cusco"
     },
-    "description": "Iglesia de la Compañía de Jesús en la Plaza de Armas, centro histórico de Cusco, Perú.",
+    "description": "Calle Siete Borreguitos, barrio de San Blas, Cusco, Perú.",
     "keywords": [
-      "Cusco",
-      "Plaza de Armas",
-      "Qorikancha",
       "San Blas",
-      "Perú",
+      "Cusco",
+      "Siete Borreguitos",
+      "barrio de los artesanos",
       "Cusco city"
     ],
-    "brief": "Vertical 4:5: Plaza de Armas con la Catedral o calle empedrada de San Blas, luz de atardecer.",
-    "avoid": "Tomas con carteles comerciales visibles, tráfico, turistas en masa.",
-    "source_hint": "Unsplash / Pexels / Wikimedia Commons (licencia libre)",
-    "credit": "Hongbin / Unsplash (Licencia Unsplash)",
+    "brief": "Foto enviada por el cliente (Drive).",
+    "avoid": "",
+    "source_hint": "Carpeta de Drive AUREVIA FOTOS",
+    "credit": "Autor por confirmar (foto enviada por el cliente)",
     "focus": [
-      0.66,
-      0.5
+      0.5,
+      0.6
     ],
     "caption": {
-      "es": "La Compañía de Jesús y los portales de la Plaza de Armas, con la luz dorada de la tarde.",
-      "en": "The Compañía de Jesús and the arcades of the Plaza de Armas in golden afternoon light."
+      "es": "San Blas: escalinatas, balcones de madera y macetas en flor, el barrio de los artesanos.",
+      "en": "San Blas: stone stairways, wooden balconies and flower pots in the artisans' quarter."
     }
   },
   {
@@ -201,35 +200,34 @@
   },
   {
     "file": "destino-valle-sagrado-04.jpg",
-    "w": 1000,
-    "h": 1250,
+    "w": 735,
+    "h": 480,
     "title": {
-      "es": "Andenes de Ollantaytambo",
-      "en": "Ollantaytambo terraces"
+      "es": "Parque arqueológico de Pisac",
+      "en": "Pisac archaeological park"
     },
     "alt": {
-      "es": "Andenes y muros incas de Ollantaytambo al pie de un cerro rocoso, bajo un cielo nublado",
-      "en": "Inca terraces and walls of Ollantaytambo at the foot of a rocky hill, under an overcast sky"
+      "es": "Andenes incas de Pisac que bajan por la ladera sobre el Valle Sagrado",
+      "en": "Inca terraces of Pisac descending the hillside above the Sacred Valley"
     },
-    "description": "Andenes incas de Ollantaytambo, Valle Sagrado, Cusco, Perú.",
+    "description": "Parque arqueológico de Pisac, Valle Sagrado, Cusco, Perú.",
     "keywords": [
-      "Ollantaytambo",
-      "andenes incas",
+      "Pisac",
       "Valle Sagrado",
-      "Cusco",
-      "Inca terraces"
+      "andenes incas",
+      "Sacred Valley"
     ],
-    "brief": "Vertical: andenes y muros de Ollantaytambo.",
-    "avoid": "Cielos grises si hay una alternativa con mejor luz.",
-    "source_hint": "Unsplash / Pexels / Wikimedia Commons (licencia libre)",
-    "credit": "Mauro Lima / Unsplash (Licencia Unsplash)",
+    "brief": "Foto enviada por el cliente (Drive).",
+    "avoid": "",
+    "source_hint": "Carpeta de Drive AUREVIA FOTOS",
+    "credit": "Autor por confirmar (foto enviada por el cliente)",
     "focus": [
       0.5,
-      0.75
+      0.5
     ],
     "caption": {
-      "es": "Andenes y muros de piedra que suben por la ladera de la fortaleza.",
-      "en": "Terraces and stone walls climbing the hillside of the fortress."
+      "es": "Pisac: andenes incas y el mercado artesanal al pie del valle.",
+      "en": "Pisac: Inca terraces and the artisan market at the foot of the valley."
     }
   },
   {
@@ -373,33 +371,32 @@
     "w": 1000,
     "h": 1250,
     "title": {
-      "es": "Camino Inka a Machu Picchu",
-      "en": "Inca Trail to Machu Picchu"
+      "es": "Camino Inka con AUREVIA",
+      "en": "Inca Trail with AUREVIA"
     },
     "alt": {
-      "es": "Senderista descansando sobre una roca frente a un valle andino con un nevado al fondo",
-      "en": "Hiker resting on a rock in front of an Andean valley with a snow-capped peak in the background"
+      "es": "Dos caminantes con mochilas AUREVIA y bastones de trekking recorriendo un sendero de piedra del Camino Inka",
+      "en": "Two hikers with AUREVIA backpacks and trekking poles walking a stone path of the Inca Trail"
     },
-    "description": "Camino Inca hacia Machu Picchu, Cusco, Perú.",
+    "description": "Caminantes con mochilas AUREVIA en el Camino Inka, Cusco, Perú.",
     "keywords": [
       "Camino Inka",
       "Inca Trail",
-      "Machu Picchu",
-      "Perú",
       "trekking",
-      "Wiñay Wayna"
+      "AUREVIA",
+      "Machu Picchu"
     ],
-    "brief": "Vertical: tramo de piedra del Camino Inca o Wiñay Wayna, con bruma.",
-    "avoid": "Fotos con carpas de campamento masivas o porteadores cargando en exceso.",
-    "source_hint": "Unsplash / Pexels / Wikimedia Commons (licencia libre)",
-    "credit": "Samuel Malmström / Unsplash (Licencia Unsplash)",
+    "brief": "Foto enviada por el cliente (Drive).",
+    "avoid": "",
+    "source_hint": "Carpeta de Drive AUREVIA FOTOS",
+    "credit": "AUREVIA (foto propia enviada por el cliente)",
     "focus": [
-      0.5,
-      0.7
+      0.4,
+      0.5
     ],
     "caption": {
-      "es": "Un alto en el camino frente a los nevados, antes de seguir hacia Machu Picchu.",
-      "en": "A pause on the trail facing the snow peaks, before pressing on to Machu Picchu."
+      "es": "En el sendero con el equipo AUREVIA, a nuestro ritmo.",
+      "en": "On the trail with the AUREVIA team, at our own pace."
     }
   },
   {
@@ -728,28 +725,35 @@
   },
   {
     "file": "experiencia-cusco-a-la-mesa-01.jpg",
-    "w": 1000,
-    "h": 1250,
+    "w": 532,
+    "h": 665,
     "title": {
-      "es": "Cusco a la Mesa",
-      "en": "Cusco at the Table"
+      "es": "Almuerzo en el Valle Sagrado",
+      "en": "Lunch in the Sacred Valley"
     },
     "alt": {
-      "es": "Platos de cocina peruana contemporánea con ingredientes andinos",
-      "en": "Contemporary Peruvian dishes made with Andean ingredients"
+      "es": "Plato de trucha con salsa y verduras junto a una copa de vino blanco en una terraza con vista a las montañas del Valle Sagrado",
+      "en": "Trout with sauce and vegetables beside a glass of white wine on a terrace overlooking the Sacred Valley mountains"
     },
-    "description": "Experiencia gastronómica de un día por Cusco, Moray y el Valle Sagrado, Perú.",
+    "description": "Almuerzo de cocina andina en el Valle Sagrado, Cusco, Perú.",
     "keywords": [
       "gastronomía Cusco",
-      "cocina andina",
-      "food tour Cusco",
-      "Cusco food experience",
-      "Valle Sagrado"
+      "Valle Sagrado",
+      "trucha andina",
+      "Cusco food experience"
     ],
-    "brief": "Vertical cenital: platos de cocina peruana contemporánea sobre cerámica artesanal, luz natural, paleta terrosa.",
-    "avoid": "Platos de restaurantes reconocibles sin permiso; ceviche genérico de banco de imágenes.",
-    "source_hint": "Unsplash / Pexels / Wikimedia Commons (licencia libre)",
-    "credit": ""
+    "brief": "Foto enviada por el cliente (Drive).",
+    "avoid": "",
+    "source_hint": "Carpeta de Drive AUREVIA FOTOS",
+    "credit": "Autor por confirmar (foto enviada por el cliente)",
+    "focus": [
+      0.5,
+      0.6
+    ],
+    "caption": {
+      "es": "Almuerzo en una terraza frente a las montañas del Valle Sagrado.",
+      "en": "Lunch on a terrace facing the Sacred Valley mountains."
+    }
   },
   {
     "file": "experiencia-peru-en-familia-01.jpg",
@@ -1205,5 +1209,323 @@
     "avoid": "Stock genérico: resta credibilidad en una marca de lujo.",
     "source_hint": "Unsplash / Pexels / Wikimedia Commons (licencia libre)",
     "credit": ""
+  },
+  {
+    "file": "destino-cusco-ciudad-03.jpg",
+    "w": 736,
+    "h": 490,
+    "title": {
+      "es": "Sacsayhuamán",
+      "en": "Sacsayhuamán"
+    },
+    "alt": {
+      "es": "Muros incas de piedra en zigzag de Sacsayhuamán sobre una explanada de césped, con montañas al fondo",
+      "en": "Zigzag Inca stone walls of Sacsayhuamán above a grassy esplanade, with mountains behind"
+    },
+    "description": "Complejo arqueológico de Sacsayhuamán, Cusco, Perú.",
+    "keywords": [
+      "Sacsayhuamán",
+      "Cusco",
+      "arqueología inca",
+      "Inca walls"
+    ],
+    "brief": "Foto enviada por el cliente (Drive).",
+    "avoid": "",
+    "source_hint": "Carpeta de Drive AUREVIA FOTOS",
+    "credit": "Autor por confirmar (foto enviada por el cliente)",
+    "focus": [
+      0.5,
+      0.5
+    ],
+    "caption": {
+      "es": "Sacsayhuamán: los muros incas de piedra más imponentes, sobre la ciudad.",
+      "en": "Sacsayhuamán: the most imposing Inca stone walls, above the city."
+    }
+  },
+  {
+    "file": "destino-cusco-ciudad-04.jpg",
+    "w": 736,
+    "h": 920,
+    "title": {
+      "es": "Acueducto de Sapantiana",
+      "en": "Sapantiana aqueduct"
+    },
+    "alt": {
+      "es": "Acueducto colonial de piedra de Sapantiana con una cascada que baja por un canal empedrado, en San Blas",
+      "en": "Colonial stone aqueduct of Sapantiana with water cascading down a cobbled channel, in San Blas"
+    },
+    "description": "Acueducto de Sapantiana, San Blas, Cusco, Perú.",
+    "keywords": [
+      "Sapantiana",
+      "acueducto",
+      "San Blas",
+      "Cusco"
+    ],
+    "brief": "Foto enviada por el cliente (Drive).",
+    "avoid": "",
+    "source_hint": "Carpeta de Drive AUREVIA FOTOS",
+    "credit": "Autor por confirmar (foto enviada por el cliente)",
+    "focus": [
+      0.5,
+      0.45
+    ],
+    "caption": {
+      "es": "Acueducto de Sapantiana: un rincón escondido a pocos pasos de San Blas.",
+      "en": "Sapantiana aqueduct: a hidden corner a few steps from San Blas."
+    }
+  },
+  {
+    "file": "destino-valle-sagrado-05.jpg",
+    "w": 736,
+    "h": 552,
+    "title": {
+      "es": "Pueblo de Chinchero",
+      "en": "Chinchero village"
+    },
+    "alt": {
+      "es": "Campanario blanco de la iglesia colonial de Chinchero y mercado de textiles en la plaza",
+      "en": "White bell tower of Chinchero's colonial church and textile market on the square"
+    },
+    "description": "Plaza e iglesia colonial de Chinchero, Valle Sagrado, Cusco, Perú.",
+    "keywords": [
+      "Chinchero",
+      "Valle Sagrado",
+      "iglesia colonial",
+      "Cusco"
+    ],
+    "brief": "Foto enviada por el cliente (Drive).",
+    "avoid": "",
+    "source_hint": "Carpeta de Drive AUREVIA FOTOS",
+    "credit": "Autor por confirmar (foto enviada por el cliente)",
+    "focus": [
+      0.5,
+      0.5
+    ],
+    "caption": {
+      "es": "Chinchero: iglesia colonial sobre muros incas y su mercado de tejidos.",
+      "en": "Chinchero: a colonial church on Inca walls and its weaving market."
+    }
+  },
+  {
+    "file": "destino-valle-sagrado-06.jpg",
+    "w": 736,
+    "h": 736,
+    "title": {
+      "es": "Teñido natural en Chinchero",
+      "en": "Natural dyeing in Chinchero"
+    },
+    "alt": {
+      "es": "Tejedora de Chinchero con traje tradicional preparando tintes naturales, con madejas de lana de colores colgadas",
+      "en": "Chinchero weaver in traditional dress preparing natural dyes, with skeins of coloured wool hanging above"
+    },
+    "description": "Demostración de teñido natural de lana en Chinchero, Cusco, Perú.",
+    "keywords": [
+      "Chinchero",
+      "textiles andinos",
+      "tintes naturales",
+      "Andean weaving"
+    ],
+    "brief": "Foto enviada por el cliente (Drive).",
+    "avoid": "",
+    "source_hint": "Carpeta de Drive AUREVIA FOTOS",
+    "credit": "Autor por confirmar (foto enviada por el cliente)",
+    "focus": [
+      0.5,
+      0.5
+    ],
+    "caption": {
+      "es": "Las tejedoras de Chinchero tiñen la lana de alpaca con plantas y cochinilla.",
+      "en": "Chinchero's weavers dye alpaca wool with plants and cochineal."
+    }
+  },
+  {
+    "file": "destino-camino-inka-02.jpg",
+    "w": 736,
+    "h": 920,
+    "title": {
+      "es": "Sendero del Camino Inka",
+      "en": "Inca Trail path"
+    },
+    "alt": {
+      "es": "Caminantes con bastones en un sendero empedrado del Camino Inka entre vegetación de bosque nuboso y montañas",
+      "en": "Hikers with poles on a cobbled stretch of the Inca Trail through cloud forest and mountains"
+    },
+    "description": "Sendero empedrado del Camino Inka, Cusco, Perú.",
+    "keywords": [
+      "Camino Inka",
+      "Inca Trail",
+      "bosque nuboso",
+      "trekking"
+    ],
+    "brief": "Foto enviada por el cliente (Drive).",
+    "avoid": "",
+    "source_hint": "Carpeta de Drive AUREVIA FOTOS",
+    "credit": "Autor por confirmar (foto enviada por el cliente)",
+    "focus": [
+      0.5,
+      0.55
+    ],
+    "caption": {
+      "es": "Tramos empedrados originales entre bosque nuboso.",
+      "en": "Original cobbled stretches through cloud forest."
+    }
+  },
+  {
+    "file": "destino-camino-inka-03.jpg",
+    "w": 736,
+    "h": 736,
+    "title": {
+      "es": "Grupo en el Camino Inka",
+      "en": "Group on the Inca Trail"
+    },
+    "alt": {
+      "es": "Grupo de caminantes con mochilas subiendo un sendero de piedra entre helechos en el Camino Inka",
+      "en": "Group of hikers with backpacks climbing a stone path among ferns on the Inca Trail"
+    },
+    "description": "Caminantes en el Camino Inka, Cusco, Perú.",
+    "keywords": [
+      "Camino Inka",
+      "Inca Trail",
+      "trekking Perú"
+    ],
+    "brief": "Foto enviada por el cliente (Drive).",
+    "avoid": "",
+    "source_hint": "Carpeta de Drive AUREVIA FOTOS",
+    "credit": "Autor por confirmar (foto enviada por el cliente)",
+    "focus": [
+      0.5,
+      0.5
+    ],
+    "caption": {
+      "es": "Laderas de helechos en el último tramo hacia Machu Picchu.",
+      "en": "Fern-covered slopes on the final stretch to Machu Picchu."
+    }
+  },
+  {
+    "file": "destino-machu-picchu-02.jpg",
+    "w": 511,
+    "h": 639,
+    "title": {
+      "es": "Llamas en Machu Picchu",
+      "en": "Llamas at Machu Picchu"
+    },
+    "alt": {
+      "es": "Dos llamas pastando en los andenes de Machu Picchu con el Huayna Picchu al fondo",
+      "en": "Two llamas grazing on the terraces of Machu Picchu with Huayna Picchu behind"
+    },
+    "description": "Llamas en los andenes de Machu Picchu, Perú.",
+    "keywords": [
+      "Machu Picchu",
+      "llamas",
+      "Huayna Picchu",
+      "Peru"
+    ],
+    "brief": "Foto enviada por el cliente (Drive).",
+    "avoid": "",
+    "source_hint": "Carpeta de Drive AUREVIA FOTOS",
+    "credit": "Autor por confirmar (foto enviada por el cliente)",
+    "focus": [
+      0.5,
+      0.6
+    ],
+    "caption": {
+      "es": "Las llamas que pastan entre los andenes de la ciudadela.",
+      "en": "The llamas that graze among the citadel's terraces."
+    }
+  },
+  {
+    "file": "destino-machu-picchu-03.jpg",
+    "w": 736,
+    "h": 920,
+    "title": {
+      "es": "Machu Picchu entre nubes",
+      "en": "Machu Picchu in the clouds"
+    },
+    "alt": {
+      "es": "Ciudadela de Machu Picchu entre nubes, con el Templo del Sol en primer plano y montañas al fondo",
+      "en": "Machu Picchu citadel among clouds, with the Temple of the Sun in the foreground and mountains behind"
+    },
+    "description": "Ciudadela de Machu Picchu con neblina, Perú.",
+    "keywords": [
+      "Machu Picchu",
+      "Templo del Sol",
+      "ciudadela inca",
+      "Peru"
+    ],
+    "brief": "Foto enviada por el cliente (Drive).",
+    "avoid": "",
+    "source_hint": "Carpeta de Drive AUREVIA FOTOS",
+    "credit": "Autor por confirmar (foto enviada por el cliente)",
+    "focus": [
+      0.5,
+      0.45
+    ],
+    "caption": {
+      "es": "La neblina de la mañana revela poco a poco la ciudadela.",
+      "en": "Morning mist slowly reveals the citadel."
+    }
+  },
+  {
+    "file": "destino-machu-picchu-04.jpg",
+    "w": 736,
+    "h": 920,
+    "title": {
+      "es": "Portada inca en Machu Picchu",
+      "en": "Inca gateway at Machu Picchu"
+    },
+    "alt": {
+      "es": "Portada de piedra inca en Machu Picchu con andenes y montañas iluminadas por el sol de la mañana",
+      "en": "Inca stone gateway at Machu Picchu with terraces and mountains lit by the morning sun"
+    },
+    "description": "Portada inca en Machu Picchu, Perú.",
+    "keywords": [
+      "Machu Picchu",
+      "arquitectura inca",
+      "Andes"
+    ],
+    "brief": "Foto enviada por el cliente (Drive).",
+    "avoid": "",
+    "source_hint": "Carpeta de Drive AUREVIA FOTOS",
+    "credit": "Autor por confirmar (foto enviada por el cliente)",
+    "focus": [
+      0.5,
+      0.6
+    ],
+    "caption": {
+      "es": "Portadas de piedra que enmarcan las montañas sagradas.",
+      "en": "Stone gateways framing the sacred mountains."
+    }
+  },
+  {
+    "file": "experiencia-cusco-a-la-mesa-02.jpg",
+    "w": 736,
+    "h": 920,
+    "title": {
+      "es": "Cocina de autor",
+      "en": "Signature cuisine"
+    },
+    "alt": {
+      "es": "Chef sirviendo leche de tigre sobre un tiradito con cebolla morada y camote en un bowl oscuro",
+      "en": "Chef pouring tiger's milk over a tiradito with red onion and sweet potato in a dark bowl"
+    },
+    "description": "Plato de cocina peruana de autor, Cusco, Perú.",
+    "keywords": [
+      "cocina de autor",
+      "gastronomía peruana",
+      "Cusco",
+      "fine dining"
+    ],
+    "brief": "Foto enviada por el cliente (Drive).",
+    "avoid": "",
+    "source_hint": "Carpeta de Drive AUREVIA FOTOS",
+    "credit": "Autor por confirmar (foto enviada por el cliente)",
+    "focus": [
+      0.5,
+      0.5
+    ],
+    "caption": {
+      "es": "El toque final de la cena de autor, servido en la mesa.",
+      "en": "The finishing touch of the signature dinner, served at the table."
+    }
   }
 ]

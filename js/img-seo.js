@@ -14,18 +14,18 @@ const AUREVIA_IMG_SEO = {
   },
   "destino-cusco-ciudad-01.jpg": {
     "alt": {
-      "es": "Iglesia de la Compañía de Jesús y portales coloniales de la Plaza de Armas de Cusco con luz dorada",
-      "en": "Church of the Society of Jesus and colonial arcades of Cusco’s Plaza de Armas in golden light"
+      "es": "Casa blanca de balcones rojos con macetas de flores en la calle Siete Borreguitos del barrio de San Blas, Cusco",
+      "en": "White house with red balconies and flower pots on Siete Borreguitos street in the San Blas quarter, Cusco"
     },
     "title": {
-      "es": "Cusco Ciudad, Perú",
-      "en": "Cusco City, Peru"
+      "es": "Calle Siete Borreguitos, San Blas",
+      "en": "Siete Borreguitos street, San Blas"
     },
-    "w": 1000,
-    "h": 1250,
+    "w": 736,
+    "h": 920,
     "caption": {
-      "es": "La Compañía de Jesús y los portales de la Plaza de Armas, con la luz dorada de la tarde.",
-      "en": "The Compañía de Jesús and the arcades of the Plaza de Armas in golden afternoon light."
+      "es": "San Blas: escalinatas, balcones de madera y macetas en flor, el barrio de los artesanos.",
+      "en": "San Blas: stone stairways, wooden balconies and flower pots in the artisans' quarter."
     }
   },
   "destino-cusco-ciudad-02.jpg": {
@@ -94,18 +94,18 @@ const AUREVIA_IMG_SEO = {
   },
   "destino-valle-sagrado-04.jpg": {
     "alt": {
-      "es": "Andenes y muros incas de Ollantaytambo al pie de un cerro rocoso, bajo un cielo nublado",
-      "en": "Inca terraces and walls of Ollantaytambo at the foot of a rocky hill, under an overcast sky"
+      "es": "Andenes incas de Pisac que bajan por la ladera sobre el Valle Sagrado",
+      "en": "Inca terraces of Pisac descending the hillside above the Sacred Valley"
     },
     "title": {
-      "es": "Andenes de Ollantaytambo",
-      "en": "Ollantaytambo terraces"
+      "es": "Parque arqueológico de Pisac",
+      "en": "Pisac archaeological park"
     },
-    "w": 1000,
-    "h": 1250,
+    "w": 735,
+    "h": 480,
     "caption": {
-      "es": "Andenes y muros de piedra que suben por la ladera de la fortaleza.",
-      "en": "Terraces and stone walls climbing the hillside of the fortress."
+      "es": "Pisac: andenes incas y el mercado artesanal al pie del valle.",
+      "en": "Pisac: Inca terraces and the artisan market at the foot of the valley."
     }
   },
   "destino-machu-picchu-01.jpg": {
@@ -174,18 +174,18 @@ const AUREVIA_IMG_SEO = {
   },
   "destino-camino-inka-01.jpg": {
     "alt": {
-      "es": "Senderista descansando sobre una roca frente a un valle andino con un nevado al fondo",
-      "en": "Hiker resting on a rock in front of an Andean valley with a snow-capped peak in the background"
+      "es": "Dos caminantes con mochilas AUREVIA y bastones de trekking recorriendo un sendero de piedra del Camino Inka",
+      "en": "Two hikers with AUREVIA backpacks and trekking poles walking a stone path of the Inca Trail"
     },
     "title": {
-      "es": "Camino Inka a Machu Picchu",
-      "en": "Inca Trail to Machu Picchu"
+      "es": "Camino Inka con AUREVIA",
+      "en": "Inca Trail with AUREVIA"
     },
     "w": 1000,
     "h": 1250,
     "caption": {
-      "es": "Un alto en el camino frente a los nevados, antes de seguir hacia Machu Picchu.",
-      "en": "A pause on the trail facing the snow peaks, before pressing on to Machu Picchu."
+      "es": "En el sendero con el equipo AUREVIA, a nuestro ritmo.",
+      "en": "On the trail with the AUREVIA team, at our own pace."
     }
   },
   "experiencia-boda-andina-01.jpg": {
@@ -350,15 +350,19 @@ const AUREVIA_IMG_SEO = {
   },
   "experiencia-cusco-a-la-mesa-01.jpg": {
     "alt": {
-      "es": "Platos de cocina peruana contemporánea con ingredientes andinos",
-      "en": "Contemporary Peruvian dishes made with Andean ingredients"
+      "es": "Plato de trucha con salsa y verduras junto a una copa de vino blanco en una terraza con vista a las montañas del Valle Sagrado",
+      "en": "Trout with sauce and vegetables beside a glass of white wine on a terrace overlooking the Sacred Valley mountains"
     },
     "title": {
-      "es": "Cusco a la Mesa",
-      "en": "Cusco at the Table"
+      "es": "Almuerzo en el Valle Sagrado",
+      "en": "Lunch in the Sacred Valley"
     },
-    "w": 1000,
-    "h": 1250
+    "w": 532,
+    "h": 665,
+    "caption": {
+      "es": "Almuerzo en una terraza frente a las montañas del Valle Sagrado.",
+      "en": "Lunch on a terrace facing the Sacred Valley mountains."
+    }
   },
   "experiencia-peru-en-familia-01.jpg": {
     "alt": {
@@ -587,5 +591,165 @@ const AUREVIA_IMG_SEO = {
     },
     "w": 1000,
     "h": 1250
+  },
+  "destino-cusco-ciudad-03.jpg": {
+    "alt": {
+      "es": "Muros incas de piedra en zigzag de Sacsayhuamán sobre una explanada de césped, con montañas al fondo",
+      "en": "Zigzag Inca stone walls of Sacsayhuamán above a grassy esplanade, with mountains behind"
+    },
+    "title": {
+      "es": "Sacsayhuamán",
+      "en": "Sacsayhuamán"
+    },
+    "w": 736,
+    "h": 490,
+    "caption": {
+      "es": "Sacsayhuamán: los muros incas de piedra más imponentes, sobre la ciudad.",
+      "en": "Sacsayhuamán: the most imposing Inca stone walls, above the city."
+    }
+  },
+  "destino-cusco-ciudad-04.jpg": {
+    "alt": {
+      "es": "Acueducto colonial de piedra de Sapantiana con una cascada que baja por un canal empedrado, en San Blas",
+      "en": "Colonial stone aqueduct of Sapantiana with water cascading down a cobbled channel, in San Blas"
+    },
+    "title": {
+      "es": "Acueducto de Sapantiana",
+      "en": "Sapantiana aqueduct"
+    },
+    "w": 736,
+    "h": 920,
+    "caption": {
+      "es": "Acueducto de Sapantiana: un rincón escondido a pocos pasos de San Blas.",
+      "en": "Sapantiana aqueduct: a hidden corner a few steps from San Blas."
+    }
+  },
+  "destino-valle-sagrado-05.jpg": {
+    "alt": {
+      "es": "Campanario blanco de la iglesia colonial de Chinchero y mercado de textiles en la plaza",
+      "en": "White bell tower of Chinchero's colonial church and textile market on the square"
+    },
+    "title": {
+      "es": "Pueblo de Chinchero",
+      "en": "Chinchero village"
+    },
+    "w": 736,
+    "h": 552,
+    "caption": {
+      "es": "Chinchero: iglesia colonial sobre muros incas y su mercado de tejidos.",
+      "en": "Chinchero: a colonial church on Inca walls and its weaving market."
+    }
+  },
+  "destino-valle-sagrado-06.jpg": {
+    "alt": {
+      "es": "Tejedora de Chinchero con traje tradicional preparando tintes naturales, con madejas de lana de colores colgadas",
+      "en": "Chinchero weaver in traditional dress preparing natural dyes, with skeins of coloured wool hanging above"
+    },
+    "title": {
+      "es": "Teñido natural en Chinchero",
+      "en": "Natural dyeing in Chinchero"
+    },
+    "w": 736,
+    "h": 736,
+    "caption": {
+      "es": "Las tejedoras de Chinchero tiñen la lana de alpaca con plantas y cochinilla.",
+      "en": "Chinchero's weavers dye alpaca wool with plants and cochineal."
+    }
+  },
+  "destino-camino-inka-02.jpg": {
+    "alt": {
+      "es": "Caminantes con bastones en un sendero empedrado del Camino Inka entre vegetación de bosque nuboso y montañas",
+      "en": "Hikers with poles on a cobbled stretch of the Inca Trail through cloud forest and mountains"
+    },
+    "title": {
+      "es": "Sendero del Camino Inka",
+      "en": "Inca Trail path"
+    },
+    "w": 736,
+    "h": 920,
+    "caption": {
+      "es": "Tramos empedrados originales entre bosque nuboso.",
+      "en": "Original cobbled stretches through cloud forest."
+    }
+  },
+  "destino-camino-inka-03.jpg": {
+    "alt": {
+      "es": "Grupo de caminantes con mochilas subiendo un sendero de piedra entre helechos en el Camino Inka",
+      "en": "Group of hikers with backpacks climbing a stone path among ferns on the Inca Trail"
+    },
+    "title": {
+      "es": "Grupo en el Camino Inka",
+      "en": "Group on the Inca Trail"
+    },
+    "w": 736,
+    "h": 736,
+    "caption": {
+      "es": "Laderas de helechos en el último tramo hacia Machu Picchu.",
+      "en": "Fern-covered slopes on the final stretch to Machu Picchu."
+    }
+  },
+  "destino-machu-picchu-02.jpg": {
+    "alt": {
+      "es": "Dos llamas pastando en los andenes de Machu Picchu con el Huayna Picchu al fondo",
+      "en": "Two llamas grazing on the terraces of Machu Picchu with Huayna Picchu behind"
+    },
+    "title": {
+      "es": "Llamas en Machu Picchu",
+      "en": "Llamas at Machu Picchu"
+    },
+    "w": 511,
+    "h": 639,
+    "caption": {
+      "es": "Las llamas que pastan entre los andenes de la ciudadela.",
+      "en": "The llamas that graze among the citadel's terraces."
+    }
+  },
+  "destino-machu-picchu-03.jpg": {
+    "alt": {
+      "es": "Ciudadela de Machu Picchu entre nubes, con el Templo del Sol en primer plano y montañas al fondo",
+      "en": "Machu Picchu citadel among clouds, with the Temple of the Sun in the foreground and mountains behind"
+    },
+    "title": {
+      "es": "Machu Picchu entre nubes",
+      "en": "Machu Picchu in the clouds"
+    },
+    "w": 736,
+    "h": 920,
+    "caption": {
+      "es": "La neblina de la mañana revela poco a poco la ciudadela.",
+      "en": "Morning mist slowly reveals the citadel."
+    }
+  },
+  "destino-machu-picchu-04.jpg": {
+    "alt": {
+      "es": "Portada de piedra inca en Machu Picchu con andenes y montañas iluminadas por el sol de la mañana",
+      "en": "Inca stone gateway at Machu Picchu with terraces and mountains lit by the morning sun"
+    },
+    "title": {
+      "es": "Portada inca en Machu Picchu",
+      "en": "Inca gateway at Machu Picchu"
+    },
+    "w": 736,
+    "h": 920,
+    "caption": {
+      "es": "Portadas de piedra que enmarcan las montañas sagradas.",
+      "en": "Stone gateways framing the sacred mountains."
+    }
+  },
+  "experiencia-cusco-a-la-mesa-02.jpg": {
+    "alt": {
+      "es": "Chef sirviendo leche de tigre sobre un tiradito con cebolla morada y camote en un bowl oscuro",
+      "en": "Chef pouring tiger's milk over a tiradito with red onion and sweet potato in a dark bowl"
+    },
+    "title": {
+      "es": "Cocina de autor",
+      "en": "Signature cuisine"
+    },
+    "w": 736,
+    "h": 920,
+    "caption": {
+      "es": "El toque final de la cena de autor, servido en la mesa.",
+      "en": "The finishing touch of the signature dinner, served at the table."
+    }
   }
 };

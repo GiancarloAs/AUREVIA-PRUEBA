@@ -35,7 +35,7 @@ const AUREVIA_DATA = {
     {
       id: "cusco-ciudad",
       imagen: "destino-cusco-ciudad-01.jpg",
-      galeria: ["destino-cusco-ciudad-02.jpg"],
+      galeria: ["destino-cusco-ciudad-02.jpg", "destino-cusco-ciudad-03.jpg", "destino-cusco-ciudad-04.jpg"],
       categoria: "ciudad",
       duracion: { es: "1–2 días", en: "1–2 days" },
       altitud: "3,399 m s.n.m.",
@@ -72,7 +72,7 @@ const AUREVIA_DATA = {
     {
       id: "valle-sagrado",
       imagen: "destino-valle-sagrado-01.jpg",
-      galeria: ["destino-valle-sagrado-02.jpg", "destino-valle-sagrado-03.jpg"],
+      galeria: ["destino-valle-sagrado-02.jpg", "destino-valle-sagrado-03.jpg", "destino-valle-sagrado-04.jpg", "destino-valle-sagrado-05.jpg", "destino-valle-sagrado-06.jpg"],
       categoria: "naturaleza",
       duracion: { es: "1 a 2 días", en: "1 to 2 days" },
       altitud: "2,800 – 3,760 m s.n.m.",
@@ -119,6 +119,7 @@ const AUREVIA_DATA = {
     {
       id: "machu-picchu",
       imagen: "destino-machu-picchu-01.jpg",
+      galeria: ["destino-machu-picchu-02.jpg", "destino-machu-picchu-03.jpg", "destino-machu-picchu-04.jpg"],
       categoria: "icono",
       duracion: { es: "1 día", en: "1 day" },
       altitud: "2,430 m s.n.m.",
@@ -245,6 +246,7 @@ const AUREVIA_DATA = {
     {
       id: "camino-inka",
       imagen: "destino-camino-inka-01.jpg",
+      galeria: ["destino-camino-inka-02.jpg", "destino-camino-inka-03.jpg"],
       categoria: "trekking",
       duracion: { es: "4 días / 3 noches", en: "4 days / 3 nights" },
       altitud: "4,215 m s.n.m. (Warmiwañusca)",
@@ -460,8 +462,7 @@ const AUREVIA_DATA = {
     {
       id: "cusco-a-la-mesa",
       imagen: "experiencia-cusco-a-la-mesa-01.jpg",
-      portadaProvisional: true,
-      galeria: ["experiencia-huerto-mesa-01.jpg", "destino-valle-sagrado-01.jpg", "destino-cusco-ciudad-02.jpg"],
+      galeria: ["experiencia-cusco-a-la-mesa-02.jpg", "experiencia-huerto-mesa-01.jpg", "destino-valle-sagrado-01.jpg"],
       categoria: "gastronomia",
       duracion: { es: "1 día", en: "1 day" },
       grupo: { es: "2 – 12 personas", en: "2 – 12 people" },
